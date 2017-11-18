@@ -5,6 +5,15 @@ Escape + a or b = Insert cell above or below<br>
 ** - Exponent Operator<br>
 Print number with specific decimals - {:.2f}
 
+Using integer division and .format method with return in function:
+```python
+def readable_timedelta(days):
+    #to get the number of weeks we use integer division
+    weeks = days // 7
+    remainder = days % 7
+    return "{} week(s) and {} day(s)".format(weeks, remainder)
+```
+
 <br>
 
 ### OOP - Object Oriented Programming:
@@ -102,6 +111,8 @@ def odd_or_even(number):
 
 print(odd_or_even(7))
 ```
+
+<br>
 
 Another example of returning values with functions:
 ```python
