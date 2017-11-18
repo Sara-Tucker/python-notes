@@ -73,8 +73,8 @@ Example 1:
 def say_hi(name):
 	print('Hi {}!'.format(name))
 
-say_hi('Jason')  # <-- Giving the parameter the value Jason
-say_hi('everybody') # <-- Giving the parameter the value everybody
+say_hi('Jason')  # <-- Executing the function with the value 'Jason'
+say_hi('everybody') # <-- Executing the function with the value 'everybody'
 ```
 ```python
 Hi Jason!
