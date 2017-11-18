@@ -5,10 +5,10 @@ Escape + a or b = Insert cell above or below<br>
 ** - Exponent Operator<br>
 Print number with specific decimals - {:.2f}
 
-why using return with a function, does it return the value of the parameter or just a value?
+why using return with a function, does it return the value of the parameter or just a value?<br>
 		return 'Even'<br>
 	else:<br>
-		return 'Odd'<br>
+		return 'Odd'
 
 odd_or_even_string = odd_or_even(7)
 
@@ -47,13 +47,7 @@ while keepGoing == True:
 <br>
 
 ### Functions:
-function
-	parameter is subsection of functions
-
-parameters are variables that can be used inside of the function
-to assign the variable call the function with the variable value inside the ()
-
-Nesting Functions:
+Nesting Functions:<br>
 print(len('apple')) - the len function is nested in the print function
 
 <br>
@@ -61,8 +55,8 @@ print(len('apple')) - the len function is nested in the print function
 ### Parameters:
 Parameter - variables used inside of functions
 
-def function_name(parameter):
-	print(parameter)
+def function_name(parameter):<br>
+	print(parameter)<br>
 function_name(value for parameter)
 
 Example of using a parameter:
