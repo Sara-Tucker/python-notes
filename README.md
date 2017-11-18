@@ -60,6 +60,8 @@ def function_name(parameter):
 function_name(value for parameter)
 ```
 
+<br>
+
 Example of using a parameter:
 ```python
 
@@ -74,6 +76,8 @@ Hi Jason!
 Hi everybody!
 ```
 
+<br>
+
 You can also declare parameters in functions. This will make an input optional.<br>
 Example of declaring a parameter in the function:
 ```python
@@ -87,6 +91,8 @@ say_hi('Jason')
 Hi there!
 Hi Jason!
 ```
+
+<br>
 
 Functions can return data using the return statement.
 Once the return statement is called no further code is executed.
