@@ -5,13 +5,6 @@ Escape + a or b = Insert cell above or below<br>
 ** - Exponent Operator<br>
 Print number with specific decimals - {:.2f}
 
-why using return with a function, does it return the value of the parameter or just a value?<br>
-		return 'Even'<br>
-	else:<br>
-		return 'Odd'
-
-odd_or_even_string = odd_or_even(7)
-
 <br>
 
 ### OOP - Object Oriented Programming:
@@ -107,6 +100,5 @@ def odd_or_even(number):
 	else:
 		return 'Odd'
 
-odd_or_even_string = odd_or_even(7)
-print(odd_or_even_string)
+print(odd_or_even(7))
 ```
