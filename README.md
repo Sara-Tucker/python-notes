@@ -1,17 +1,13 @@
-% - Modulo Operator - Returns the remainder - 3%2=1; 4%2=0
-
-** - Exponent Operator
-
+% - Modulo Operator - Returns the remainder - 3%2=1; 4%2=0<br>
+** - Exponent Operator<br>
 Print number with specific decimals - {:.2f}
 
 <br>
 
 ### OOP - Object Oriented Programming:
-Everything in Python is an object. Every object has a type.
-
-'apple' is a string object type
-
-fruit = 'apple' - the variable fruit is a string object
+Everything in Python is an object. Every object has a type.<br>
+'apple' is a string object type<br>
+fruit = 'apple' - the variable fruit is a string object<br>
 
 <br>
 
