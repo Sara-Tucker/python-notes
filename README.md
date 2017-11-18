@@ -42,7 +42,7 @@ while keepGoing == True:
 
 <br>
 
-# Functions
+### Functions:
 function
 	parameter is subsection of functions
 
@@ -58,14 +58,14 @@ Nesting Functions:
 print(len('apple')) - the len function is nested in the print function
 
 
-Parameters:
+### Parameters:
 Parameter - variables used inside of functions
 
 function_name(parameter)
-
-def function_name(parameter): <--- create function
+```python
+def function_name(parameter):
 	print(parameter)
-function_name(value)  <--- call function
+function_name(value for parameter)
 
 Example 1:
 def say_hi(name):
@@ -73,6 +73,11 @@ def say_hi(name):
 
 say_hi('Jason')
 say_hi('everybody')
+```
+```python
+Hi Jason!
+Hi everybody!
+```
 
 #will output Hi Jason! then Hi everybody!
 
