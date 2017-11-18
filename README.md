@@ -102,3 +102,13 @@ def odd_or_even(number):
 
 print(odd_or_even(7))
 ```
+
+Another example of returning values with functions:
+```python
+def cylinder_volume(height, radius):
+    pi = 3.14159
+    return height * pi * radius ** 2
+    
+>>> cylinder_volume(10, 3)
+282.7431
+```
