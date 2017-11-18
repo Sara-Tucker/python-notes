@@ -50,6 +50,8 @@ while keepGoing == True:
 Nesting Functions:<br>
 print(len('apple')) - the len function is nested in the print function
 
+You should be making a # docstring for all your functions.
+
 <br>
 
 ### Parameters:
@@ -94,13 +96,12 @@ Hi Jason!
 
 <br>
 
-Functions can return data using the return statement.
-Once the return statement is called no further code is executed.
-
+Functions can return data using the return statement. Once the return statement is called no further code is executed.<br>
 Example of returning a parameters value:
 ```python
 def odd_or_even(number):
-	"""Determine if a number is odd or even."""
+	#Determine if a number is odd or even
+	
 	if number % 2 == 0:
 		return 'Even'
 	else:
