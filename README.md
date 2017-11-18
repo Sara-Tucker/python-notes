@@ -5,6 +5,13 @@ Escape + a or b = Insert cell above or below<br>
 ** - Exponent Operator<br>
 Print number with specific decimals - {:.2f}
 
+why using return with a function, does it return the value of the parameter or just a value?
+		return 'Even'<br>
+	else:<br>
+		return 'Odd'<br>
+
+odd_or_even_string = odd_or_even(7)
+
 <br>
 
 ### OOP - Object Oriented Programming:
@@ -58,22 +65,22 @@ def function_name(parameter):
 	print(parameter)
 function_name(value for parameter)
 
-Example 1:
+Example of using a parameter:
 ```python
 
 def say_hi(name):
 	print('Hi {}!'.format(name))
 
-say_hi('Jason')  <-- Executing the function with the value 'Jason'
-say_hi('everybody')  <-- Executing the function with the value 'everybody'
+say_hi('Jason')#  <-- Executing the function with the value 'Jason'
+say_hi('everybody')#  <-- Executing the function with the value 'everybody'
 ```
 ```
 Hi Jason!
 Hi everybody!
 ```
 
-You can also declare parameters in functions. This will make an input optional:
-Example 2: (declaring a parameter in the function)
+You can also declare parameters in functions. This will make an input optional.<br>
+Example of declaring a parameter in the function:
 ```python
 def say_hi(name = 'there'):
 	print('Hi {}!'.format(name))
@@ -85,10 +92,12 @@ say_hi('Jason')
 Hi there!
 Hi Jason!
 ```
+
 Functions can return data using the return statement.
 Once the return statement is called no further code is executed.
 
-Example:
+Example of returning a parameters value:
+```python
 def odd_or_even(number):
 	"""Determine if a number is odd or even."""
 	if number % 2 == 0:
@@ -98,8 +107,4 @@ def odd_or_even(number):
 
 odd_or_even_string = odd_or_even(7)
 print(odd_or_even_string)
-
-Docstring:
-def print():
-	'''Prints string'''
-	Code
+```
