@@ -62,17 +62,19 @@ print(len('apple')) - the len function is nested in the print function
 Parameter - variables used inside of functions
 
 function_name(parameter)
-```python
+
 def function_name(parameter):
 	print(parameter)
 function_name(value for parameter)
 
 Example 1:
+```python
+
 def say_hi(name):
 	print('Hi {}!'.format(name))
 
-say_hi('Jason')
-say_hi('everybody')
+say_hi('Jason')  # <-- Giving the parameter the value Jason
+say_hi('everybody') # <-- Giving the parameter the value everybody
 ```
 ```python
 Hi Jason!
