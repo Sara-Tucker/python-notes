@@ -2,6 +2,7 @@
 ** - Exponent Operator<br>
 Print number with specific decimals - {:.2f}
 
+
 ### OOP - Object Oriented Programming:
 Everything in Python is an object. Every object has a type.<br>
 'apple' is a string object type<br>
