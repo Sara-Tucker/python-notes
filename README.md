@@ -15,7 +15,6 @@ Ctrl + Enter = Run cell
 
 Escape + a or b = Insert cell above or below
 
-<br>
 
 ### Compound Conditional: (Two end conditions)
 ```python
