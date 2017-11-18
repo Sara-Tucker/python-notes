@@ -54,11 +54,11 @@ print(len('apple')) - the len function is nested in the print function
 
 ### Parameters:
 Parameter - variables used inside of functions
-
-def function_name(parameter):<br>
-	print(parameter)<br>
+'''
+def function_name(parameter):
+	print(parameter)
 function_name(value for parameter)
-
+'''
 Example of using a parameter:
 ```python
 
