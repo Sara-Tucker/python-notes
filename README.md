@@ -59,10 +59,10 @@ You should be making a # docstring for all your functions.
 ### Parameters:
 Parameter - variables used inside of functions
 
-Parameter is the name you define. Argument is the value you give for the parameter.
+Parameter is used when defining a function. Argument is the value you give for the parameter when calling a function.
 ```
 def function_name(parameter):
-	print(parameter)
+	#code
 function_name(argument)
 ```
 
