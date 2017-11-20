@@ -101,7 +101,7 @@ Hi Jason!
 <br>
 
 Functions can return data using the return statement. Once the return statement is called no further code is executed.<br>
-Example of returning a parameters value:
+Example of returning something with a function:
 ```python
 def odd_or_even(number):
 	#Determine if a number is odd or even
