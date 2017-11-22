@@ -62,7 +62,7 @@ Parameter - variables used inside of functions
 Parameter is used when defining a function. Argument is the value you give for the parameter when calling a function.
 ```
 def function_name(parameter):
-	#code
+    #code
 function_name(argument)
 ```
 
@@ -72,7 +72,7 @@ Example of using a parameter:
 ```python
 
 def say_hi(name):
-	print('Hi {}!'.format(name))
+    print('Hi {}!'.format(name))
 
 say_hi('Jason')#  <-- Executing the function with the value 'Jason'
 say_hi('everybody')#  <-- Executing the function with the value 'everybody'
@@ -88,7 +88,7 @@ You can also declare parameters in functions. This will make an input optional.<
 Example of declaring a parameter in the function:
 ```python
 def say_hi(name = 'there'):
-	print('Hi {}!'.format(name))
+    print('Hi {}!'.format(name))
 
 say_hi()
 say_hi('Jason')
@@ -104,12 +104,12 @@ Functions can return data using the return statement. Once the return statement 
 Example of returning something with a function:
 ```python
 def odd_or_even(number):
-	#Determine if a number is odd or even
+    #Determine if a number is odd or even
 	
-	if number % 2 == 0:
-		return 'Even'
-	else:
-		return 'Odd'
+    if number % 2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
 
 print(odd_or_even(7))
 ```
