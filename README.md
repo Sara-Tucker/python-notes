@@ -84,7 +84,7 @@ Hi everybody!
 
 <br>
 
-You can also declare parameters in functions. This will make an input optional.<br>
+You can also declare parameters in functions. This will make an input for a defined parameter optional.<br>
 Example of declaring a parameter in the function:
 ```python
 def say_hi(name = 'there'):
