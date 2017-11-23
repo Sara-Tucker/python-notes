@@ -30,7 +30,7 @@ correct = "Python"
 tries = 3
 
 while keepGoing == True:
-    guess = raw_input("Please enter the password: ")
+    guess = input("Please enter the password: ")
     tries = tries - 1
     
     if guess == correct:
