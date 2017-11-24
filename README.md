@@ -49,9 +49,6 @@ while keepGoing == True:
 <br>
 
 ### Functions:
-Nesting Functions:<br>
-print(len('apple')) - the len function is nested in the print function
-
 You should be making a # docstring for all your functions.
 
 <br>
