@@ -133,6 +133,7 @@ count_list = [1,2,3,a,5,6,7,8,b,10]
 
 <br>
 
+Beginner:
 ```python
 # Create a list:
     listname = [item1, item2, itemN]
@@ -144,11 +145,32 @@ count_list = [1,2,3,a,5,6,7,8,b,10]
 # Print all items in list on seperate line:
     for i in list:
         print(i)
-	
-#
 ```
 
 <br>
+
+Advanced:
+```python
+# Copy a list:
+    new_list = list(old_list)
+
+# Find number of items in a list:
+    print(len(list_name))
+
+# Find largest element in a list:
+    print(max(list_name))
+    
+# Find smallest element in a list:
+    print(min(list_name))
+    
+# Sort a list from smallest to largest and/or alphabetically:
+    # This does not change the order of the list it just prints it
+    print(sorted(list))
+    
+    # Create a new list that is sorted
+    new_list = list(old_list)
+    sorted_list = sorted(new_list)
+```
 
 ## List Methods
 
