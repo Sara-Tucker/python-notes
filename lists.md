@@ -168,7 +168,7 @@ Example:
 
 <br>
 
-### Range (also in lists doc)
+### Range (also in loops doc)
 range(n) - generates a list of numbers and is paired with a for loop<br>
 Starts at 0 and will go n number of times
 
