@@ -278,5 +278,6 @@ list[index1:]
 Example:
 	animals = ['bear', 'pig', 'cow', 'duck', 'horse']
 	some_animals = animals[1:3]
+	# prints ?
 	Important, does not include last index when slicing, only 1 and 2 are in new list ^
 ```
