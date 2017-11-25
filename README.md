@@ -258,26 +258,28 @@ print(temp)
 <br>
 
 ## Slices
+Slice - a section (subset) of a list<br>
+Will get the items in the specified range of the slice:
 ```python
-Slice - a section (subset) of a list
-will get the items in the specified range of the slice
-The start index will be included while the end index is not.
 list[start:end:step]
 list[1:3]
 list[:7]
 list[3:]
+```
 
-Does not include the last index, so if list has 3 indexs, and you say
-a	b	c	d
+<br>
+
+Slices do not include the last index, so if list has 3 indices, and have:<br>
+a	b	c	d<br>
 0	1	2	3
-list[:3] - it will print out a,b,c
-list[index1:index2]
-list[:index2]
-list[index1:]
+
+list[:3] - Would print out a,b,c
 
 Example:
+```python
 	animals = ['bear', 'pig', 'cow', 'duck', 'horse']
 	some_animals = animals[1:3]
-	# prints ?
-	Important, does not include last index when slicing, only 1 and 2 are in new list ^
+	# prints pig, cow
 ```
+
+
