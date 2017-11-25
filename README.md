@@ -152,14 +152,16 @@ count_list = [1,2,3,a,5,6,7,8,b,10]
 
 ## List Methods
 
-### .append(x) - Adds a single element (x) to the end of a list.
+### .append(x)
+Adds a single element (x) to the end of a list.
 ```python
 arr.append(9)   
 print arr  
 # prints [1, 2, 3, 9]
 ```
 
-### .extend(list) - Merges another undefined list (list) or a defined list to the end.
+### .extend(list)
+Merges another undefined list (list) or a defined list to the end.
 ```python
 # Undefined list
 arr.extend([10,11])
@@ -170,4 +172,29 @@ print arr
 # prints [1, 2, 3, 9, 10, 11]
 ```
 
+### .insert(index,x)
+Inserts element (x) at (index).
+```python
+arr.insert(3,7)
+print arr
+# prints [1, 2, 3, 7, 9, 10, 11]
+```
+
+### .remove(x)
+Removes the first occurrence of element (x).
+```python
+arr.remove(10)  
+arr  
+# prints [1, 2, 3, 7, 9, 11]
+```
+
+### .pop(i)
+Removes the element at index (i). If no argument is passed, the last element of the list is removed.
+```python
+temp = arr.pop()
+print temp 
+# prints 11
+```
+
+### .
 
