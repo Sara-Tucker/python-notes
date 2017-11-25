@@ -1,5 +1,8 @@
+### Jupyter Notebook
+View -> Toggle header and toolbar on new projects<br>
 Ctrl + Enter = Run cell<br>
 Escape + a or b = Insert cell above or below<br>
+
 
 % - Modulo Operator - Returns the remainder - 3%2=1; 4%2=0<br>
 ** - Exponent Operator<br>
@@ -121,6 +124,31 @@ def cylinder_volume(height, radius):
     
 >>> cylinder_volume(10, 3)
 282.7431
+```
+
+<br>
+
+### List
+Holds ordered collection of items, various data types
+The index of the first item in a list is 0.
+DONT MAKE SPACES AFTER COMMAS IN LISTS
+count_list = [1,2,3,a,5,6,7,8,b,10]
+
+Create a list:
+```python
+    listname = [item1, item2, itemN]
+    listname = []
+```
+<br>
+Access item in list:
+```python
+	listname = [0]
+```
+<br>
+Print all items in list on seperate line:
+```python
+	for i in list:
+		print(i)
 ```
 
 
