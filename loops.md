@@ -1,4 +1,5 @@
 ## Loops
+### For loop
 For Loop - used to perform an action on every item in a list
 
 for item_variable in list_name:<br>
@@ -43,7 +44,7 @@ for i in range(1,10,2):
 
 <br>
 
-### While loops
+### While loop
 While Loop:<br>
 If the condition is true the code will execute.<br>
 Typically the code block will alter a variable that is part of the condition.<br>
