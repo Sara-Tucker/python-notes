@@ -140,7 +140,14 @@ Beginner:
     listname = []
     
 # Access item in list:
-    listname = [0]
+    list[0]
+    
+# Negative index:
+    # Last index of the list, -2 is 2nd last
+    list[-1]
+
+# Combine lists:
+    combined_list = list1 + list2
 
 # Print all items in list on seperate line:
     for i in list:
@@ -170,6 +177,18 @@ Advanced:
     # Create a new list that is sorted
     new_list = list(old_list)
     sorted_list = sorted(new_list)
+    
+# Remove duplicates from a list:
+def remove_duplicates(source_list):
+    new_list = []
+
+    for i in source_list:
+        if i not in new_list:
+            new_list.append(i)
+
+    return new_list
+
+new = remove_duplicates(list)
 ```
 
 ## List Methods
