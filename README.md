@@ -156,7 +156,7 @@ count_list = [1,2,3,a,5,6,7,8,b,10]
 Adds a single element (x) to the end of a list.
 ```python
 arr.append(9)   
-print arr  
+print(arr) 
 # prints [1, 2, 3, 9]
 ```
 
@@ -168,7 +168,7 @@ arr.extend([10,11])
 # Defined list
 arr.extend(listName)
 
-print arr
+print(arr) 
 # prints [1, 2, 3, 9, 10, 11]
 ```
 
@@ -176,7 +176,7 @@ print arr
 Inserts element (x) at (index).
 ```python
 arr.insert(3,7)
-print arr
+print(arr) 
 # prints [1, 2, 3, 7, 9, 10, 11]
 ```
 
@@ -184,7 +184,7 @@ print arr
 Removes the first occurrence of element (x).
 ```python
 arr.remove(10)  
-arr  
+print(arr) 
 # prints [1, 2, 3, 7, 9, 11]
 ```
 
@@ -192,9 +192,24 @@ arr
 Removes the element at index (i). If no argument is passed, the last element of the list is removed.
 ```python
 temp = arr.pop()
-print temp 
+print(temp)
 # prints 11
 ```
 
-### .
+### .index(x)
+Returns the first index of a value in the list. Throws an error if it's not found.
+```python
+temp = arr.index(3)
+print(temp)
+# prints 2
+```
+
+### .count(x)
+Counts the number of occurrences of element (x).
+```python
+temp = arr.count(1)
+print(temp)
+# prints 1
+```
+
 
