@@ -136,20 +136,19 @@ count_list = [1,2,3,a,5,6,7,8,b,10]
 
 <br>
 
-Create a list:
 ```python
+# Create a list:
     listname = [item1, item2, itemN]
     listname = []
-```
-<br>
-Access item in list:
-```python
-	listname = [0]
-```
-<br>
-Print all items in list on seperate line:
-```python
-	for i in list:
-		print(i)
+    
+# Access item in list:
+    listname = [0]
+
+# Print all items in list on seperate line:
+    for i in list:
+        print(i)
+	
+#
 ```
 
+<br>
