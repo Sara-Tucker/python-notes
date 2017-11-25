@@ -1,5 +1,6 @@
 ## Loops
-for: When you know when to stop looping. That's because you know it will loop until every item has been iterated over.<br>
+for: When you know when to stop looping. That's because you know it will loop until every item has been iterated over.
+
 while: When you don't know how many times you'll need to loop or when to stop looping.
 
 <br>
