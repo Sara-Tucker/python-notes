@@ -79,6 +79,8 @@ while count < 5:
     count += 1
 ```
 
+<br>
+
 Using Loops Correctly:
 List with one end condition:
 
@@ -100,12 +102,16 @@ for i in list:
     print(i)
 ```
 
+<br>
 
-break - ends a loop
-Example:
-this code is actually incorrect cuz if it doesnt calculate the added weight
+### Break
+ends a loop
+
+Example:<br>
+(This code is actually incorrect because it doesn't calculate the added weight, but the example is still good)
 ```python
-manifest = [["bananas", 15], ["mattresses", 34], ["dog kennels",42], ["machine that goes ping!", 120], ["tea chests", 10], ["cheeses", 0]]
+manifest = [["bananas", 15], ["mattresses", 34], ["dog kennels",42],
+["machine that goes ping!", 120], ["tea chests", 10], ["cheeses", 0]]
 
 cargo_weight = 0
 cargo_hold = []
@@ -116,14 +122,4 @@ for cargo in manifest:
     else:
         cargo_hold.append(cargo[0])
         cargo_weight += cargo[1]
-
-
-# pop method. removes an item from a list and returns the items value
-card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
-hand = []
-
-while sum(hand) <= 17:
-    hand.append(card_deck.pop())
-
-print(hand)
 ```
