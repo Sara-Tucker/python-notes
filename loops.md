@@ -1,27 +1,45 @@
 ## Loops
 For Loop - used to perform an action on every item in a list
 
-	for item_variable in list_name:
-		#codeblock
+for item_variable in list_name:<br>
+    #codeblock
 
-	Example:
-	animals = ['man', 'bear', 'pig']
-	for i in animals:
-		print(animal.upper())
+Example:
+```python
+animals = ['man', 'bear', 'pig']
+for i in animals:
+print(animal.upper())
+```
 
-	Ranges - generates a list of numbers and paired with a For loop
-	also include range stuff in lists section
+<br>
 
-	range(3) - starts at 0, doesn't include 3, will have 0, 1, 2.
+### Range
+range(n) - generates a list of numbers and is paired with a For loop<br>
+Starts at 0 and will go n number of times
 
-	Example:
-		for i in range(3):
-		print(number)
-	Specify start and stop:
-		for i in range(1, 3):
-	Specifiy start, stop, and step"
-		for i in range(1, 10, 2):
-			print(number) - prints 1, 3, 5, 7, 9
+```python
+for i in range(start, stop, step):
+    # code block
+```
+
+<br>
+
+Example:
+```python
+for i in range(3):
+    print(number)
+    
+# starts at 0, goes 3 times
+# prints 0, 1, 2
+
+for i in range(1,3):
+    print(number)
+# prints 1, 2
+
+for i in range(1,10,2):
+    print(number)
+# prints 1, 3, 5, 7, 9
+```
 
 <br>
 
