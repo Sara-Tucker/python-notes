@@ -129,10 +129,12 @@ def cylinder_volume(height, radius):
 <br>
 
 ### List
-Holds ordered collection of items, various data types
-The index of the first item in a list is 0.
-DONT MAKE SPACES AFTER COMMAS IN LISTS
+Holds ordered collection of items, various data types<br>
+The index of the first item in a list is 0.<br>
+DONT MAKE SPACES AFTER COMMAS IN LISTS<br>
 count_list = [1,2,3,a,5,6,7,8,b,10]
+
+<br>
 
 Create a list:
 ```python
@@ -150,5 +152,4 @@ Print all items in list on seperate line:
 	for i in list:
 		print(i)
 ```
-
 
