@@ -1,6 +1,8 @@
 ## Loops
-for loop - Use when you know when to stop looping. That's because you know it will loop until every item has been iterated over.<br>
-while loop - Use when you don't know how many times you'll need to loop or when to stop looping.
+for: When you know when to stop looping. That's because you know it will loop until every item has been iterated over.<br>
+while: When you don't know how many times you'll need to loop or when to stop looping.
+
+<br>
 
 ### for loop
 Used to perform an action on every item in a list<br>
