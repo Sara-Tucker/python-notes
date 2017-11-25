@@ -1,4 +1,4 @@
-### Jupyter Notebook
+## Jupyter Notebook
 View -> Toggle header and toolbar on new projects<br>
 Ctrl + Enter = Run cell<br>
 Escape + a or b = Insert cell above or below<br>
@@ -19,14 +19,14 @@ def readable_timedelta(days):
 
 <br>
 
-### OOP - Object Oriented Programming:
+## OOP - Object Oriented Programming:
 Everything in Python is an object. Every object has a type.<br>
 'apple' is a string object type<br>
 fruit = 'apple' - the variable fruit is a string object
 
 <br>
 
-### Compound Conditional: (Two end conditions)
+## Compound Conditional: (Two end conditions)
 ```python
 keepGoing = True
 correct = "Python"
@@ -51,12 +51,9 @@ while keepGoing == True:
 
 <br>
 
-### Functions:
+## Functions and Parameters:
 You should be making a # docstring for all your functions.
 
-<br>
-
-### Parameters:
 Parameter - variables used inside of functions
 
 Parameter is used when defining a function. Argument is the value you give for the parameter when calling a function.
@@ -128,7 +125,7 @@ def cylinder_volume(height, radius):
 
 <br>
 
-### List
+## Lists
 Holds ordered collection of items, various data types<br>
 The index of the first item in a list is 0.<br>
 DONT MAKE SPACES AFTER COMMAS IN LISTS<br>
@@ -153,9 +150,9 @@ count_list = [1,2,3,a,5,6,7,8,b,10]
 
 <br>
 
-### List Methods
+## List Methods
 
-# append(x) - Adds a single element (x) to the end of a list.
+### append(x) - Adds a single element (x) to the end of a list.
 ```python
 arr.append(9)   
 print arr  
@@ -164,7 +161,7 @@ print arr
 
 <br>
 
-# extend(list) - Merges another undefined list (list) or a defined list to the end.
+### extend(list) - Merges another undefined list (list) or a defined list to the end.
 ```python
 # Undefined list
 arr.extend([10,11])
