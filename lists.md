@@ -112,6 +112,17 @@ print(temp)
 # prints 11
 ```
 
+Good example:
+```python
+card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
+hand = []
+
+while sum(hand) <= 17:
+    hand.append(card_deck.pop())
+
+print(hand)
+```
+
 ### .index(x)
 Returns the first index of a value in the list. Throws an error if it's not found.
 ```python
