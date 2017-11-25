@@ -1,6 +1,9 @@
 ## Loops
-### For loop
-Used to perform an action on every item in a list
+for loop - Use when you know when to stop looping. That's because you know it will loop until every item has been iterated over.<br>
+while loop - Use when you don't know how many times you'll need to loop or when to stop looping.
+
+### for loop
+Used to perform an action on every item in a list<br>
 ```python
 for item_variable in list_name:
     #codeblock
@@ -18,12 +21,12 @@ for i in animals:
 <br>
 
 ### Range
-range(n) - generates a list of numbers and is paired with a For loop<br>
+range(n) - generates a list of numbers and is paired with a for loop<br>
 Starts at 0 and will go n number of times
 
 ```python
 for i in range(start, stop, step):
-    # code block
+    #codeblock
 ```
 
 <br>
@@ -47,32 +50,36 @@ for i in range(1,10,2):
 
 <br>
 
-### While loop
-If the condition is true the code will execute.<br>
-Typically the code block will alter a variable that is part of the condition.<br>
+### while loop
+If the condition is true the code will execute until it is false.
+
+How to make:<br>
+The while condition should be made with: ==  or  >  or  < <br>
+The condition should be defined outside of the loop.<br>
+The code block will alter a variable that is part of the condition.<br>
 Eventually the condition will evaluate to false.
 
-	while condition:
-		#code block
+```python
+defined condition
 
-	Example:
-	count = 0
-	while count < 5:
-    		print count
-   		count += 1
+while condition is true:
+    #codeblock
+```
 
-For loop =  When you know when to stop looping.
-While loop = When you dont know when to stop looping. Used with true or false instead of numbers. Condition to be checked should be defined outside the loop. After reaching true, condition should be set to false to avoid infinite loop. increment is done inside the loop.
+<br>
 
-As we mentioned, for loops are great for doing the same task over and over when you know ahead of time how many times you'll have to repeat the loop. On the other hand, while loops are ideal when you have to loop, but you don't know ahead of time how many times you'll need to loop. However, you can combine a while loop with a counter variable to do the same kind of work a for loop does. In these cases, it's often a matter of preference.
-
-so a while loop should be dealing with booleans mostly?
-
+Example:
+```python
+count = 0
+while count < 5:
+    print count
+    count += 1
+```
 
 Using Loops Correctly:
 List with one end condition:
 
-
+```python
 list = []
 finished = False
 
@@ -88,11 +95,13 @@ while finished == False:
 print('Your To- Do List:')
 for i in list:
     print(i)
+```
 
 
 break - ends a loop
 Example:
-# this code is actually incorrect cuz if it doesnt calculate the added weight
+this code is actually incorrect cuz if it doesnt calculate the added weight
+```python
 manifest = [["bananas", 15], ["mattresses", 34], ["dog kennels",42], ["machine that goes ping!", 120], ["tea chests", 10], ["cheeses", 0]]
 
 cargo_weight = 0
@@ -114,3 +123,4 @@ while sum(hand) <= 17:
     hand.append(card_deck.pop())
 
 print(hand)
+```
