@@ -1,12 +1,15 @@
 ## Loops
 ### For loop
 Used to perform an action on every item in a list
-
-Example:
 ```python
 for item_variable in list_name:
     #codeblock
+```
 
+<br>
+
+Example:
+```python
 animals = ['man', 'bear', 'pig']
 for i in animals:
     print(animal.upper())
