@@ -1,15 +1,15 @@
 ## Loops
 ### For loop
-For Loop - used to perform an action on every item in a list
-
-for item_variable in list_name:<br>
-    #codeblock
+Used to perform an action on every item in a list
 
 Example:
 ```python
+for item_variable in list_name:
+    #codeblock
+
 animals = ['man', 'bear', 'pig']
 for i in animals:
-print(animal.upper())
+    print(animal.upper())
 ```
 
 <br>
@@ -45,7 +45,6 @@ for i in range(1,10,2):
 <br>
 
 ### While loop
-While Loop:<br>
 If the condition is true the code will execute.<br>
 Typically the code block will alter a variable that is part of the condition.<br>
 Eventually the condition will evaluate to false.
