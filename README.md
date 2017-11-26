@@ -6,10 +6,18 @@ Escape + a or b = Insert cell above or below
 % - Modulo Operator - Returns the remainder - 3%2=1; 4%2=0<br>
 ** - Exponent Operator
 
-Print variable with 2 decimal places:
+<br>
+
+### Print variable with n decimal places:
 ```python
-print('{:.2f}'.format(variable))
+print('{:.nf}'.format(variable))
 ```
+
+<br>
+
+## Web scraping:
+https://www.datacamp.com/community/tutorials/web-scraping-python-nlp<br>
+https://www.udacity.com/course/introduction-to-python--ud1110
 
 <br>
 
@@ -19,3 +27,7 @@ Everything in Python is an object. Every object has a type.<br>
 fruit = 'apple' - the variable fruit is a string object
 
 <br>
+
+## Methods:
+Methods are functions for objects.<br>
+	object.method()
