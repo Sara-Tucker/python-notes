@@ -11,6 +11,18 @@ dictionaryName = {}
 
 <br>
 
+### Create a dictionary from lists:
+```python
+keysList = ['a', 'b', 'c']
+valuesList = [1, 2, 3]
+dictionaryName = dict(zip(keysList, valuesList))
+
+print(dictionary)
+# prints {'a': 1, 'b': 2, 'c': 3}
+```
+
+<br>
+
 ### Access values by their keys:
 ```python
 dictionaryName[key]
@@ -56,16 +68,4 @@ for key in dictionaryName:
 for key, value in dictionaryName.items():
 	print('The value for {} is {}.'.format(key, value))
 # actually use the words key and value instead of i
-```
-
-<br>
-
-### Create a dictionary from lists:
-```python
-keysList = ['a', 'b', 'c']
-valuesList = [1, 2, 3]
-dictionaryName = dict(zip(keysList, valuesList))
-
-print(dictionary)
-# prints {'a': 1, 'b': 2, 'c': 3}
 ```
