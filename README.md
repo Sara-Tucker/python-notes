@@ -20,10 +20,11 @@ https://www.datacamp.com/community/tutorials/web-scraping-python-nlp<br>
 https://www.udacity.com/course/introduction-to-python--ud1110
 
 <br>
-
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## OOP - Object Oriented Programming:
 Everything in Python is an object. Every object has a type.<br>
