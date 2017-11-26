@@ -1,4 +1,5 @@
 ## General
+D + D = Delete cell<br>
 Ctrl + Enter = Run cell<br>
 Escape + a or b = Insert cell above or below
 
