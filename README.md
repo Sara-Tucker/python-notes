@@ -1,10 +1,8 @@
-## Jupyter Notebook
-View -> Toggle header and toolbar on new projects<br>
+## General
 Ctrl + Enter = Run cell<br>
 Escape + a or b = Insert cell above or below
 
-% - Modulo Operator - Returns the remainder - 3%2=1; 4%2=0<br>
-** - Exponent Operator
+Functions can't use variables outside of its scope.
 
 <br>
 
@@ -20,6 +18,11 @@ https://www.datacamp.com/community/tutorials/web-scraping-python-nlp<br>
 https://www.udacity.com/course/introduction-to-python--ud1110
 
 <br>
+
+View -> Toggle header and toolbar on new projects<br>
+% - Modulo Operator - Returns the remainder - 3%2=1; 4%2=0<br>
+** - Exponent Operator
+
 <br>
 <br>
 <br>
