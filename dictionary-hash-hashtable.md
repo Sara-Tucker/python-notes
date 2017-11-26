@@ -69,3 +69,7 @@ for key, value in dictionaryName.items():
 	print('The value for {} is {}.'.format(key, value))
 # actually use the words key and value instead of i
 ```
+
+<br>
+
+Advanced dictionary stuff, like web and idk- https://www.datacamp.com/community/tutorials/python-dictionary-tutorial
