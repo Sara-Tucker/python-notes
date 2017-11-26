@@ -21,13 +21,19 @@ https://www.udacity.com/course/introduction-to-python--ud1110
 
 <br>
 
+
+
+
+
 ## OOP - Object Oriented Programming:
 Everything in Python is an object. Every object has a type.<br>
 'apple' is a string object type<br>
 fruit = 'apple' - the variable fruit is a string object
 
-<br>
-
 ## Methods:
 Methods are functions for objects.<br>
 	object.method()
+
+classes
+Methods and Classes:
+https://www.datacamp.com/community/tutorials/functions-python-tutorial
