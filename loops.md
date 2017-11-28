@@ -8,9 +8,13 @@ while - When you don't know how many times you'll need to loop or when to stop l
 ### for loop
 Used to perform an action on every item in a list<br>
 ```python
-for item_variable in list_name:
+for element in list_name:
     #codeblock
 ```
+
+<br>
+
+### FOR LOOPS LOOP THROUGH ELEMENTS ONLY, THEY HAVE NOTHING TO DO WITH INDICES
 
 <br>
 
