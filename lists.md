@@ -205,17 +205,17 @@ for i in range(start, stop, step):
 Example:
 ```python
 for i in range(3):
-    print(number)
+    print(i)
     
 # starts at 0, goes 3 times
 # prints 0, 1, 2
 
 for i in range(1,3):
-    print(number)
+    print(i)
 # prints 1, 2
 
 for i in range(1,10,2):
-    print(number)
+    print(i)
 # prints 1, 3, 5, 7, 9
 ```
 
