@@ -206,7 +206,6 @@ Example:
 ```python
 for i in range(3):
     print(i)
-    
 # starts at 0, goes 3 times
 # prints 0, 1, 2
 
