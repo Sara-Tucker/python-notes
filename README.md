@@ -1,7 +1,8 @@
 ## General
 D + D = Delete cell<br>
 Ctrl + Enter = Run cell<br>
-Escape + a or b = Insert cell above or below
+Escape + a or b = Insert cell above or below<br>
+Cell -> all outputs -> toggle scrolling
 
 Functions can't use variables outside of its scope.
 
