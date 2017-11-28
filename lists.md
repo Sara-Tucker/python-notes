@@ -62,6 +62,9 @@ def remove_duplicates(source_list):
     return new_list
 
 new = remove_duplicates(list)
+
+# Take a list where elements are a fucked up float decimal and change to 2 decimals while still remaining a float type
+list_name = [float('%.2f' % i) for i in list_name]
 ```
 
 <br>
