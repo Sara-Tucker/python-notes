@@ -63,10 +63,6 @@ def remove_duplicates(source_list):
 
 new = remove_duplicates(list)
 
-# Take a list where elements are a fucked up float decimal and
-# change to 2 decimals while still remaining a float type
-list_name = [float('%.2f' % i) for i in list_name]
-
 #Operations with two lists
 a = [1, 2, 3]
 b = [4, 5, 6]
@@ -82,6 +78,10 @@ for i in range(0, len(a)):
 List Comprehensions:<br>
 Create new lists where each item is the result of some operation applied to each member of another list
 ```python
+# Take a list where elements are a fucked up float decimal and
+# change to 2 decimals while still remaining a float type
+list_name = [float('%.2f' % i) for i in list_name]
+
 a = [1, 2, 3]
 doubled_a = [i * 2 for i in a]
 #prints 2, 4, 6
