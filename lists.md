@@ -32,7 +32,8 @@ Beginner:
 Advanced:
 ```python
 # Copy a list:
-    new_list = list(old_list)
+    import copy
+    new_list = copy.deepcopy(old_list)
 
 # Find number of items in a list:
     print(len(list_name))
