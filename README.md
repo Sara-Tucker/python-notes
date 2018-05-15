@@ -1,4 +1,4 @@
-## General
+## Random
 D + D = Delete cell<br>
 Ctrl + Enter = Run cell<br>
 Escape + a or b = Insert cell above or below<br>
@@ -26,20 +26,12 @@ View -> Toggle header and toolbar on new projects<br>
 ** - Exponent Operator
 
 <br>
-<br>
-<br>
-<br>
-<br>
-
-## OOP - Object Oriented Programming:
-Everything in Python is an object. Every object has a type.<br>
-'apple' is a string object type<br>
-fruit = 'apple' - the variable fruit is a string object
 
 ## Methods:
-Methods are functions for objects.<br>
+Methods are functions for objects.  
 	object.method()
 
-classes
-Methods and Classes:
+<br>
+
+Classes:
 https://www.datacamp.com/community/tutorials/functions-python-tutorial
