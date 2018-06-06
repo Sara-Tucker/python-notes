@@ -1,9 +1,8 @@
 # Functions
 
-## Functions and Parameters:
 You should be making a # docstring for all your functions.
 
-Using integer division and .format method with return in function:
+Example using integer division and .format method with return in function:
 ```python
 def readable_timedelta(days):
     #to get the number of weeks we use integer division
