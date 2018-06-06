@@ -13,7 +13,7 @@ def readable_timedelta(days):
 
 <br>
 
-## Parameter and Argument
+### Parameter and Argument
 Parameter - A variable in the declaration of a function.  
 Argument - The value of the variable that gets passed to the function.
 ```
@@ -24,7 +24,7 @@ function_name(argument)
 
 <br>
 
-## Good example of returning values with functions:
+### Good example of returning values with functions:
 ```python
 def cylinder_volume(height, radius):
     pi = 3.14159
@@ -36,7 +36,7 @@ def cylinder_volume(height, radius):
 
 <br>
 
-## Compound Conditional: (Two end conditions)
+### Compound Conditional: (Two end conditions)
 ```python
 keepGoing = True
 correct = "Python"
