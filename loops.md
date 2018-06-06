@@ -5,7 +5,7 @@ for element in list_name:
     #codeblock
 
 
-#Example
+#Example:
 animals = ['man', 'bear', 'pig']
 for i in animals:
     print(animal.upper())
@@ -21,7 +21,7 @@ for i in range(start, stop, step):
     #codeblock
 
 
-Example:
+#Example:
 for i in range(3):
     print(number)
     
