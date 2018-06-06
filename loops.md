@@ -24,7 +24,6 @@ for i in range(start, stop, step):
 #Example:
 for i in range(3):
     print(number)
-    
 # starts at 0, goes 3 times
 # prints 0, 1, 2
 
