@@ -1,17 +1,16 @@
-## Dictionary / Hash / Hash Table:
-Holds key-value pairs called items
+# Dictionary / Hash / Hash Table:
+Holds key-value pairs. (called an item or pair)
 
 <br>
 
-### Create a dictionary:
+#### Create a dictionary:
 ```python
 dictionaryName = {key1:value1, key2:value2, keyN:valueN}
-dictionaryName = {}
 ```
 
 <br>
 
-### Create a dictionary from lists:
+#### Create a dictionary from lists:
 ```python
 keysList = ['a', 'b', 'c']
 valuesList = [1, 2, 3]
@@ -23,37 +22,40 @@ print(dictionary)
 
 <br>
 
-### Access values by their keys:
+#### Access a value using its key:
 ```python
 dictionaryName[key]
-# outputs value for that key
+# outputs the value for that key
 ```
 
 <br>
 
-### Delete items:
+#### Delete a pair:
 ```python
 del dictionaryName[key]
 ```
 
 <br>
 
-### Check if a key is in a dictionary:
+### Check if a key is in a dictionary: ???
 ```python
-if key in dictionaryName.keys():
-	print('dictionaryName[key])
+if key in dictionary.keys():
+    print('dictionary[key])
+
+# ????
+print(value in dictionaryName.keys())
 ```
 
 <br>
 
-### Check if a value is in a dictionary:
+### Check if a value is in a dictionary: ???
 ```python
 print(key in dictionaryName.values())
 ```
 
 <br>
 
-### Loop through dictionary:<br>
+### Loop through dictionary:
 All items will be processed but in random order.
 ```python
 for key in dictionaryName:
