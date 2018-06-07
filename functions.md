@@ -82,3 +82,49 @@ https://www.udacity.com/course/introduction-to-python--ud1110
 
 ### Classes:
 https://www.datacamp.com/community/tutorials/functions-python-tutorial
+
+<br>
+
+### Files:
+open(file_path, mode) - Opens a file and returns a file object
+
+#Absolute path
+open('D:\zPython\currentfolder\subfolder\file')
+
+#Relative path
+open('currentfolder\subfolder\file')
+
+File modes:
+Default (r) - Open for reading
+a - Open for writing and append to the end of the file
+w - Open for writing and clear all existing data
+x - Create a new file and open it for writing
++ - Open for reading and writing
+
+b - Binary file (image, video, compressed file)
+#Append b to one of the modes above. Ex: open('/pics/cat.jpg', rb)
+
+.read() method - Returns a string containing the content of the file
+
+Read entire file
+hosts = open('etc/hosts.txt')
+content = hosts.read()
+print(content)
+
+Close file
+.close()
+
+Automatically close a file:
+with open(file_path) as file_variable_name:
+    #code
+
+with open('/etc/hosts') as hosts:
+    print(hosts.read())
+    
+    #Print every line on new line:
+    for line in file_name:
+        print(line)
+    
+    #Print every line on new line if the lines in the data have a carriage return:
+    for line in file_name:
+        print(line.rstrip())
