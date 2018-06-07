@@ -86,7 +86,7 @@ https://www.datacamp.com/community/tutorials/functions-python-tutorial
 <br>
 
 ### Files:
-open(file_path, mode) - Opens a file and returns a file object
+open('file_path', 'mode') - Opens a file and returns a file object
 
 #Absolute path
 open('D:\zPython\currentfolder\subfolder\file')
@@ -102,7 +102,7 @@ x - Create a new file and open it for writing
 + - Open for reading and writing
 
 b - Binary file (image, video, compressed file)
-#Append b to one of the modes above. Ex: open('/pics/cat.jpg', rb)
+#Append b to one of the modes above. Ex: open('/pics/cat.jpg', 'rb')
 
 .read() method - Returns a string containing the content of the file
 
@@ -115,7 +115,7 @@ Close file
 .close()
 
 Automatically close a file:
-with open(file_path) as file_variable_name:
+with open('file_path') as file_variable_name:
     #code
 
 with open('/etc/hosts') as hosts:
@@ -125,6 +125,11 @@ with open('/etc/hosts') as hosts:
     for line in file_name:
         print(line)
     
-    #Print every line on new line if the lines in the data have a carriage return:
+    #Print every line on new line if the lines in the data have \n:
     for line in file_name:
         print(line.rstrip())
+
+
+
+Write to file:
+file_name.write('string goes here.\n')
