@@ -90,7 +90,8 @@ https://www.datacamp.com/community/tutorials/functions-python-tutorial
 ## Check user input strings for mispelling:
 ```python
 from difflib import get_close_matches
-difflib.get_close_matches(input, possibilities, n=3, cutoff=0.6)
+
+listName = get_close_matches(input, possibilities, n=3, cutoff=0.6)
 ```
 
 <br>
