@@ -1,8 +1,6 @@
 ## Lists
-Holds ordered collection of items, various data types<br>
-The index of the first item in a list is 0.<br>
-DONT MAKE SPACES AFTER COMMAS IN LISTS<br>
-count_list = [1,2,3,a,5,6,7,8,b,10]
+Holds ordered collection of items, various data types  
+The index of the first item in a list is 0.  
 
 <br>
 
@@ -45,12 +43,11 @@ Advanced:
     print(min(list_name))
     
 # Sort a list from smallest to largest and/or alphabetically:
-    # This does not change the order of the list it just prints it
-    print(sorted(list))
+    # sorted(list) - Returns a new sorted list
+    print(sorted(list)) #This does not change the order of the list it just prints it
     
-    # Create a new list that is sorted
-    new_list = list(old_list)
-    sorted_list = sorted(new_list)
+    # list.sorted()
+    # This method sorts the list it is called on, it returns None
     
 # Remove duplicates from a list:
 def remove_duplicates(source_list):
@@ -76,7 +73,7 @@ for i in range(0, len(a)):
 
 <br>
 
-List Comprehensions:<br>
+List Comprehensions:  
 Create new lists where each item is the result of some operation applied to each member of another list
 ```python
 a = [1, 2, 3]
@@ -220,5 +217,3 @@ for i in range(1,10,2):
 ```
 
 <br>
-
-
