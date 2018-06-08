@@ -87,6 +87,24 @@ https://www.datacamp.com/community/tutorials/functions-python-tutorial
 <br>
 <br>
 
+## Check user input strings for mispelling:
+```python
+from difflib import get_close_matches
+difflib.get_close_matches(input, possibilities, n=3, cutoff=0.6)
+```
+
+<br>
+
+Returns a list of the best “good enough” matches. Possibilities is a list of (typically) strings to check for.
+
+Optional argument n (default 3) is the maximum number of close matches to return.
+
+Optional argument cutoff (default 0.6) is a float that cuts off possibilities. Results that are 1 = Extremely similar, so a cutoff of .9 would be very strict.
+
+<br>
+<br>
+<br>
+
 ## Files:
 ### Automatically open and close a file:
 ```python
