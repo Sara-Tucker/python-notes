@@ -84,6 +84,8 @@ https://www.udacity.com/course/introduction-to-python--ud1110
 https://www.datacamp.com/community/tutorials/functions-python-tutorial
 
 <br>
+<br>
+<br>
 
 ## Files:
 ### Automatically open and close a file:
@@ -124,8 +126,8 @@ x - Create a new file and open it for writing
 + - Open for reading and writing
 
 b - Binary file (image, video, compressed file)
-#Append b to one of the modes above.
-#Example:
+Append b to one of the modes above.
+Example:
 open('/pics/cat.jpg', 'rb')
 ```
 
@@ -133,7 +135,7 @@ open('/pics/cat.jpg', 'rb')
 
 ### .read()
 Returns a string containing the content of the file.
-```
+```python
 #Read entire file:
 hosts = open('etc/hosts.txt')
 print(hosts.read())
