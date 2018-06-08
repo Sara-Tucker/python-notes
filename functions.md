@@ -87,25 +87,6 @@ https://www.datacamp.com/community/tutorials/functions-python-tutorial
 <br>
 <br>
 
-## Check user input strings for mispelling:
-```python
-from difflib import get_close_matches
-
-listName = get_close_matches(input, possibilities, n=3, cutoff=0.6)
-```
-
-<br>
-
-Returns a list of the best “good enough” matches. Possibilities is a list of (typically) strings to check for.
-
-Optional argument n (default 3) is the maximum number of close matches to return.
-
-Optional argument cutoff (default 0.6) is a float that cuts off possibilities. Results that are 1 = Extremely similar, so a cutoff of .9 would be very strict.
-
-<br>
-<br>
-<br>
-
 ## Files:
 ### Automatically open and close a file:
 ```python
@@ -131,10 +112,11 @@ with open('/etc/hosts') as hosts:
 Opens a file and returns a file object.
 ```python
 #Absolute path
-open('D:\zPython\currentfolder\subfolder\file')
+open('D:/zPython/currentfolder/subfolder/file.type')
 
 #Relative path
-open('currentfolder\subfolder\file')
+open('file.type')
+open('currentfolder/subfolder/file.type')
 ```
 ```
 File modes:
@@ -142,7 +124,7 @@ Default (r) - Open for reading
 a - Open for writing and append to the end of the file
 w - Open for writing and clear all existing data
 x - Create a new file and open it for writing
-r+ - Open for reading and writing
+r+ - Open for reading and appending
 
 b - Binary file (image, video, compressed file)
 Append b to one of the modes above.
@@ -156,7 +138,7 @@ open('/pics/cat.jpg', 'rb')
 Returns a string containing the content of the file.
 ```python
 #Read entire file:
-hosts = open('etc/hosts.txt')
+hosts = open('hosts.txt')
 print(hosts.read())
 ```
 
@@ -168,7 +150,43 @@ Closes a file.
 <br>
 
 ### .write('string')
-Writes to a file.
+Writes to a file. If the file already exists, the argument is appended to the file.
 ```python
 file_name.write('string goes here.\n')
 ```
+
+<br>
+<br>
+<br>
+
+## time and datetime:
+```python
+# Delay execution for n seconds. seconds can be an int or float.
+import time
+time.sleep(seconds)
+
+# 
+import datetime
+
+# lib    static class
+datetime.datetime.method()
+```
+
+<br>
+<br>
+<br>
+
+## Check user input strings for mispelling:
+```python
+from difflib import get_close_matches
+
+listName = get_close_matches(input, possibilities, n=3, cutoff=0.6)
+```
+
+<br>
+
+Returns a list of the best “good enough” matches. Possibilities is a list of (typically) strings to check for.
+
+Optional argument n (default 3) is the maximum number of close matches to return.
+
+Optional argument cutoff (default 0.6) is a float that cuts off possibilities. Results that are 1 = Extremely similar, so a cutoff of .9 would be very strict.
