@@ -101,7 +101,7 @@ with open('/etc/hosts') as hosts:
     for line in file_name:
         print(line)
     
-    #If the lines in the data have \n, print without the \n:
+    #Remove any whitespace or \n from lines:
     for line in file_name:
         print(line.rstrip())
 ```
@@ -123,7 +123,7 @@ Default (r) - Open for reading
 a - Open for writing and append to the end of the file
 w - Open for writing and clear all existing data
 x - Create a new file and open it for writing
-+ - Open for reading and writing
+r+ - Open for reading and writing
 
 b - Binary file (image, video, compressed file)
 Append b to one of the modes above.
