@@ -135,11 +135,18 @@ open('/pics/cat.jpg', 'rb')
 <br>
 
 ### .read()
-Returns a string containing the content of the file.
+Returns a single string containing the content of the file.
 ```python
-#Read entire file:
 hosts = open('hosts.txt')
 print(hosts.read())
+```
+
+<br>
+
+### .readlines()
+Returns a list of strings, every string is a new line in the file.
+```python
+file_content = file.readlines()
 ```
 
 <br>
@@ -159,17 +166,21 @@ file_name.write('string goes here.\n')
 <br>
 <br>
 
-## time and datetime:
+## datetime and time:
 ```python
-# Delay execution for n seconds. seconds can be an int or float.
-import time
-time.sleep(seconds)
-
-# 
+# Get current time and set a time
 import datetime
 
-# lib    static class
-datetime.datetime.method()
+# libr     static class
+# datetime.datetime.method()
+
+now = datetime.datetime.now()
+freeTimeStart = now.replace(hour = 19, minute = 45)
+
+
+# Delay execution for n seconds. (seconds can be an int or float)
+import time
+time.sleep(seconds)
 ```
 
 <br>
