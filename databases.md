@@ -1,5 +1,11 @@
 # Databases
 
+SQLite:  
+https://docs.python.org/3/library/sqlite3.html  
+https://sebastianraschka.com/Articles/2014_sqlite_in_python_tutorial.html
+
+<br>
+
 ```python
 import sqlite3
 
