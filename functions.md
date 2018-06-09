@@ -201,3 +201,59 @@ Returns a list of the best “good enough” matches. Possibilities is a list of
 Optional argument n (default 3) is the maximum number of close matches to return.
 
 Optional argument cutoff (default 0.6) is a float that cuts off possibilities. Results that are 1 = Extremely similar, so a cutoff of .9 would be very strict.
+
+<br>
+<br>
+<br>
+
+## GUI:
+
+Correct way to code tkinter:  
+http://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html  
+http://www.tutorialspoint.com/python/python_gui_programming.htm
+
+<br>
+
+```python
+from tkinter import *
+
+#Start
+window = Tk()
+
+txtBox1Val = StringVar()
+
+def convert_kg():
+    gram=float(txtBox1Val.get())*1000
+    pound=float(txtBox1Val.get())*2.20462
+    ounce=float(txtBox1Val.get())*35.274
+    txt1.delete("1.0", END)
+    txt1.insert(END,gram)
+    txt2.delete("1.0", END)
+    txt2.insert(END,pound)
+    txt3.delete("1.0", END)
+    txt3.insert(END,ounce)
+
+
+lbl1 = Label(window, text = 'Kg')
+lbl1.grid(row = 0, column = 0)
+
+txtBox1 = Entry(window, textvariable = txtBox1Val)
+txtBox1.grid(row = 0, column = 1)
+
+btn1 = Button(window, text = 'Convert', command = convert_kg)
+btn1.grid(row = 0, column = 2)
+
+
+txt1 = Text(window, height = 1, width = 20)
+txt1.grid(row = 1, column = 0)
+
+txt2 = Text(window, height = 1, width = 20)
+txt2.grid(row = 1, column = 1)
+
+txt3 = Text(window, height = 1, width = 20)
+txt3.grid(row = 1, column = 2)
+
+
+window.mainloop()
+#End
+```
