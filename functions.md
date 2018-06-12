@@ -209,7 +209,7 @@ Optional argument cutoff (default 0.6) is a float that cuts off possibilities. R
 ## GUI:
 
 Correct way to code tkinter:  
-http://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html  
+http://python-textbok.readthedocs.io/en/latest/Introduction_to_GUI_Programming.html  
 http://www.tutorialspoint.com/python/python_gui_programming.htm
 
 <br>
