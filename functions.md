@@ -217,9 +217,8 @@ https://dzone.com/articles/python-gui-examples-tkinter-tutorial-like-geeks
 
 Templates:  
 https://github.com/jesusfbes/SimpleGUI/tree/master/src  
-https://github.com/jhooey/tkinter-notebook-template/blob/master/application.py  
+https://gist.github.com/ajfigueroa/c2af555630d1db3efb5178ece728b017  
 https://github.com/brysontyrrell/MacAdmins-2016-Craft-GUIs-with-Python-and-Tkinter  
-https://grassfedfarmboi.wordpress.com/2016/11/27/tkinter-template/  
 https://www.raspberrypi.org/forums/viewtopic.php?t=105749
 
 <br>
