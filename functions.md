@@ -40,19 +40,19 @@ tries = 3
 
 while keepGoing == True:
     guess = input("Please enter the password: ")
-    tries = tries - 1
+    tries -= 1
     
     if guess == correct:
-        print "You may proceed"
+        print("You may proceed.")
         keepGoing = False
     else:
-        print "That's not correct."
+        print("That's not correct.")
 
-        if tries <= 0:
-            print "Sorry. You only had three tries"
+        if tries == 0:
+            print("Sorry, you only had three tries.")
             keepGoing = False
         else:
-            print "You have %d tries left" % tries
+            print("You have {} tries left".format(tries))
 ```
 
 <br>
