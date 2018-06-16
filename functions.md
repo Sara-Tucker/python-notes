@@ -17,6 +17,7 @@ Argument - The value of the variable that gets passed to the function.
 ```
 def function_name(parameter):
     #code
+
 function_name(argument)
 ```
 
