@@ -25,9 +25,9 @@ function_name(argument)
 
 ### Good example of returning values with functions:
 ```python
-def cylinder_volume(height, radius):
+def cylinder_volume(radius, height):
     pi = 3.14159
-    return height * pi * radius ** 2
+    return pi * (radius ** 2) * height
 ```
 
 <br>
