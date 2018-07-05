@@ -98,7 +98,6 @@ list_name = [float('%.2f' % i) for i in list_name]
 <br>
 
 ## List Methods
-
 ### .append(x)
 Adds a single element (x) to the end of a list.
 ```python
@@ -172,37 +171,10 @@ print(temp)
 <br>
 <br>
 
-## Slices
-Slice - a section (subset) of a list  
-Gets the items in the specified range of the slice:
-```python
-list[start_index:end_index:step]
-list[1:3]
-list[:7]
-list[3:]
-```
-
-<br>
-
-Slices do not include the last index, so if list has 3 indices, and have:  
-a	b	c	d  
-0	1	2	3
-
-list[:3] would print out a,b,c
-
-```python
-# Example:
-animals = ['bear', 'pig', 'cow', 'duck', 'horse']
-some_animals = animals[1:3]
-# prints pig, cow
-```
-
-<br>
-
-### range(n) (also in loops doc)
+## range(n)
+(also in loops doc)  
 Generates a list of numbers and is paired with a for loop  
 Starts at 0 and will go n number of times
-
 ```python
 for i in range(start, stop, step):
     #codeblock
@@ -221,6 +193,36 @@ for i in range(1,3):
 for i in range(1,10,2):
     print(i)
 # prints 1, 3, 5, 7, 9
+```
+
+<br>
+<br>
+
+## Slices
+Slice - a section (subset) of a list  
+Gets the items in the specified range of the slice:
+```python
+list[start_index:end_index:step]
+list[1:3]
+list[:7]
+list[3:]
+```
+
+<br>
+
+Slices do not include the last index, so if list has 3 indices, and have:  
+a	b	c	d  
+0	1	2	3
+
+list[:3] would print out a,b,c
+
+<br>
+
+Example:
+```python
+animals = ['bear', 'pig', 'cow', 'duck', 'horse']
+some_animals = animals[1:3]
+# prints pig, cow
 ```
 
 <br>
