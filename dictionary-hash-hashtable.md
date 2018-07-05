@@ -1,6 +1,6 @@
 # Dictionary / Hash / Hash Table:
 Holds a collection of key-value pairs called pairs.  
-It is unordered, values are accessed by keys and that's all.
+It is unordered; values are accessed by keys and that's all.
 
 <br>
 
@@ -14,7 +14,7 @@ keysList = ['a', 'b', 'c']
 valuesList = [1, 2, 3]
 dictName = dict(zip(keysList, valuesList))
 
-print(dictName) # prints {'a': 1, 'b': 2, 'c': 3}
+print(dictName) #prints {'a': 1, 'b': 2, 'c': 3}
 ```
 
 <br>
