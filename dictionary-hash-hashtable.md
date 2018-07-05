@@ -4,7 +4,7 @@ It is unordered, values are accessed by keys and that's all.
 
 <br>
 
-### Create a dictionary:
+#### Create a dictionary:
 ```python
 dictName = {key1:value1, key2:value2, keyN:valueN}
 
@@ -19,7 +19,7 @@ print(dictName) # prints {'a': 1, 'b': 2, 'c': 3}
 
 <br>
 
-### Access a value using its key:
+#### Access a value using its key:
 ```python
 # value == dictName[key]
 dictName[key]
@@ -27,7 +27,7 @@ dictName[key]
 
 <br>
 
-### Adding, changing, or deleting pairs:
+#### Adding, changing, or deleting pairs:
 ```python
 # Add a pair (changes it if the key already exists)
 dictName[key] = value
@@ -38,7 +38,7 @@ del dictName[key]
 
 <br>
 
-### Check if a key or value is in a dictionary:
+#### Check if a key or value is in a dictionary:
 ```python
 # prints true or false
 print(key in dictName.keys())
@@ -47,7 +47,7 @@ print(value in dictName.values())
 
 <br>
 
-### Loop through a dictionary:
+#### Loop through a dictionary:
 All items will be processed in a random order.
 ```python
 # Pairs (actually use the words key and value instead of i)
