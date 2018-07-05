@@ -176,7 +176,7 @@ print(temp)
 Slice - a section (subset) of a list  
 Gets the items in the specified range of the slice:
 ```python
-list[start:end:step]
+list[start_index:end_index:step]
 list[1:3]
 list[:7]
 list[3:]
@@ -188,13 +188,13 @@ Slices do not include the last index, so if list has 3 indices, and have:
 a	b	c	d  
 0	1	2	3
 
-list[:3] - Would print out a,b,c
+list[:3] would print out a,b,c
 
-Example:
 ```python
-	animals = ['bear', 'pig', 'cow', 'duck', 'horse']
-	some_animals = animals[1:3]
-	# prints pig, cow
+# Example:
+animals = ['bear', 'pig', 'cow', 'duck', 'horse']
+some_animals = animals[1:3]
+# prints pig, cow
 ```
 
 <br>
