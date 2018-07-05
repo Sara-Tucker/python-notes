@@ -1,5 +1,5 @@
 # Dictionary / Hash / Hash Table:
-Holds key-value pairs. (called an item or pair)
+Holds a collection of key-value pairs. (called an item or pair) (also unordered, that important?)
 
 <br>
 
