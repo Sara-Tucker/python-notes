@@ -6,7 +6,7 @@ Set - holds an unordered and unindexed collection of items with no duplicate ite
 
 <br>
 
-Create a list:
+#### Create a list:
 ```python
 # Create a list:
     listname = [item1, item2, itemN]
@@ -22,7 +22,7 @@ Create a list:
 
 <br>
 
-Access items in a list:
+#### Access items in a list:
 ```python
 # Access an item in list:
     list[0]
@@ -38,7 +38,7 @@ Access items in a list:
 
 <br>
 
-Find:
+#### Find:
 ```python
 # Find number of items in a list:
     print(len(list_name))
@@ -52,14 +52,11 @@ Find:
 
 <br>
 
-Advanced:
+#### Advanced:
 ```python
-# Sort a list from smallest to largest and/or alphabetically:
-    # sorted(list) - Returns a new sorted list
-    print(sorted(list)) #This does not change the order of the list it just prints it
-    
-    # list.sorted()
-    # This method sorts the list it is called on, it returns None
+# Sort a list from smallest to largest or alphabetically:
+    # sorted(list_name) - Returns a new sorted list, it does not sort the list it is passed
+    # list_name.sorted() - This method sorts the list it is called on, it returns None
     
 # Remove duplicates from a list:
 def remove_duplicates(source_list):
@@ -157,11 +154,11 @@ print(hand)
 ```
 
 ### .index(x)
-Returns the first index of a value in the list. Throws an error if it's not found.
+Searches for the specified value and returns the index of its first occurrence. Throws an error if it's not found.
 ```python
 temp = arr.index(3)
 print(temp)
-# prints 2
+# prints 2 (because it found the value 3 at index 2)
 ```
 
 ### .count(x)
