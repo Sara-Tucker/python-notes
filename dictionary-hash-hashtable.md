@@ -1,37 +1,38 @@
 # Dictionary / Hash / Hash Table:
-Holds a collection of key-value pairs. (called an item or pair) (also unordered, that important?)
+Holds a collection of key-value pairs called pairs.  
+It is unordered, values are accessed by keys and that's all.
 
 <br>
 
 #### Create a dictionary:
 ```python
-dictionaryName = {key1:value1, key2:value2, keyN:valueN}
-```
+dictName = {key1:value1, key2:value2, keyN:valueN}
 
-<br>
 
-#### Create a dictionary from lists:
-```python
+# Create a dictionary from lists:
 keysList = ['a', 'b', 'c']
 valuesList = [1, 2, 3]
-dictionaryName = dict(zip(keysList, valuesList))
+dictName = dict(zip(keysList, valuesList))
 
-print(dictionary)
-# prints {'a': 1, 'b': 2, 'c': 3}
+print(dictName) # prints {'a': 1, 'b': 2, 'c': 3}
 ```
 
 <br>
 
 #### Access a value using its key:
 ```python
-dictionaryName[key]
-# outputs the value for that key
+# value == dictName[key]
+dictName[key]
 ```
 
 <br>
 
-#### Delete a pair:
+#### Adding, changing, or deleting pairs:
 ```python
+# Add a pair (changes it if the key already exists)
+dictName[key] = value
+
+# Delete a pair
 del dictionaryName[key]
 ```
 
