@@ -1,6 +1,8 @@
 ## Lists
-Holds ordered collection of items, various data types  
-The index of the first item in a list is 0.  
+
+List - holds an ordered collection of items  
+Tuple - holds an ordered collection of items and can't be changed after being initialized  
+Set - holds an unordered and unindexed collection of items with no duplicate items
 
 <br>
 
