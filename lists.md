@@ -6,35 +6,40 @@ Set - holds an unordered and unindexed collection of items with no duplicate ite
 
 <br>
 
-Beginner:
+Create a list:
 ```python
 # Create a list:
     listname = [item1, item2, itemN]
     listname = []
-    
-# Access item in list:
-    list[0]
-    
-# Negative index:
-    # Last index of the list, -2 is 2nd last
-    list[-1]
 
 # Combine lists:
     combined_list = list1 + list2
 
-# Print all items in list on seperate line:
+# Copy a list:
+    import copy
+    new_list = copy.deepcopy(old_list)
+```
+
+<br>
+
+Access items in a list:
+```python
+# Access an item in list:
+    list[0]
+    
+# Negative index:
+    # -1 is the last index of the list, -2 is 2nd last
+    list[-1]
+
+# Print all items in a list on seperate lines:
     for i in list:
         print(i)
 ```
 
 <br>
 
-Advanced:
+Find:
 ```python
-# Copy a list:
-    import copy
-    new_list = copy.deepcopy(old_list)
-
 # Find number of items in a list:
     print(len(list_name))
 
@@ -43,7 +48,12 @@ Advanced:
     
 # Find smallest element in a list:
     print(min(list_name))
-    
+```
+
+<br>
+
+Advanced:
+```python
 # Sort a list from smallest to largest and/or alphabetically:
     # sorted(list) - Returns a new sorted list
     print(sorted(list)) #This does not change the order of the list it just prints it
@@ -63,13 +73,13 @@ def remove_duplicates(source_list):
 
 new = remove_duplicates(list)
 
-#Operations with two lists
+# Operations with two lists
 a = [1, 2, 3]
 b = [4, 5, 6]
-atimesb = []
+a_times_b = []
 
 for i in range(0, len(a)):
-	atimesb.append(a[i] * b[i])
+	a_times_b.append(a[i] * b[i])
 #prints 4, 10, 18
 ```
 
@@ -87,6 +97,7 @@ doubled_a = [i * 2 for i in a]
 list_name = [float('%.2f' % i) for i in list_name]
 ```
 
+<br>
 <br>
 
 ## List Methods
@@ -133,10 +144,9 @@ Removes the element at index (i). If no argument is passed, the last element of 
 temp = arr.pop()
 print(temp)
 # prints 11
-```
 
-Good example:
-```python
+
+# Good example:
 card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
 hand = []
 
@@ -163,10 +173,11 @@ print(temp)
 ```
 
 <br>
+<br>
 
 ## Slices
-Slice - a section (subset) of a list<br>
-Will get the items in the specified range of the slice:
+Slice - a section (subset) of a list  
+Gets the items in the specified range of the slice:
 ```python
 list[start:end:step]
 list[1:3]
@@ -176,8 +187,8 @@ list[3:]
 
 <br>
 
-Slices do not include the last index, so if list has 3 indices, and have:<br>
-a	b	c	d<br>
+Slices do not include the last index, so if list has 3 indices, and have:  
+a	b	c	d  
 0	1	2	3
 
 list[:3] - Would print out a,b,c
@@ -191,19 +202,16 @@ Example:
 
 <br>
 
-### Range (also in loops doc)
-range(n) - generates a list of numbers and is paired with a for loop<br>
+### range(n) (also in loops doc)
+Generates a list of numbers and is paired with a for loop  
 Starts at 0 and will go n number of times
 
 ```python
 for i in range(start, stop, step):
     #codeblock
-```
 
-<br>
 
-Example:
-```python
+# Example:
 for i in range(3):
     print(i)
 # starts at 0, goes 3 times
