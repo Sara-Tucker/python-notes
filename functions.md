@@ -92,19 +92,7 @@ https://www.datacamp.com/community/tutorials/functions-python-tutorial
 ### Automatically open and close a file:
 ```python
 with open('file_path') as file_variable_name:
-    #code
-
-
-with open('/etc/hosts') as hosts:
-    print(hosts.read())
-    
-    #Print every line on new line:
-    for line in file_name:
-        print(line)
-    
-    #Remove any whitespace or \n from lines:
-    for line in file_name:
-        print(line.rstrip())
+    #code    
 ```
 
 <br>
