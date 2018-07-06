@@ -2,16 +2,14 @@
 
 ### Paths
 ```
-./ - this directory
-../ - the parent folder
 cwd - current working directory (only an abbreviation)
+./ - the cwd
+../ - the parent folder
 
 
+idek:
 from pathlib import Path
 files_folder = Path("source_data/text_files/")
-
-can you make a path object a file?? cuz seriously just do that and replace all the arguments with it
-string pathName = @"c:\temp\myfile.txt";
 
 
 import os
@@ -19,20 +17,21 @@ os.getcwd() - returns the cwd
 os.chdir('path') - changes the cwd
 os.makedirs('path') - creates a directory
 os.listdir('path') - returns a list of all files in a directory
-os.path.exists('path') - 
+os.path.exists('path') - returns true or false
 os.path.abspath('./relative_path') - returns the absolute path of a relative path as a string
 
 
 The File Reading/Writing Process - stopped here
 ```
 
+
 ```python
 #Absolute path - full path name
-open('D:/zPython/currentfolder/subfolder/file.type')
+pathName = 'D:/zPython/currentfolder/subfolder/file.type'
 
-#Relative path - the program’s current working directory is inferred as the start of the path
-open('file.type')
-open('subfolder/file.type')
+#Relative path - the program’s cwd is inferred as the start of the path
+pathName = './file.type'
+pathName = './subfolder/file.type'
 ```
 
 
