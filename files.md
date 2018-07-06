@@ -17,12 +17,9 @@ path_name = 'D:/zPython/currentfolder/subfolder/file.type'
 #Relative path - the program’s cwd is inferred as the start of the path
 path_name = './file.type'
 path_name = './subfolder/file.type'
-```
 
-<br>
 
-#### Store paths as variables to make reusing easier
-```python
+# Store paths as variables to make reusing easier
 file_path = './subfolder/file.type'
 
 # idek:
@@ -59,49 +56,41 @@ os.path.abspath('./relative_path')
 
 Binary files are all other file types, such as word processing documents, PDFs, images, spreadsheets, and executable programs. If you open a binary file in Notepad or TextEdit, it will look like scrambled nonsense, like in Figure 8-5.
 
+<br>
+
 ---
+
+<br>
 
 ### Read a file:
 ```python
-# .read() - Returns a single string containing the content of the file
+# .read() - Returns the file content as a single string
 print(f.read())
 
 
-# .readlines() - Returns a list of strings, every string is a new line in the file.
-file_content = file.readlines()
+# .readlines() - Returns a list of strings, each string is a line in the file
+file_content = f.readlines()
+for line in file_content:
+    print(line)
 
-
-# Read the file as one string:
-string text = File.ReadAllText(pathName);
-
-
-# Create an array where each element is one line of the file:
-string[] lines = File.ReadAllLines(pathName);
-
-foreach (string line in lines)
-{
-    Console.WriteLine(line);
-}
+with open('path') as f:
+    for line in f:
+        # Print each line:
+        print(line)
+        
+        #Remove any whitespace or \n from lines:
+        print(line.rstrip())
 ```
 
 
-The File and FileInfo classes provide methods for creating, copying, deleting, moving, and opening files.
 
-Methods with no examples yet:
+
 ```
 Create()
 GetAttributes()
 Move()
 ```
 
-<br>
-
-### File:
-File provides static methods. It makes programming faster since methods are static, but it's slower to run because the operating system has to do security checks to see if you can access a file.
-
-```c#
-string pathName = @"c:\temp\myfile.txt";
-```
 <br>
 
 ### Write to a file:
@@ -118,6 +107,7 @@ using (StreamWriter file = new StreamWriter(pathName, true))
     file.WriteLine("Fourth line");
 }
 ```
+
 <br>
 
 ### Other:
