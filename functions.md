@@ -111,14 +111,6 @@ with open('/etc/hosts') as hosts:
 
 ### open('file_path', 'mode')
 Opens a file and returns a file object.
-```python
-#Absolute path
-open('D:/zPython/currentfolder/subfolder/file.type')
-
-#Relative path
-open('file.type')
-open('currentfolder/subfolder/file.type')
-```
 ```
 File modes:
 Default (r) - Open for reading
@@ -131,23 +123,6 @@ b - Binary file (image, video, compressed file)
 Append b to one of the modes above.
 Example:
 open('/pics/cat.jpg', 'rb')
-```
-
-<br>
-
-### .read()
-Returns a single string containing the content of the file.
-```python
-hosts = open('hosts.txt')
-print(hosts.read())
-```
-
-<br>
-
-### .readlines()
-Returns a list of strings, every string is a new line in the file.
-```python
-file_content = file.readlines()
 ```
 
 <br>
