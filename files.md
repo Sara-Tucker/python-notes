@@ -84,7 +84,14 @@ with open('path') as f:
         print(line.rstrip())
 ```
 
+#### Save program 'state'
+```python
+import shelve
+user_name = 'Bob'
 
+with shelve.open('path') as f:
+    f['user_name'] = user_name
+```
 
 
 ```
