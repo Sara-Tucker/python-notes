@@ -1,30 +1,15 @@
 # Files
 
-### Paths
+## Paths and directories
 ```
-cwd - current working directory (only an abbreviation)
-./ - the cwd
+cwd - current working directory (abbreviation, not a keyword)  
+./  - the cwd  
 ../ - the parent folder
-
-
-idek:
-from pathlib import Path
-files_folder = Path("source_data/text_files/")
-
-
-import os
-os.getcwd() - returns the cwd
-os.chdir('path') - changes the cwd
-os.makedirs('path') - creates a directory
-os.listdir('path') - returns a list of all files in a directory
-os.path.exists('path') - returns true or false
-os.path.abspath('./relative_path') - returns the absolute path of a relative path as a string
-
-
-The File Reading/Writing Process - stopped here
 ```
 
+<br>
 
+#### Absolute and relative paths
 ```python
 #Absolute path - full path name
 pathName = 'D:/zPython/currentfolder/subfolder/file.type'
@@ -34,6 +19,47 @@ pathName = './file.type'
 pathName = './subfolder/file.type'
 ```
 
+<br>
+
+#### Store paths as variables to make reusing easier
+```python
+file_path = './subfolder/file.type'
+
+# idek:
+from pathlib import Path
+files_folder = Path('source_data/text_files/')
+```
+
+<br>
+
+#### os module
+```python
+import os
+
+# Return the cwd
+os.getcwd()
+
+# Change the cwd
+os.chdir('path')
+
+# Create a directory
+os.makedirs('path')
+
+# Return a list of all files and directories in a directory
+os.listdir('path')
+
+# Check if directory or file exists
+os.path.exists('path') - returns true or false
+
+# Return the absolute path of a relative path as a string
+os.path.abspath('./relative_path')
+```
+
+
+
+The File Reading/Writing Process - stopped here
+
+---
 
 The File and FileInfo classes provide methods for creating, copying, deleting, moving, and opening files.
 
