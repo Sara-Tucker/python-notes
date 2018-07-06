@@ -1,33 +1,30 @@
 # Files
 
 ### Paths
-
+```
 ./ - this directory
 ../ - the parent folder
+cwd - current working directory
 
 
 from pathlib import Path
 files_folder = Path("source_data/text_files/")
 
+can you make a path object a file?? cuz seriously just do that and replace all the arguments with it
+string pathName = @"c:\temp\myfile.txt";
+
+
 import os
-
-os.getcwd() - returns the current working directory
-os.chdir('path') - changes the current working directory
+os.getcwd() - returns the cwd
+os.chdir('path') - changes the cwd
 os.makedirs('path') - creates a directory
+os.listdir('path') - returns a list of all files in a directory
+os.path.exists('path') - 
+os.path.abspath('./relative_path') - returns the absolute path of a relative path as a string
 
-
-Calling os.listdir(path) will return a list of filename strings for each file in the path argument.
-
-
-Calling os.path.exists(path) will return True if the file or folder referred to in the argument exists and will return False if it does not exist.
-
-
-
-
-Calling os.path.abspath(path) will return a string of the absolute path of the argument. This is an easy way to convert a relative path into an absolute one.
 
 The File Reading/Writing Process - stopped here
-
+```
 
 ```python
 #Absolute path - full path name
