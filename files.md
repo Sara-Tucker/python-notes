@@ -12,11 +12,11 @@ cwd - current working directory (abbreviation, not a keyword)
 #### Absolute and relative paths
 ```python
 #Absolute path - full path name
-pathName = 'D:/zPython/currentfolder/subfolder/file.type'
+path_name = 'D:/zPython/currentfolder/subfolder/file.type'
 
 #Relative path - the program’s cwd is inferred as the start of the path
-pathName = './file.type'
-pathName = './subfolder/file.type'
+path_name = './file.type'
+path_name = './subfolder/file.type'
 ```
 
 <br>
@@ -49,7 +49,7 @@ os.makedirs('path')
 os.listdir('path')
 
 # Check if directory or file exists
-os.path.exists('path') - returns true or false
+os.path.exists('path')
 
 # Return the absolute path of a relative path as a string
 os.path.abspath('./relative_path')
@@ -57,9 +57,33 @@ os.path.abspath('./relative_path')
 
 
 
-The File Reading/Writing Process - stopped here
+Binary files are all other file types, such as word processing documents, PDFs, images, spreadsheets, and executable programs. If you open a binary file in Notepad or TextEdit, it will look like scrambled nonsense, like in Figure 8-5.
 
 ---
+
+### Read a file:
+```python
+# .read() - Returns a single string containing the content of the file
+print(f.read())
+
+
+# .readlines() - Returns a list of strings, every string is a new line in the file.
+file_content = file.readlines()
+
+
+# Read the file as one string:
+string text = File.ReadAllText(pathName);
+
+
+# Create an array where each element is one line of the file:
+string[] lines = File.ReadAllLines(pathName);
+
+foreach (string line in lines)
+{
+    Console.WriteLine(line);
+}
+```
+
 
 The File and FileInfo classes provide methods for creating, copying, deleting, moving, and opening files.
 
@@ -78,22 +102,6 @@ File provides static methods. It makes programming faster since methods are stat
 ```c#
 string pathName = @"c:\temp\myfile.txt";
 ```
-
-### Read a file:
-```c#
-//Read the file as one string:
-string text = File.ReadAllText(pathName);
-
-
-//Create an array where each element is one line of the file:
-string[] lines = File.ReadAllLines(pathName);
-
-foreach (string line in lines)
-{
-    Console.WriteLine(line);
-}
-```
-
 <br>
 
 ### Write to a file:
