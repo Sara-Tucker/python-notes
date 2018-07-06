@@ -4,7 +4,7 @@
 ```
 ./ - this directory
 ../ - the parent folder
-cwd - current working directory
+cwd - current working directory (only an abbreviation)
 
 
 from pathlib import Path
