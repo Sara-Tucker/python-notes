@@ -69,16 +69,18 @@ print(f.read())
 
 
 # .readlines() - Returns a list of strings, each string is a line in the file
-file_content = f.readlines()
-for line in file_content:
-    print(line)
-
 with open('path') as f:
+
+    # Method 1
     for line in f:
-        # Print each line:
+        print(line)
+
+    # Method 2
+    file_content = f.readlines()
+    for line in file_content:
         print(line)
         
-        #Remove any whitespace or \n from lines:
+        # Remove any whitespace or \n from lines
         print(line.rstrip())
 ```
 
