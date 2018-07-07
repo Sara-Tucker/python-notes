@@ -1,7 +1,7 @@
 ## Lists
 
 List - holds an ordered collection of items  
-Tuple - holds an ordered collection of items and can't be changed after being initialized  
+Tuple - holds an ordered collection of items and can't be changed after being initialized (immutable)(an immutable list)  
 Set - holds an unordered and unindexed collection of items with no duplicate items
 
 <br>
