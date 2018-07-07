@@ -119,14 +119,6 @@ open('/pics/cat.jpg', 'rb')
 Closes a file.
 
 <br>
-
-### .write('string')
-Writes to a file. If the file already exists, the argument is appended to the file.
-```python
-file_name.write('string goes here.\n')
-```
-
-<br>
 <br>
 <br>
 
