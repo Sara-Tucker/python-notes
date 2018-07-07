@@ -1,14 +1,12 @@
-### For Loop
-Used to perform an action on every item in a list. Used when you know when to stop looping because you know it will loop until every item has been iterated over.
+## for loop
+Executes a codeblock for each element in a collection. Used when you know when to stop looping because you know it will loop until every element has been iterated over.
 ```python
 for element in list_name:
     #codeblock
 
-
-#Example:
-animals = ['man', 'bear', 'pig']
-for i in animals:
-    print(animal.upper())
+names = ['alice', 'bob', 'charlie']
+for name in names:
+    print(name.title())
 ```
 
 <br>
@@ -38,31 +36,37 @@ for i in range(1,10,2):
 
 <br>
 
-### While Loop
-If the condition is true the code will execute until it is false. Used when you don't know how many times you'll need to loop or when to stop looping.
+## while loop
+Repeats a codeblock until a condition evaluates to false.
 
-How to make:  
-The while condition should be made with: ==  or  >  or  <  
-The condition should be defined outside of the loop.  
-The code block will alter a variable that is part of the condition.  
-Eventually the condition will evaluate to false.
+- The while condition should be made with: ==  or  >  or  <  
+- The condition should be defined outside of the loop.  
+- The code block will alter a variable that is part of the condition.  
+- Eventually the condition will evaluate to false.
 ```python
 defined condition
 
-while condition is true:
+while conditionistrue:
     #codeblock
 
 
-#Example:
 count = 0
 while count < 5:
-    print count
-    count += 1
+    print(count)
+    count++
+
+
+finished = false
+while finished == false:
+    if condition:
+        finished = true
+    else:
+        #codeblock
 ```
 
 <br>
 
-### Example of using Loops - List with one end condition:
+## Example of using Loops - List with one end condition:
 ```python
 list = []
 finished = False
@@ -83,4 +87,4 @@ for i in list:
 
 <br>
 
-### Use Break statements!!
+## Use Break statements!!
