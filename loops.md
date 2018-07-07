@@ -11,7 +11,7 @@ for name in names:
 
 <br>
 
-#### range()
+## range()
 Generates a tuple of numbers and is paired with a for loop.
 ```python
 for i in range(stop):
