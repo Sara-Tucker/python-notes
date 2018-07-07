@@ -11,27 +11,29 @@ for name in names:
 
 <br>
 
-#### Range
-range(n) - generates a list of numbers and is paired with a for loop<br>
-Starts at 0 and will go n number of times
+#### range()
+Generates a tuple of numbers and is paired with a for loop.
 ```python
+for i in range(stop):
+# stop - number of integers to generate starting from zero
+
 for i in range(start, stop, step):
-    #codeblock
+# start - starting number of the sequence
+# stop - generate numbers up to, but not including this number
 
 
 #Example:
 for i in range(3):
-    print(number)
-# starts at 0, goes 3 times
-# prints 0, 1, 2
+    print(i)
+# 0, 1, 2
 
 for i in range(1,3):
-    print(number)
-# prints 1, 2
+    print(i)
+# 1, 2
 
 for i in range(1,10,2):
-    print(number)
-# prints 1, 3, 5, 7, 9
+    print(i)
+# 1, 3, 5, 7, 9
 ```
 
 <br>
@@ -53,13 +55,13 @@ while conditionistrue:
 count = 0
 while count < 5:
     print(count)
-    count++
+    count += 1
 
 
-finished = false
-while finished == false:
+finished = False
+while not finished:
     if condition:
-        finished = true
+        finished = True
     else:
         #codeblock
 ```
@@ -86,5 +88,32 @@ for i in list:
 ```
 
 <br>
+<br>
 
-## Use Break statements!!
+## break statement:
+The break statement terminates the entire loop.
+```python
+foo = 10
+
+while foo > 0:
+    print(foo)
+    foo -= 1
+    
+    if foo == 5:
+        break
+```
+
+<br>
+<br>
+
+## continue statement:
+The continue statement passes control to the next iteration of the loop.
+```python
+for i in range(1, 11):
+    if i < 9:
+        continue
+    print(i)
+
+# 9
+# 10
+```
