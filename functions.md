@@ -1,3 +1,5 @@
+rename a_____________main
+
 You should be making a # docstring for all your functions.
 
 Example using integer division and .format method with return in function:
@@ -28,31 +30,6 @@ function_name(argument)
 def cylinder_volume(radius, height):
     pi = 3.14159
     return pi * (radius ** 2) * height
-```
-
-<br>
-
-### Compound Conditional: (Two end conditions)
-```python
-keepGoing = True
-correct = "Python"
-tries = 3
-
-while keepGoing == True:
-    guess = input("Please enter the password: ")
-    tries -= 1
-    
-    if guess == correct:
-        print("You may proceed.")
-        keepGoing = False
-    else:
-        print("That's not correct.")
-
-        if tries == 0:
-            print("Sorry, you only had three tries.")
-            keepGoing = False
-        else:
-            print("You have {} tries left".format(tries))
 ```
 
 <br>
