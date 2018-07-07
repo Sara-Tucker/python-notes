@@ -88,40 +88,6 @@ https://www.datacamp.com/community/tutorials/functions-python-tutorial
 <br>
 <br>
 
-## Files:
-### Automatically open and close a file:
-```python
-with open('file_path') as file_variable_name:
-    #code    
-```
-
-<br>
-
-### open('file_path', 'mode')
-Opens a file and returns a file object.
-```
-File modes:
-Default (r) - Open for reading
-a - Open for writing and append to the end of the file
-w - Open for writing and clear all existing data
-x - Create a new file and open it for writing
-r+ - Open for reading and appending
-
-b - Binary file (image, video, compressed file)
-Append b to one of the modes above.
-Example:
-open('/pics/cat.jpg', 'rb')
-```
-
-<br>
-
-### .close()
-Closes a file.
-
-<br>
-<br>
-<br>
-
 ## datetime and time:
 ```python
 # Get current time and set a time
