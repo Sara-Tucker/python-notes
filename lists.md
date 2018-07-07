@@ -171,28 +171,28 @@ print(temp)
 <br>
 <br>
 
-## range(n)
-(also in loops doc)  
-Generates a list of numbers and is paired with a for loop  
-Starts at 0 and will go n number of times
+## range()
+Generates a tuple of numbers and is paired with a for loop.
 ```python
+for i in range(stop):
+# stop - number of integers to generate starting from zero
+
 for i in range(start, stop, step):
-    #codeblock
+# start - starting number of the sequence
+# stop - generate numbers up to, but not including this number
 
 
-# Example:
 for i in range(3):
     print(i)
-# starts at 0, goes 3 times
-# prints 0, 1, 2
+# 0, 1, 2
 
 for i in range(1,3):
     print(i)
-# prints 1, 2
+# 1, 2
 
 for i in range(1,10,2):
     print(i)
-# prints 1, 3, 5, 7, 9
+# 1, 3, 5, 7, 9
 ```
 
 <br>
