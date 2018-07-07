@@ -50,6 +50,15 @@ os.path.exists('path')
 
 # Return the absolute path of a relative path as a string
 os.path.abspath('./relative_path')
+
+# Delete a directory
+os.rmdir('path')
+
+# Delete a file
+os.remove('path')
+
+# Rename a file or directory
+os.rename('./original.txt', './new.txt')
 ```
 
 If you open a binary file in a text editor it will look like scrambled nonsense.
@@ -94,12 +103,6 @@ with shelve.open('path') as db:
 pass_input = input('Enter password: ')```
 ```
 
-```
-Create()
-GetAttributes()
-Move()
-```
-
 <br>
 
 ### Write to a file:
@@ -114,41 +117,6 @@ text = ["a line of text",
 f.writelines(text)
 ```
 
-<br>
-
-### Other:
-```c#
-// File.Copy()
-File.Copy(pathName, @"c:\temp\newtext.txt");
-
-
-// File.Delete()
-File.Delete(pathName);
-
-
-// File.Exists()
-if (File.Exists(pathName))
-{
-    //
-}
-```
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-
-Methods with no examples yet:
-```
-Delete()
-Move()
-GetLogicalDrives()
-```
-
-<br>
 <br>
 <br>
 
