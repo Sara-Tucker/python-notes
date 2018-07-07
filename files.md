@@ -1,6 +1,4 @@
-# Files
-
-## Paths and directories
+# Paths and directories
 ```
 cwd - current working directory (abbreviation, not a keyword)  
 ./  - the cwd  
@@ -67,13 +65,15 @@ os.rename('./original.txt', './new.txt')
 
 <br>
 
+# Files
 #### Automatically open and close a file:
 ```python
 with open('path', 'mode') as f:
     #code
+```
 
-
-# open('path', 'mode') - Opens a file and returns a file object.
+open('path', 'mode') - Opens a file and returns a file object
+```
 File modes:
 r (default) - Open for reading
 a - Open for writing and append to the end of the file
@@ -89,7 +89,7 @@ b - Binary file (image, video, compressed file)
         open('/pics/cat.jpg', 'rb')
 
 
-# .close() - Closes a file
+.close() - Closes a file
 ```
 
 <br>
@@ -112,7 +112,8 @@ with open('path') as f:
     for line in file_content:
         print(line)
         
-        # Remove any whitespace or \n from lines
+    # Remove any whitespace or \n from lines
+    for line in f:
         print(line.rstrip())
 ```
 
