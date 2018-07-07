@@ -1,5 +1,40 @@
 # Files
 
+### Automatically open and close a file:
+```python
+with open('file_path') as file_variable_name:
+    #code    
+```
+
+<br>
+
+### open('path', 'mode')
+Opens a file and returns a file object.
+```
+File modes:
+r (default) - Open for reading
+a - Open for writing and append to the end of the file
+w - Open for writing and clear all existing data
+x - Create a new file and open it for writing
+
+
+(any)+ - Open for reading and writing for (any)
+    - Append + to one of the modes above.
+b - Binary file (image, video, compressed file)
+    - If you open a binary file in a text editor it will look obfuscated.
+    - Append b to one of the modes above.
+    - Example:
+        open('/pics/cat.jpg', 'rb')
+```
+
+<br>
+
+### .close()
+Closes a file.
+
+
+
+
 ## Paths and directories
 ```
 cwd - current working directory (abbreviation, not a keyword)  
@@ -61,7 +96,6 @@ os.remove('path')
 os.rename('./original.txt', './new.txt')
 ```
 
-If you open a binary file in a text editor it will look like scrambled nonsense.
 
 <br>
 
