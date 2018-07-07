@@ -72,7 +72,7 @@ with open('path', 'mode') as f:
     #code
 ```
 
-open('path', 'mode') - Opens a file and returns a file object
+#### open('path', 'mode') - Opens a file and returns a file object
 ```
 File modes:
 r (default) - Open for reading
