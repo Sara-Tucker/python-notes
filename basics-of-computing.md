@@ -46,7 +46,30 @@ def Factorial(number):
 <br>
 <br>
 
-## Good example of a Compound Conditional (two end conditions):
+### Good example of returning values with functions:
+```python
+def cylinder_volume(radius, height):
+    pi = 3.14159
+    return pi * (radius ** 2) * height
+```
+
+<br>
+
+### Make a # docstring for all your functions
+Example using integer division return:
+```python
+def readable_timedelta(days):
+    #to get the number of weeks we use integer division
+    
+    weeks = days // 7
+    remainder = days % 7
+    
+    return "{} week(s) and {} day(s)".format(weeks, remainder)
+```
+
+<br>
+
+### Good example of a Compound Conditional (two end conditions):
 ```python
 keepGoing = True
 correct = "Python"
@@ -67,29 +90,6 @@ while keepGoing:
             keepGoing = False
         else:
             print(f"You have {tries} tries left.")
-```
-
-<br>
-
-### Good example of returning values with functions:
-```python
-def cylinder_volume(radius, height):
-    pi = 3.14159
-    return pi * (radius ** 2) * height
-```
-
-<br>
-
-### You should be making a # docstring for all your functions
-Example using integer division and .format method with return in function:
-```python
-def readable_timedelta(days):
-    #to get the number of weeks we use integer division
-    
-    weeks = days // 7
-    remainder = days % 7
-    
-    return "{} week(s) and {} day(s)".format(weeks, remainder)
 ```
 
 <br>
