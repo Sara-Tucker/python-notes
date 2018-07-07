@@ -22,7 +22,6 @@ for i in range(start, stop, step):
 # stop - generate numbers up to, but not including this number
 
 
-#Example:
 for i in range(3):
     print(i)
 # 0, 1, 2
@@ -68,28 +67,6 @@ while not finished:
 
 <br>
 
-## Example of using Loops - List with one end condition:
-```python
-list = []
-finished = False
-
-while finished == False:
-    task = input('Enter a task for your to-do list. Press <enter> when done:\n')
-
-    if len(task) == 0:
-        finished = True
-    else:
-        list.append(task)
-        print('Task added.')
-
-print('Your To- Do List:')
-for i in list:
-    print(i)
-```
-
-<br>
-<br>
-
 ## break statement:
 The break statement terminates the entire loop.
 ```python
@@ -103,7 +80,6 @@ while foo > 0:
         break
 ```
 
-<br>
 <br>
 
 ## continue statement:
