@@ -142,5 +142,10 @@ with shelve.open('./data/') as db:
         db['password'] = input('Create a password: ')
     password = db['password']
 
-pass_input = input('Enter password: ')```
+pass_input = input('Enter password: ')
+
+if pass_input == password:
+    print('ok')
+else:
+    print('nope')
 ```
