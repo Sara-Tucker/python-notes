@@ -52,9 +52,7 @@ os.path.exists('path')
 os.path.abspath('./relative_path')
 ```
 
-
-
-Binary files are all other file types, such as word processing documents, PDFs, images, spreadsheets, and executable programs. If you open a binary file in Notepad or TextEdit, it will look like scrambled nonsense, like in Figure 8-5.
+If you open a binary file in a text editor it will look like scrambled nonsense.
 
 <br>
 
@@ -87,12 +85,14 @@ with open('path') as f:
 #### Save program 'state'
 ```python
 import shelve
-user_name = 'Bob'
 
-with shelve.open('path') as f:
-    f['user_name'] = user_name
+with shelve.open('path') as db:
+    if 'password' not in db:
+        db['password'] = input('Create a password: ')
+    password = db['password']
+
+pass_input = input('Enter password: ')```
 ```
-
 
 ```
 Create()
@@ -103,18 +103,15 @@ Move()
 <br>
 
 ### Write to a file:
-```c#
-//Overwrite with an array of strings:
-string[] lines = { "First line", "Second line", "Third line" };
-File.WriteAllLines(pathName, lines);
-//File.WriteAllText(pathName, string);
+```python
+# .write() - Writes to a file; if the file already exists the argument is appended to the file
+f.write('string goes here.\n')
 
-
-//Append new text to an existing file:
-using (StreamWriter file = new StreamWriter(pathName, true))
-{
-    file.WriteLine("Fourth line");
-}
+# .writelines() - Writes lines to a file; if the file already exists the argument is appended to the file
+text = ["a line of text",
+    "another line of text",
+    "a third line"]
+f.writelines(text)
 ```
 
 <br>
