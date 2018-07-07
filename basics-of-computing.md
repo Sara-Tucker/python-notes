@@ -33,7 +33,6 @@ recursion - repeated application of a recursive procedure
 Example:
 ```python
 def Factorial(number):
-    print(number)
     if number <= 1:
         return 1
     else:
@@ -47,13 +46,13 @@ def Factorial(number):
 <br>
 <br>
 
-## Good Compound Conditional (two end conditions) and Function examples
+## Good example of a Compound Conditional (two end conditions):
 ```python
 keepGoing = True
 correct = "Python"
 tries = 3
 
-while keepGoing == True:
+while keepGoing:
     guess = input("Please enter the password: ")
     tries -= 1
     
@@ -72,12 +71,25 @@ while keepGoing == True:
 
 <br>
 
-```c#
-static double CylinderVolume(double radius, double height)
-{
-    const double pi = 3.14159;
-    return pi * Math.Pow(radius, 2) * height;
-}
+### Good example of returning values with functions:
+```python
+def cylinder_volume(radius, height):
+    pi = 3.14159
+    return pi * (radius ** 2) * height
+```
+
+<br>
+
+### You should be making a # docstring for all your functions
+Example using integer division and .format method with return in function:
+```python
+def readable_timedelta(days):
+    #to get the number of weeks we use integer division
+    
+    weeks = days // 7
+    remainder = days % 7
+    
+    return "{} week(s) and {} day(s)".format(weeks, remainder)
 ```
 
 <br>
@@ -86,15 +98,13 @@ static double CylinderVolume(double radius, double height)
 ## Methods, Parameters, and Arguments
 Parameter - A variable in the declaration of a function.  
 Argument - The value of the variable that gets passed to the function.
-```c#
-// Creating a method:
-typereturned MethodName(parameters)
-{
-    //code
-}
+```python
+# Creating a method:
+def method_name(self, parameters)
+    #code
 
-// Calling a method:
-Class.Method(arguments);
+# Calling a method:
+Class.Method(arguments)
 ```
 
 <br>
