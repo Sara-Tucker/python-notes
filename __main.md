@@ -94,19 +94,20 @@ classify = (input > 0) ? "positive" : "negative";
 <br>
 
 **enum** - An enum/enumeration is a set of named integer constants.
-```c#
-public enum ShippingMethod
-{
-    Regular = 1,
-    Priority = 2,
-    Express = 3;
-};
+```python
+from enum import Enum
 
-var shMethod = ShippingMethod.Express;
-Console.WriteLine(shMethod); // 3
+class ShippingMethod(Enum):
+    Regular = 1
+    Priority = 2
+    Express = 3
 
-var shMethodID = 3;
-Console.WriteLine((ShippingMethod)shMethodID); // Express
+
+foo = ShippingMethod.Express
+print(foo) #prints 3
+
+foo = 3
+print(ShippingMethod(foo)) #prints Express
 ```
 
 <br>
