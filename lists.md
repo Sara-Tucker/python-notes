@@ -184,15 +184,15 @@ for i in range(start, stop, step):
 
 for i in range(3):
     print(i)
-# 0, 1, 2
+    # 0, 1, 2
 
 for i in range(1,3):
     print(i)
-# 1, 2
+    # 1, 2
 
 for i in range(1,10,2):
     print(i)
-# 1, 3, 5, 7, 9
+    # 1, 3, 5, 7, 9
 ```
 
 <br>
