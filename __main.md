@@ -82,12 +82,12 @@ num = random.randint(1, 5) #between 1-5 (correct)
 <br>
 <br>
 
-**Conditional Operator: '?:'** - Returns one of two values depending on the value of a Boolean expression.  
-```c#
-// The condition evaluates to true or false. If true then #1 is returned, if false then #2 is returned.
-condition ? first_expression : second_expression;
+**Conditional Operator:** - Returns one of two values depending on the value of a Boolean expression.
+```python
+# The condition evaluates to true or false.
+[on_true] if [expression] else [on_false]
 
-classify = (input > 0) ? "positive" : "negative";  
+pos_or_neg = 'positive' if user_input > 0 else 'negative'
 ```
 
 <br>
@@ -104,10 +104,10 @@ class ShippingMethod(Enum):
 
 
 foo = ShippingMethod.Express
-print(foo) #prints 3
+print(foo) #3
 
 foo = 3
-print(ShippingMethod(foo)) #prints Express
+print(ShippingMethod(foo)) #Express
 ```
 
 <br>
@@ -115,10 +115,13 @@ print(ShippingMethod(foo)) #prints Express
 
 **Access modifier** - The accessibility of a member or type.
 ```
+Everything is public by default.
+
 Public - visible/accessible anywhere  
 Private - only visible/accessible in the entire block where it's defined
 
-Private is the default access modifier if none was declared.
+self._color = color    # protected variable
+self.__content = None  # private variable
 ```
 
 <br>
