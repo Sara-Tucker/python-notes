@@ -34,6 +34,10 @@ Set - holds an unordered and unindexed collection of items with no duplicate ite
 # Print all items in a list on seperate lines:
     for i in list:
         print(i)
+
+# Access lists in a list:
+list = [[10, 13, 17], [3, 5, 1], [13, 11, 12]]
+print(list1[0][2]) #17
 ```
 
 <br>
@@ -106,6 +110,14 @@ print(arr)
 # prints [1, 2, 3, 9]
 ```
 
+### del list_name[x]
+Not a method, but removes the item at index (x).
+```python
+list_name = [5, 6, 7]
+del list_name[2]
+# prints [5, 6]
+```
+
 ### .extend(list)
 Merges another undefined list (list) or a defined list to the end.
 ```python
@@ -134,8 +146,8 @@ print(arr)
 # prints [1, 2, 3, 7, 9, 11]
 ```
 
-### .pop(i)
-Removes the element at index (i). If no argument is passed, the last element of the list is removed.
+### .pop(x)
+Removes the element at index (x) and returns it. If no argument is passed, the last element of the list is removed.
 ```python
 temp = arr.pop()
 print(temp)
