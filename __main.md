@@ -150,11 +150,11 @@ Hierarchy of a class:
 ```
 
 Declaring a class:
-```c#
+```python
 class ClassName:
     # Members
 ```
-```c#
+```python
 class Person:
     # Fields
 
@@ -168,7 +168,7 @@ class Person:
 <br>
 
 ### Constructor:
-```c#
+```python
 # Create a constructor of the current class:
 # ctor + Tab
 
@@ -226,27 +226,26 @@ To use a non-static class you need to create an object of the class. A static cl
 You can't access static members from objects. When an object is made anything static is removed from the object so it does not get any of the static things. Static members exist only in the class and are accessed the same way as from a static class.
 
 Example of a static member in a non-static class:
-```c#
-public class Calculator
-{
-    public static int Add(int a, int b)
-    {
-        return a + b;
-    }
-}
+```python
+class Calculator
 
-int answer = Calculator.Add(1, 2);
+    @classmethod
+    def Add(a, b)
+        return a + b
 
-// Since the add method in the calculator class is static
-// that means you don't need to create an object to use that method.
+answer = Calculator.Add(1, 2)
+
+# Since the add method in the calculator class is static,
+# that means you don't need to create an object to use that method.
 ```
 
 <br>
 
 ### Inheritance:
 A relationship between two classes that allows one to inherit code from another. A child class can inherit the existing members from a base class, then the child class can add any members to itself that are specific to the child class.
-```c#
-modifier class ChildClassName : BaseClassName {}
+```python
+class ChildClassName(BaseClassName):
+    #Members
 ```
 
 <br>
