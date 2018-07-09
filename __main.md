@@ -135,7 +135,10 @@ self.__content = None  # private variable
 ### Class:
 A template for creating objects that provides initial fields and methods for an object.
 
-Field - A variable that is declared directly in a class.  
+Field / Attribute - A variable declared directly in a class and accessed with Class.variable  
+Static field / class attribute - accessed directly from the class using the class name  
+Instance field / attribute - accessed from instantiated objects of the class
+
 Member - Things that a class contains: Fields, Properties, Constructors, Methods.  
 Namespace - A container for classes. "using Namespace;"
 
@@ -148,44 +151,34 @@ Hierarchy of a class:
 
 Declaring a class:
 ```c#
-modifier class ClassName
-{
-    // Members
-}
+class ClassName:
+    # Members
 ```
 ```c#
-public class Person
-{
-    // Fields
+class Person:
+    # Fields
 
-    public Person()
-    {
-    }
+    # Constructor
+    def __init__(self):
+        pass
 
-    // Methods
-}
+    # Methods
 ```
 
 <br>
 
 ### Constructor:
-A method that is called when an object (instance of a class) is created. We use constructors to intialize fields in an object. Constructor methods have the same name as the class.
 ```c#
-// Create a constructor of the current class:
-// ctor + Tab
+# Create a constructor of the current class:
+# ctor + Tab
 
 
-public class Person
-{
-    string first;
-    string last;
-    
-    public Person(string firstName, string lastName)
-    {
-        first = firstName;
-        last = lastName;
-    }
-}
+class Person:
+
+    # Constructor
+    def __init__(inst, firstName, lastName):
+        inst.first = firstName
+	inst.last = lastName
 ```
 
 <br>
@@ -195,7 +188,7 @@ A particular instance of a class.
 
 Create an object / Instantiate a class:
 ```c#
-var objectName = new ClassName(arguments);
+object_name = ClassName(arguments)
 ```
 
 <br>
@@ -214,13 +207,13 @@ Person:
 
 
 Objects:
-    var john = new Person();
-    var mary = new Person();
+    john = Person()
+    mary = Person()
 
 
 Setting a field and calling a method:
-    john.Name = "John";
-    mary.Talk($"Hello {john.Name}!");
+    john.Name = 'John'
+    mary.Talk(f'Hello {john.Name}!')
 ```
 
 <br>
