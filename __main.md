@@ -1,5 +1,12 @@
 # Python Notes
 
+```
+__ - private
+__var__ - special methods from Python
+
+The first argument of every class method is always a reference to the current instance of the class. By convention, this argument is called self.
+```
+
 **Methods:**  
 ```c#
 The special thing about methods is that the instance object is passed as the first argument of the function. In our example, the call x.f() is exactly equivalent to MyClass.f(x). In general, calling a method with a list of n arguments is equivalent to calling the corresponding function with an argument list that is created by inserting the method’s instance object before the first argument.
@@ -144,7 +151,7 @@ Field / Attribute - A variable declared directly in a class and accessed with Cl
 Static field / class attribute - accessed directly from the class using the class name  
 Instance field / attribute - accessed from instantiated objects of the class
 
-Member - Things that a class contains: Fields, Properties, Constructors, Methods.  
+Member / Attribute - Things that a class contains: Fields, Properties, Constructors, Methods.  
 Namespace - A container for classes. "using Namespace;"
 
 Hierarchy of a class:
