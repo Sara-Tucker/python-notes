@@ -61,7 +61,8 @@ print(list1[0][2]) #17
 # Sort a list from smallest to largest or alphabetically:
     # sorted(list_name) - Returns a new sorted list, it does not sort the list it is passed
     # list_name.sorted() - This method sorts the list it is called on, it returns None
-    
+
+
 # Remove duplicates from a list:
 def remove_duplicates(source_list):
     new_list = []
@@ -73,6 +74,7 @@ def remove_duplicates(source_list):
     return new_list
 
 new = remove_duplicates(list)
+
 
 # Operations with two lists
 a = [1, 2, 3]
@@ -96,6 +98,15 @@ doubled_a = [i * 2 for i in a]
 # Take a list where elements are a fucked up float decimal and
 # change to 2 decimals while still remaining a float type
 list_name = [float('%.2f' % i) for i in list_name]
+
+
+# Remove items from a list while iterating
+new_list = [x for x in old_list if determine(x)]
+new_list = [x for x in old_list if not determine(x)]
+
+same_list[:] = [x for x in same_list if determine(x)]
+same_list[:] = [x for x in same_list if not determine(x)]
+# same but makes a copy of the list, then overwrites it
 ```
 
 <br>
