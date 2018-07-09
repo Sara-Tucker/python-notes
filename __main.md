@@ -641,6 +641,21 @@ freeTimeStart = now.replace(hour = 19, minute = 45)
 # Delay execution for n seconds. (seconds can be an int or float)
 import time
 time.sleep(seconds)
+
+
+# strptime:
+for row in csv:
+    row['key'] = datetime.strptime(row['key'], '%m/%d/%y')
+
+'''
+%m - 01 or 1
+%d - 01 or 1
+%y - 18
+%Y - 2018
+
+https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
+https://chrisalbon.com/python/basics/strings_to_datetime/
+'''
 ```
 
 <br>
