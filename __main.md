@@ -2,6 +2,9 @@
 
 **Methods:**  
 ```c#
+The special thing about methods is that the instance object is passed as the first argument of the function. In our example, the call x.f() is exactly equivalent to MyClass.f(x). In general, calling a method with a list of n arguments is equivalent to calling the corresponding function with an argument list that is created by inserting the method’s instance object before the first argument.
+
+
 Method Signature = Name of the method, the number of parameters, and the type of parameters
 
 
@@ -133,6 +136,8 @@ self.__content = None  # private variable
 <br>
 
 ### Class:
+Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state.
+
 A template for creating objects that provides initial fields and methods for an object.
 
 Field / Attribute - A variable declared directly in a class and accessed with Class.variable  
