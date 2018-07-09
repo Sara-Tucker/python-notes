@@ -33,8 +33,8 @@ However, some actions like adding files don’t trigger a restart, so you’ll h
 <br>
 
 #### Create an app:
+Django apps are “pluggable”. You can use an app in multiple projects, because they don’t have to be tied to a given Django installation.
 ```
-(cd to the manage.py directory)
 $ manage.py startapp appname
 ```
 That’ll create a directory called appname, which will house the app and is laid out like this:
@@ -62,8 +62,83 @@ def index(request):
 ```
 
 <br>
+
+#### /urls.py
+```
+urlpatterns = [
+    path('route', view, ..optional..name),
+    
+    path('admin/', admin.site.urls),
+]
+```
+
+<br>
+
+#### manage.py migrate:
+The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables.
+```
+$ manage.py migrate
+```
+
+<br>
+
+#### Creating models:
+Models are essentially your database layout, with additional metadata.
+```python
+# when you create a class they inherit from the django.db.models.Model class
+class Question(models.Model):
+    #field_instance = models.XxxField()
+    # fields are actually classes from Django
+    
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+    # a human readable can be given as an optional first position argument
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    # a relationship is defined using ForeignKey
+    # That tells Django each Choice is related to a single Question
+    # Django supports all the common database relationships
+    
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+```
+
+<br>
+
+#### Activate a model:
+To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add that dotted path to the INSTALLED_APPS setting. It’ll look like this:
+```python
+# mysite/settings.py
+
+INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+]
+```
+
+<br>
+
+#### manage.py makemigrations:
+After making a change to a model you need to run this.
+
+The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables.
+
+By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
+
+Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk. You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py. Don’t worry, you’re not expected to read them every time Django makes one, but they’re designed to be human-editable in case you want to manually tweak how Django changes things.
+```
+$ manage.py makemigrations
+```
+
+<br>
+
+
 <br>
 <br>
+<br>
+
+database schema (CREATE TABLE statements)
+
 Package - a directory of code  
 https://docs.python.org/3/tutorial/modules.html
 
