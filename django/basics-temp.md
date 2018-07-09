@@ -1,9 +1,11 @@
 # Django
 
-#### Create a Django project(environment):
+#### Create a Django project (environment):
 ```
 $ django-admin startproject mysite
 ```
+
+<br>
 
 #### Project directory:
 ```
@@ -17,23 +19,27 @@ mysite/
         wsgi.py
 ```
 
+<br>
+
 #### Run the development server:
-cd to the directory with manage.py
 ```
+(cd to the manage.py directory)
 $ manage.py runserver
 ```
 The development server automatically reloads Python code for each request as needed.  
 You don’t need to restart the server for code changes to take effect.  
 However, some actions like adding files don’t trigger a restart, so you’ll have to restart the server in these cases.
 
+<br>
+
 #### Create an app:
-To create your app, make sure you’re in the same directory as manage.py and type this command:
 ```
-$ manage.py startapp polls
+(cd to the manage.py directory)
+$ manage.py startapp appname
 ```
-That’ll create a directory called polls, which will house the app and is laid out like this:
+That’ll create a directory called appname, which will house the app and is laid out like this:
 ```
-polls/
+appname/
     __init__.py
     admin.py
     apps.py
@@ -44,7 +50,20 @@ polls/
     views.py
 ```
 
+<br>
 
+#### Create a view:
+```python
+# open appname/views.py
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the appname index.")
+```
+
+<br>
+<br>
+<br>
 Package - a directory of code  
 https://docs.python.org/3/tutorial/modules.html
 
