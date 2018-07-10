@@ -134,7 +134,21 @@ $ manage.py makemigrations
 <br>
 
 #### Request and response objects
+Requests and responses go through middleware. Think of middleware as your house window, where requests go out and responses come in, both of them going through the window.
 
+Middleware in settings.py
+```python
+def home_view(request):
+    return HttpResponse('Hello world')
+    
+def home_view(request):
+    response = HttpResponse()
+    
+    response.write('<p>Web page text.</p>')
+    # use other methods here to customize the response
+    
+    return response
+```
 
 <br>
 <br>
