@@ -83,41 +83,6 @@ $ manage.py migrate
 
 <br>
 
-#### Creating models:
-Models are essentially your database layout, with additional metadata.
-```python
-# when you create a class they inherit from the django.db.models.Model class
-class Question(models.Model):
-    #field_instance = models.XxxField()
-    # fields are actually classes from Django
-    
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-    # a human readable can be given as an optional first position argument
-
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    # a relationship is defined using ForeignKey
-    # That tells Django each Choice is related to a single Question
-    # Django supports all the common database relationships
-    
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-```
-
-<br>
-
-#### Activate a model:
-To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add that dotted path to the INSTALLED_APPS setting. It’ll look like this:
-```python
-# mysite/settings.py
-
-INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-]
-```
-
-<br>
 
 #### manage.py makemigrations:
 After making a change to a model you need to run this.
