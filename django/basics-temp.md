@@ -64,9 +64,10 @@ def index(request):
 <br>
 
 #### /urls.py
+URLs map a url to a view.
 ```
 urlpatterns = [
-    path('route', view, ..optional..name),
+    path('route/', view, optionalname),
     
     path('admin/', admin.site.urls),
 ]
@@ -131,6 +132,8 @@ $ manage.py makemigrations
 ```
 
 <br>
+
+#### Request and response objects
 
 
 <br>
