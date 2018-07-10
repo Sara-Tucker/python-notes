@@ -30,6 +30,8 @@ def my_view(request):
     return HttpResponse(status=201)
 ```
 
+<br>
+
 #### HttpResponseNotFound 404:
 In order to show customized HTML when Django returns a 404, you can create an HTML template named 404.html and place it in the top level of your template tree. This template will then be served when DEBUG is set to False.
 
@@ -37,7 +39,7 @@ When DEBUG is True, you can provide a message to Http404 and it will appear in t
 ```python
 raise Http404('Custom message')
 
-
+# Example:
 from django.http import Http404
 from django.shortcuts import render
 from polls.models import Poll
@@ -49,3 +51,4 @@ def detail(request, poll_id):
         raise Http404("Poll does not exist")
     return render(request, 'polls/detail.html', {'poll': p})
 ```
+
