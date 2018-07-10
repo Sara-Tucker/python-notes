@@ -147,11 +147,11 @@ Classes provide a means of bundling data and functionality together. Creating a 
 
 A template for creating objects that provides initial fields and methods for an object.
 
-Field / Attribute - A variable declared directly in a class and accessed with Class.variable  
-Static field / class attribute - accessed directly from the class using the class name  
-Instance field / attribute - accessed from instantiated objects of the class
+Field - A variable declared directly in a class and accessed with ClassName.field  
+Static (Class) field - accessed directly from the class using the class name  
+Instance field - accessed from instantiated objects of the class
 
-Member / Attribute - Things that a class contains: Fields, Properties, Constructors, Methods.  
+Member (Attribute) - Things that a class contains: Fields, Properties, Constructors, Methods.  
 Namespace - A container for classes. "using Namespace;"
 
 Hierarchy of a class:
