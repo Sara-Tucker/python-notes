@@ -2,6 +2,8 @@
 A model is the single and definitive source of information about your data. It contains the fields and behaviors of the data you’re storing. Generally each model maps to a single database table.  
 Models are essentially your database layout, with additional metadata.
 
+<br>
+
 - Each model is a class that inherits from the django.db.models.Model class
 - Each field of the model represents a database field
 
@@ -56,22 +58,21 @@ INSTALLED_APPS = [
 
 <br>
 
-#### Using models
+#### Activate a model:
 Once you have defined your models, you need to tell Django you’re going to use those models. Do this by editing your settings file and changing the INSTALLED_APPS setting to add the name of the module that contains your models.py.
 
 For example, if the models for your application live in the module myapp.models (the package structure that is created for an application by the manage.py startapp script), INSTALLED_APPS should read, in part:
-```
+```python
 INSTALLED_APPS = [
-    #...
     'myapp',
-    #...
 ]
 ```
 When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optionally making migrations for them first with manage.py makemigrations.
 
 <br>
 
-#### A View:
+#### Fields:
+The most important part of a model – and the only required part of a model – is the list of database fields it defines. Fields are specified by class attributes. Be careful not to choose field names that conflict with the models API like clean, save, or delete.
 ```python
 from django.http import HttpResponse
 
@@ -83,40 +84,3 @@ def view_name(request):
     # a view returns a HttpResponse object that contains the generated response
     return HttpResponse(html)
 ```
-
-<br>
-
-#### Returning errors:
-You can pass the HTTP error code into the constructor for HttpResponse to create a return class for any error code.
-```python
-from django.http import HttpResponse
-
-def my_view(request):
-    # ...
-
-    # Return a "created" (201) response code.
-    return HttpResponse(status=201)
-```
-
-<br>
-
-#### HttpResponseNotFound 404:
-In order to show customized HTML when Django returns a 404, you can create an HTML template named 404.html and place it in the top level of your template tree. This template will then be served when DEBUG is set to False.
-
-When DEBUG is True, you can provide a message to Http404 and it will appear in the standard 404 debug template. Use these messages for debugging purposes; they generally aren’t suitable for use in a production 404 template.
-```python
-raise Http404('Custom message')
-
-# Example:
-from django.http import Http404
-from django.shortcuts import render
-from polls.models import Poll
-
-def detail(request, poll_id):
-    try:
-        p = Poll.objects.get(pk=poll_id)
-    except Poll.DoesNotExist:
-        raise Http404("Poll does not exist")
-    return render(request, 'polls/detail.html', {'poll': p})
-```
-
