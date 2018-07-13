@@ -82,7 +82,7 @@ class Choice(models.Model):
 db Field class types:  
 Each attribute(field) in your model should be an instance of the appropriate db Field class. Django uses the various db Field classes to determine:
 - The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT)
-- The default HTML widget to use when rendering a form field (e.g. <input type="text">, <select>)
+- The default HTML widget to use when rendering a form field (e.g. ```<input type="text">, <select>```)
 - The minimal validation requirements, used in Django’s admin and in automatically-generated forms
 
 <br>
@@ -90,12 +90,14 @@ Each attribute(field) in your model should be an instance of the appropriate db 
 db Field arguments:
 Each db Field takes a set of db Field-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR database field used to store the data.
 
-There’s also a set of common optional arguments available to all db Field types. Here’s a quick summary of the most often-used ones:
+There’s also a set of common optional arguments available to all db Field types. Here’s the most often-used ones:
 - null
     - If True, Django will store empty values as NULL in the database. Default is False.
+    
 - blank
     - If True, the field is allowed to be blank. Default is False.
     - Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a db Field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
+    
 - choices
     - An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
     - The first element in each tuple is the value to be 'set on the model'? and stored in the database. The second element is displayed by the db Field’s form widget.
