@@ -110,23 +110,23 @@ YEAR_IN_SCHOOL_CHOICES = (
 ```
     - The display value for a db Field with choices can be accessed using the get_FOO_display() method. For example:
 ```python
-    from django.db import models
+from django.db import models
 
-    class Person(models.Model):
-        SHIRT_SIZES = (
-            ('S', 'Small'),
-            ('M', 'Medium'),
-            ('L', 'Large'),
-        )
-        name = models.CharField(max_length=60)
-        shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
+class Person(models.Model):
+    SHIRT_SIZES = (
+        ('S', 'Small'),
+        ('M', 'Medium'),
+        ('L', 'Large'),
+    )
+    name = models.CharField(max_length=60)
+    shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 
-    >>> p = Person(name="Fred Flintstone", shirt_size="L")
-    >>> p.save()
-    >>> p.shirt_size
-    'L'
-    >>> p.get_shirt_size_display()
-    'Large'
+>>> p = Person(name="Fred Flintstone", shirt_size="L")
+>>> p.save()
+>>> p.shirt_size
+'L'
+>>> p.get_shirt_size_display()
+'Large'
 ```
 
 
