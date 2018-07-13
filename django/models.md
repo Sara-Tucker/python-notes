@@ -6,7 +6,7 @@ Best definition - models are database table templates
 <br>
 
 - Each model is a class that inherits from the django.db.models.Model class
-- Each db Field of the model represents a database field
+- Each DatabaseField of the model represents a DatabaseField
 
 #### Creating models:
 ```python
@@ -16,7 +16,7 @@ class Person(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
 ```
-first_name and last_name are db Fields of the model. Each db Field maps to a database column.
+first_name and last_name are DatabaseFields of the model. Each DatabaseField maps to a database column.
 
 The above Person model would create a database table like this:
 ```python
@@ -53,15 +53,15 @@ When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optio
 <br>
 <br>
 
-#### db Fields (database Fields) (DBF):
-The most important part of a model – and the only required part of a model – is the list of db Fields it defines. db Fields are specified by attributes(fields) that are classes.
+#### DatabaseFields:
+The most important part of a model – and the only required part of a model – is the list of DatabaseFields it defines. DatabaseFields are specified by attributes(fields) that are classes.
 
-db Field is an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses db Fields to create the database table to map Python types to the database.
+DatabaseFields are an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses DatabaseFields to create the database table to map Python types to the database.
 
-In models, a db Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
+In models, a DatabaseField is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 ```python
 class Question(models.Model):
-    #db_field_inst = models.---Field()
+    #dbfield_inst = models.---Field()
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     # a human readable can be given as an optional first position argument
@@ -77,29 +77,29 @@ class Choice(models.Model):
 
 <br>
 
-db Field class types:  
-Each attribute(field) in your model should be an instance of the appropriate db Field class. Django uses the various db Field classes to determine:
+DatabaseField class types:  
+Each attribute(field) in your model should be an instance of the appropriate DatabaseField class. Django uses the various DatabaseField classes to determine:
 - The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT)
 - The default HTML widget to use when rendering a form field (e.g. ```<input type="text">, <select>```)
 - The minimal validation requirements, used in Django’s admin and in automatically-generated forms
 
 <br>
 
-### db Field arguments:
-Each db Field takes a set of db Field-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR database field used to store the data.
+### DatabaseField arguments:
+Each DatabaseField takes a set of DatabaseField-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR DatabaseField used to store the data.
 
-There’s also a set of common optional arguments available to all db Field types. Here’s the most often-used ones:
+There’s also a set of common optional arguments available to all DatabaseField types. Here’s the most often-used ones:
 #### null
 - If True, Django will store empty values as NULL in the database. Default is False.
     
 #### blank
 - If True, the field is allowed to be blank. Default is False.
-- Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a db Field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
-- Simplified: You can have only blank true, you can have blank and null true, but you can't have only null true because there's no way to give the db Field an empty value if blank isn't true.
+- Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a DatabaseField has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
+- Simplified: You can have only blank true, you can have blank and null true, but you can't have only null true because there's no way to give the DatabaseField an empty value if blank isn't true.
     
 #### choices
-- An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this db Field. The default form widget will be a select box with these choices instead of the standard text field.
-- The first element in each tuple is the value to be assigned to the model's db Field and stored in the database. The second element is displayed by the db Field’s form widget.
+- An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this DatabaseField. The default form widget will be a select box with these choices instead of the standard text field.
+- The first element in each tuple is the value to be assigned to the model's DatabaseField and stored in the database. The second element is displayed by the DatabaseField’s form widget.
 - A choices list looks like this:
 ```python
 YEAR_IN_SCHOOL_CHOICES = (
@@ -109,7 +109,7 @@ YEAR_IN_SCHOOL_CHOICES = (
     ('SR', 'Senior'),
 )
 ```
-- The display value for a db Field with choices can be accessed using the model_inst.get_dbFieldVarName_display() method. For example:
+- The display value for a DatabaseField with choices can be accessed using the model_inst.get_dbFieldVarName_display() method. For example:
 ```python
 from django.db import models
 
@@ -129,7 +129,7 @@ class Person(models.Model):
 >>> p.get_shirt_size_display()
 'Large'
 ```
-- Generally, it’s best to define the choice's tuple inside a model class, and to define the db values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
+- Generally, it’s best to define the choice's tuple inside a model class, and to define the choice's database values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
 ```python
 from django.db import models
 
@@ -155,10 +155,10 @@ class Student(models.Model):
 ```
 
 #### default
-- The default value for the db Field. This can be a value or a callable object. If callable it will be called every time a new object is created.
+- The default value for the DatabaseField. This can be a value or a callable object. If callable it will be called every time a new object is created.
 
 #### help_text
-- Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your db Field isn’t used on a form.
+- Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your DatabaseField isn’t used on a form.
 
 #### primary_key
 - If True, this field is the primary key for the model.
@@ -178,7 +178,7 @@ class Fruit(models.Model):
 ```
 
 #### unique
-- If True, this db Field must be unique throughout the table.
+- If True, this DatabaseField must be unique throughout the table.
 
 
 
