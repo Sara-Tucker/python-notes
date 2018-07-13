@@ -98,6 +98,7 @@ There’s also a set of common optional arguments available to all db Field type
 #### blank
 - If True, the field is allowed to be blank. Default is False.
 - Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a db Field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
+- Simplified: You can have only blank true, you can have blank and null true, but you can't have only null true because there's no way to give the db Field an empty value if blank isn't true.
     
 #### choices
 - An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
