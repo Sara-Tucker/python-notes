@@ -108,6 +108,7 @@ YEAR_IN_SCHOOL_CHOICES = (
     ('SR', 'Senior'),
 )
 ```
+- &nbsp;
     - The display value for a db Field with choices can be accessed using the get_FOO_display() method. For example:
 ```python
 from django.db import models
