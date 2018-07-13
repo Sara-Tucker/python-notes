@@ -99,18 +99,17 @@ There’s also a set of common optional arguments available to all db Field type
 - choices
     - An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
     - The first element in each tuple is the value to be 'set on the model'? and stored in the database. The second element is displayed by the db Field’s form widget.
+    - A choices list looks like this:
 ```python
-# A choices list looks like this:
-    YEAR_IN_SCHOOL_CHOICES = (
-        ('FR', 'Freshman'),
-        ('SO', 'Sophomore'),
-        ('JR', 'Junior'),
-        ('SR', 'Senior'),
-    )
+YEAR_IN_SCHOOL_CHOICES = (
+    ('FR', 'Freshman'),
+    ('SO', 'Sophomore'),
+    ('JR', 'Junior'),
+    ('SR', 'Senior'),
+)
 ```
-       
-Given a model instance, the display value for a field with choices can be accessed using the get_FOO_display() method. For example:
-
+    - The display value for a db Field with choices can be accessed using the get_FOO_display() method. For example:
+```python
     from django.db import models
 
     class Person(models.Model):
@@ -128,7 +127,7 @@ Given a model instance, the display value for a field with choices can be access
     'L'
     >>> p.get_shirt_size_display()
     'Large'
-
+```
 
 
 
