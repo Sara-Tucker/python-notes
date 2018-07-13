@@ -111,7 +111,7 @@ YEAR_IN_SCHOOL_CHOICES = (
 )
 ```
 - &nbsp;
-    - The display value for a db Field with choices can be accessed using the get_FOO_display() method. For example:
+    - The display value for a db Field with choices can be accessed using the model_inst.get_dbFieldVarName_display() method. For example:
 ```python
 from django.db import models
 
@@ -131,8 +131,31 @@ class Person(models.Model):
 >>> p.get_shirt_size_display()
 'Large'
 ```
+- &nbsp;
+    - Generally, it’s best to define the choices tuple inside a model class, and to define the db values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
+```python
+from django.db import models
 
+class Student(models.Model):
+    FRESHMAN = 'FR'
+    SOPHOMORE = 'SO'
+    JUNIOR = 'JR'
+    SENIOR = 'SR'
+    YEAR_IN_SCHOOL_CHOICES = (
+        (FRESHMAN, 'Freshman'),
+        (SOPHOMORE, 'Sophomore'),
+        (JUNIOR, 'Junior'),
+        (SENIOR, 'Senior'),
+    )
+    year_in_school = models.CharField(
+        max_length=2,
+        choices=YEAR_IN_SCHOOL_CHOICES,
+        default=FRESHMAN,
+    )
 
+    def is_upperclass(self):
+        return self.year_in_school in (self.JUNIOR, self.SENIOR)
+```
 
 - default
     - The default value for the field. This can be a value or a callable object. If callable it will be called every time a new object is created.
