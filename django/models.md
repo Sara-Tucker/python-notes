@@ -50,11 +50,10 @@ When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optio
 
 <br>
 
-#### Fields (aka database Fields):
+#### db Fields (database Fields):
 
 
-
-The most important part of a model – and the only required part of a model – is the list of database Fields it defines. Fields are specified by attributes(fields) that are classes.
+The most important part of a model – and the only required part of a model – is the list of db Fields it defines. db Fields are specified by attributes(fields) that are classes.
 ```python
 class Question(models.Model):
     #field_instance = models.XxxField()
@@ -74,19 +73,16 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
-Field is an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses Fields to create the database table to map Python types to the database.
+db Field is an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses db Fields to create the database table to map Python types to the database.
 
 
 
-In models, a Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
+In models, a db Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 
 
-Field types¶
+db Field types:
+Each attribute(field) in your model should be an instance of the appropriate db Field class. Django uses the db Field class types to determine a few things:
+- The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT)
+- The default HTML widget to use when rendering a form field (e.g. <input type="text">, <select>)
+- The minimal validation requirements, used in Django’s admin and in automatically-generated forms
 
-Each field in your model should be an instance of the appropriate Field class. Django uses the field class types to determine a few things:
-
-    The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT).
-    The default HTML widget to use when rendering a form field (e.g. <input type="text">, <select>).
-    The minimal validation requirements, used in Django’s admin and in automatically-generated forms.
-
-Django ships with dozens of built-in field types; you can find the complete list in the model field reference. You can easily write your own fields if Django’s built-in ones don’t do the trick; see Writing custom model fields.
