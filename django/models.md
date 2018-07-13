@@ -87,7 +87,7 @@ Each attribute(field) in your model should be an instance of the appropriate db 
 
 <br>
 
-db Field arguments:
+### db Field arguments:
 Each db Field takes a set of db Field-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR database field used to store the data.
 
 There’s also a set of common optional arguments available to all db Field types. Here’s the most often-used ones:
@@ -158,7 +158,7 @@ class Student(models.Model):
 #### default
 - The default value for the field. This can be a value or a callable object. If callable it will be called every time a new object is created.
 
-### help_text
+#### help_text
 - Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your field isn’t used on a form.
 
 #### primary_key
