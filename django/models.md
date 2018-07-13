@@ -61,9 +61,7 @@ db Field is an abstract class (classes and class members that are incomplete and
 In models, a db Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 ```python
 class Question(models.Model):
-    #field_instance = models.XxxField()
-    # fields are actually classes from Django
-    
+    #db_field_inst = models.---Field()
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     # a human readable can be given as an optional first position argument
@@ -72,8 +70,7 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     # a relationship is defined using ForeignKey
     # That tells Django each Choice is related to a single Question
-    # Django supports all the common database relationships
-    
+    # Django supports many different database relationship types
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 ```
