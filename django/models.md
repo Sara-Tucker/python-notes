@@ -1,3 +1,6 @@
+The model layer:  
+Django provides an abstraction layer (the “models”) for structuring and manipulating the data of your Web application. The model layer is made up of different parts.
+
 # Models
 A model is the single and definitive source of information about your data. It contains the fields and behaviors of the data you’re storing. Generally each model maps to a single database table.  
 Models are essentially your database layout, with additional metadata.  
