@@ -27,6 +27,7 @@ CREATE TABLE myapp_person (
 ```
 
 <br>
+<br>
 
 #### Activate a model:
 Once you have defined your models, you need to tell Django you’re going to use those models. Do this by editing your settings file and changing the INSTALLED_APPS setting to add the name of the module that contains your models.py.
@@ -49,11 +50,14 @@ INSTALLED_APPS = [
 When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optionally making migrations for them first with manage.py makemigrations.
 
 <br>
+<br>
 
-#### db Fields (database Fields):
-
-
+#### db Fields (database Fields) (DBF):
 The most important part of a model – and the only required part of a model – is the list of db Fields it defines. db Fields are specified by attributes(fields) that are classes.
+
+db Field is an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses db Fields to create the database table to map Python types to the database.
+
+In models, a db Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 ```python
 class Question(models.Model):
     #field_instance = models.XxxField()
@@ -73,15 +77,10 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
-db Field is an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses db Fields to create the database table to map Python types to the database.
+<br>
 
-
-
-In models, a db Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
-
-
-db Field types:
-Each attribute(field) in your model should be an instance of the appropriate db Field class. Django uses the db Field class types to determine a few things:
+db Field types:  
+Each attribute(field) in your model should be an instance of the appropriate db Field class. Django uses the db Field class types to determine:
 - The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT)
 - The default HTML widget to use when rendering a form field (e.g. <input type="text">, <select>)
 - The minimal validation requirements, used in Django’s admin and in automatically-generated forms
