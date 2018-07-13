@@ -25,6 +25,8 @@ CREATE TABLE myapp_person (
     "last_name" varchar(30) NOT NULL
 );
 ```
+
+Here's another example of models for an app:
 ```python
 class Question(models.Model):
     #field_instance = models.XxxField()
@@ -47,18 +49,6 @@ class Choice(models.Model):
 <br>
 
 #### Activate a model:
-To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add that dotted path to the INSTALLED_APPS setting. It’ll look like this:
-```python
-# mysite/settings.py
-
-INSTALLED_APPS = [
-    'polls.apps.PollsConfig',
-]
-```
-
-<br>
-
-#### Activate a model:
 Once you have defined your models, you need to tell Django you’re going to use those models. Do this by editing your settings file and changing the INSTALLED_APPS setting to add the name of the module that contains your models.py.
 
 For example, if the models for your application live in the module myapp.models (the package structure that is created for an application by the manage.py startapp script), INSTALLED_APPS should read, in part:
@@ -67,6 +57,19 @@ INSTALLED_APPS = [
     'myapp',
 ]
 ```
+
+<br>
+
+Description #2:  
+To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add the dotted path to the INSTALLED_APPS setting. It’ll look like this:
+```python
+# in mysite/settings.py file
+
+INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
+]
+```
+
 When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optionally making migrations for them first with manage.py makemigrations.
 
 <br>
