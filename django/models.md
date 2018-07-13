@@ -129,7 +129,7 @@ class Person(models.Model):
 >>> p.get_shirt_size_display()
 'Large'
 ```
-- Generally, it’s best to define the choices tuple inside a model class, and to define the db values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
+- Generally, it’s best to define the choice's tuple inside a model class, and to define the db values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
 ```python
 from django.db import models
 
@@ -155,10 +155,10 @@ class Student(models.Model):
 ```
 
 #### default
-- The default value for the field. This can be a value or a callable object. If callable it will be called every time a new object is created.
+- The default value for the db Field. This can be a value or a callable object. If callable it will be called every time a new object is created.
 
 #### help_text
-- Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your field isn’t used on a form.
+- Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your db Field isn’t used on a form.
 
 #### primary_key
 - If True, this field is the primary key for the model.
@@ -178,7 +178,7 @@ class Fruit(models.Model):
 ```
 
 #### unique
-- If True, this field must be unique throughout the table.
+- If True, this db Field must be unique throughout the table.
 
 
 
