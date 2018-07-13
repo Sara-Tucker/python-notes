@@ -97,28 +97,19 @@ There’s also a set of common optional arguments available to all db Field type
     - If True, the field is allowed to be blank. Default is False.
     - Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a db Field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
 - choices
-    - An iterable (collection) of 2-tuples to use as choices for this field. If this is given, the default form widget will be a select box instead of the standard text field and will limit choices to the choices given.
-
-    A choices list looks like this:
-
+    - An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
+    - The first element in each tuple is the value to be 'set on the model'? and stored in the database. The second element is displayed by the db Field’s form widget.
+```python
+# A choices list looks like this:
     YEAR_IN_SCHOOL_CHOICES = (
         ('FR', 'Freshman'),
         ('SO', 'Sophomore'),
         ('JR', 'Junior'),
         ('SR', 'Senior'),
     )
-
-    The first element in each tuple is the value that will be stored in the database. The second element is displayed by the field’s form widget.
-    
-    
-    
-An iterable (collection) of iterables of exactly two items (e.g. [(A, B), (A, B) ...]) to use as choices for this field. If this is given, the default form widget will be a select box with these choices instead of the standard text field.
-
-The first element in each tuple is the actual value to be set on the model, and the second element is the human-readable name. For example:
-    
-    
-
-    Given a model instance, the display value for a field with choices can be accessed using the get_FOO_display() method. For example:
+```
+       
+Given a model instance, the display value for a field with choices can be accessed using the get_FOO_display() method. For example:
 
     from django.db import models
 
