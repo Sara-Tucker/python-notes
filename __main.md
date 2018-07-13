@@ -145,8 +145,8 @@ self.__content = None  # private variable
 ### Class:
 An object's function = Method
 
-Field / Attribute - a variable declared directly in a class and accessed with ClassName.field  
-Static field / Class attribute - accessed directly from the class using the class name  
+Field / Attribute - a variable declared in a class  
+Static field / Class attribute - a variable declared directly in a class and accessed with ClassName.field  
 Instance field / Instance attribute - accessed from instantiated objects of the class
 
 Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state.
