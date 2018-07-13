@@ -57,9 +57,6 @@ INSTALLED_APPS = [
     'myapp',
 ]
 ```
-
-<br>
-
 Description #2:  
 To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add the dotted path to the INSTALLED_APPS setting. It’ll look like this:
 ```python
@@ -69,7 +66,6 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
 ]
 ```
-
 When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optionally making migrations for them first with manage.py makemigrations.
 
 <br>
