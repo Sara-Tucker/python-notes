@@ -98,8 +98,8 @@ There’s also a set of common optional arguments available to all db Field type
 - Simplified: You can have only blank true, you can have blank and null true, but you can't have only null true because there's no way to give the db Field an empty value if blank isn't true.
     
 #### choices
-- An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
-- The first element in each tuple is the value to be 'set on the model'? and stored in the database. The second element is displayed by the db Field’s form widget.
+- An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this db Field. The default form widget will be a select box with these choices instead of the standard text field.
+- The first element in each tuple is the value to be assigned to the model's db Field and stored in the database. The second element is displayed by the db Field’s form widget.
 - A choices list looks like this:
 ```python
 YEAR_IN_SCHOOL_CHOICES = (
