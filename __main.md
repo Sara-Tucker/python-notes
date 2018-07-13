@@ -143,15 +143,17 @@ self.__content = None  # private variable
 <br>
 
 ### Class:
+An object's function = Method
+
+Field / Attribute - a variable declared directly in a class and accessed with ClassName.field  
+Static field / Class attribute - accessed directly from the class using the class name  
+Instance field / Instance attribute - accessed from instantiated objects of the class
+
 Classes provide a means of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. Each class instance can have attributes attached to it for maintaining its state. Class instances can also have methods (defined by its class) for modifying its state.
 
 A template for creating objects that provides initial fields and methods for an object.
 
-Field - A variable declared directly in a class and accessed with ClassName.field  
-Static (Class) field - accessed directly from the class using the class name  
-Instance field - accessed from instantiated objects of the class
-
-Member (Attribute) - Things that a class contains: Fields, Properties, Constructors, Methods.  
+Member (Attribute??) - Things that a class contains: Fields, Properties, Constructors, Methods.  
 Namespace - A container for classes. "using Namespace;"
 
 Hierarchy of a class:
