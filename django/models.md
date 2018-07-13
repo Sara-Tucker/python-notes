@@ -50,9 +50,11 @@ When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optio
 
 <br>
 
-#### Fields:
-The most important part of a model – and the only required part of a model – is the list of database fields it defines. Fields are specified by class attributes.
+#### Fields (aka database Fields):
 
+
+
+The most important part of a model – and the only required part of a model – is the list of database Fields it defines. Fields are specified by attributes(fields) that are classes.
 ```python
 class Question(models.Model):
     #field_instance = models.XxxField()
@@ -72,16 +74,11 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 ```
 
-Field is an abstract class that represents a database table column. Django uses fields to create the database table to map Python types to thr database.
-
-Abstract and Override modifiers:
-
-The abstract modifier enables you to create classes and class members that are incomplete and must be implemented in a derived class. Use the abstract modifier in a class declaration to indicate that a class is intended only to be a base class of other classes. An abstract class cannot be instantiated. Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.
+Field is an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses Fields to create the database table to map Python types to the database.
 
 
-A field is thus a fundamental piece in different Django APIs, notably, models and querysets.
 
-In models, a field is instantiated as a class attribute and represents a particular table column, see Models. It has attributes such as null and unique, and methods that Django uses to map the field value to database-specific values.
+In models, a Field is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 
 
 Field types¶
