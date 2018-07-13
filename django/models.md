@@ -91,17 +91,17 @@ db Field arguments:
 Each db Field takes a set of db Field-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR database field used to store the data.
 
 There’s also a set of common optional arguments available to all db Field types. Here’s the most often-used ones:
-- null
-    - If True, Django will store empty values as NULL in the database. Default is False.
+#### null
+- If True, Django will store empty values as NULL in the database. Default is False.
     
-- blank
-    - If True, the field is allowed to be blank. Default is False.
-    - Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a db Field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
+#### blank
+- If True, the field is allowed to be blank. Default is False.
+- Note that this is different than null. null is purely database-related, whereas blank is validation-related. If a db Field has blank=True, form validation will allow entry of an empty value. If a field has blank=False, the field will be required.
     
-- choices
-    - An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
-    - The first element in each tuple is the value to be 'set on the model'? and stored in the database. The second element is displayed by the db Field’s form widget.
-    - A choices list looks like this:
+#### choices
+- An iterable (collection) of tuples of two items ([(A, B), (A, B) ...]) to use as choices for this field. The default form widget will be a select box with these choices instead of the standard text field.
+- The first element in each tuple is the value to be 'set on the model'? and stored in the database. The second element is displayed by the db Field’s form widget.
+- A choices list looks like this:
 ```python
 YEAR_IN_SCHOOL_CHOICES = (
     ('FR', 'Freshman'),
@@ -110,8 +110,7 @@ YEAR_IN_SCHOOL_CHOICES = (
     ('SR', 'Senior'),
 )
 ```
-- &nbsp;
-    - The display value for a db Field with choices can be accessed using the model_inst.get_dbFieldVarName_display() method. For example:
+- The display value for a db Field with choices can be accessed using the model_inst.get_dbFieldVarName_display() method. For example:
 ```python
 from django.db import models
 
@@ -131,8 +130,7 @@ class Person(models.Model):
 >>> p.get_shirt_size_display()
 'Large'
 ```
-- &nbsp;
-    - Generally, it’s best to define the choices tuple inside a model class, and to define the db values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
+- Generally, it’s best to define the choices tuple inside a model class, and to define the db values as static constant fields. Though you can define a choices list outside of a model class and then refer to it, defining the choices and names for each choice inside the model class keeps all of that information with the class that uses it, and makes the choices easy to reference (e.g, Student.SOPHOMORE will work anywhere that the Student model has been imported).
 ```python
 from django.db import models
 
@@ -157,33 +155,32 @@ class Student(models.Model):
         return self.year_in_school in (self.JUNIOR, self.SENIOR)
 ```
 
-- default
-    - The default value for the field. This can be a value or a callable object. If callable it will be called every time a new object is created.
-help_text
-    Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your field isn’t used on a form.
-primary_key
+#### default
+- The default value for the field. This can be a value or a callable object. If callable it will be called every time a new object is created.
 
-    If True, this field is the primary key for the model.
+### help_text
+- Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your field isn’t used on a form.
 
-    If you don’t specify primary_key=True for any fields in your model, Django will automatically add an IntegerField to hold the primary key, so you don’t need to set primary_key=True on any of your fields unless you want to override the default primary-key behavior. For more, see Automatic primary key fields.
+#### primary_key
+- If True, this field is the primary key for the model.
+- If you don’t specify primary_key=True for any fields in your model, Django will automatically add an IntegerField to hold the primary key, so you don’t need to set primary_key=True on any of your fields unless you want to override the default primary-key behavior. For more, see Automatic primary key fields.
+- The primary key field is read-only. If you change the value of the primary key on an existing object and then save it, a new object will be created alongside the old one. For example:
+```python
+from django.db import models
 
-    The primary key field is read-only. If you change the value of the primary key on an existing object and then save it, a new object will be created alongside the old one. For example:
+class Fruit(models.Model):
+    name = models.CharField(max_length=100, primary_key=True)
 
-    from django.db import models
+>>> fruit = Fruit.objects.create(name='Apple')
+>>> fruit.name = 'Pear'
+>>> fruit.save()
+>>> Fruit.objects.values_list('name', flat=True)
+<QuerySet ['Apple', 'Pear']>
+```
 
-    class Fruit(models.Model):
-        name = models.CharField(max_length=100, primary_key=True)
+#### unique
+- If True, this field must be unique throughout the table.
 
-    >>> fruit = Fruit.objects.create(name='Apple')
-    >>> fruit.name = 'Pear'
-    >>> fruit.save()
-    >>> Fruit.objects.values_list('name', flat=True)
-    <QuerySet ['Apple', 'Pear']>
-
-unique
-    If True, this field must be unique throughout the table.
-
-Again, these are just short descriptions of the most common field options. Full details can be found in the common model field option reference.
 
 
 An iterable (e.g., a list or tuple) (collection)
