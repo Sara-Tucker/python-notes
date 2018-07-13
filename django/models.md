@@ -1,11 +1,12 @@
 # Models
 A model is the single and definitive source of information about your data. It contains the fields and behaviors of the data you’re storing. Generally each model maps to a single database table.  
-Models are essentially your database layout, with additional metadata.
+Models are essentially your database layout, with additional metadata.  
+Best definition - models are database table templates
 
 <br>
 
 - Each model is a class that inherits from the django.db.models.Model class
-- Each field of the model represents a database field
+- Each db Field of the model represents a database field
 
 #### Creating models:
 ```python
@@ -15,7 +16,7 @@ class Person(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
 ```
-first_name and last_name are fields of the model. Each field maps to a database column.
+first_name and last_name are db Fields of the model. Each db Field maps to a database column.
 
 The above Person model would create a database table like this:
 ```python
