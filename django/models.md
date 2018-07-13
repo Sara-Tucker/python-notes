@@ -26,26 +26,6 @@ CREATE TABLE myapp_person (
 );
 ```
 
-Here's another example of models for an app:
-```python
-class Question(models.Model):
-    #field_instance = models.XxxField()
-    # fields are actually classes from Django
-    
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-    # a human readable can be given as an optional first position argument
-
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    # a relationship is defined using ForeignKey
-    # That tells Django each Choice is related to a single Question
-    # Django supports all the common database relationships
-    
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-```
-
 <br>
 
 #### Activate a model:
@@ -71,15 +51,45 @@ When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optio
 <br>
 
 #### Fields:
-The most important part of a model – and the only required part of a model – is the list of database fields it defines. Fields are specified by class attributes. Be careful not to choose field names that conflict with the models API like clean, save, or delete.
-```python
-from django.http import HttpResponse
+The most important part of a model – and the only required part of a model – is the list of database fields it defines. Fields are specified by class attributes.
 
-# the view function (aka view)
-def view_name(request):
-    # view functions take a HttpRequest object as a first parameter (typically named request)
-    html = "<html>The page HTML goes here.</html>"
+```python
+class Question(models.Model):
+    #field_instance = models.XxxField()
+    # fields are actually classes from Django
     
-    # a view returns a HttpResponse object that contains the generated response
-    return HttpResponse(html)
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+    # a human readable can be given as an optional first position argument
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    # a relationship is defined using ForeignKey
+    # That tells Django each Choice is related to a single Question
+    # Django supports all the common database relationships
+    
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
 ```
+
+Field is an abstract class that represents a database table column. Django uses fields to create the database table to map Python types to thr database.
+
+Abstract and Override modifiers:
+
+The abstract modifier enables you to create classes and class members that are incomplete and must be implemented in a derived class. Use the abstract modifier in a class declaration to indicate that a class is intended only to be a base class of other classes. An abstract class cannot be instantiated. Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.
+
+
+A field is thus a fundamental piece in different Django APIs, notably, models and querysets.
+
+In models, a field is instantiated as a class attribute and represents a particular table column, see Models. It has attributes such as null and unique, and methods that Django uses to map the field value to database-specific values.
+
+
+Field types¶
+
+Each field in your model should be an instance of the appropriate Field class. Django uses the field class types to determine a few things:
+
+    The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT).
+    The default HTML widget to use when rendering a form field (e.g. <input type="text">, <select>).
+    The minimal validation requirements, used in Django’s admin and in automatically-generated forms.
+
+Django ships with dozens of built-in field types; you can find the complete list in the model field reference. You can easily write your own fields if Django’s built-in ones don’t do the trick; see Writing custom model fields.
