@@ -100,8 +100,6 @@ $ manage.py makemigrations
 
 #### Request and response objects
 Requests and responses go through middleware. Think of middleware as your house window, where requests go out and responses come in, both of them going through the window.
-
-Middleware in settings.py
 ```python
 def home_view(request):
     return HttpResponse('Hello world')
@@ -118,6 +116,8 @@ def home_view(request):
 <br>
 <br>
 <br>
+
+Middleware is in settings.py
 
 database schema (CREATE TABLE statements)
 
