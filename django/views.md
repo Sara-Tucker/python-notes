@@ -28,16 +28,16 @@ urlpatterns = [
     path('articles/<int:year>/<int:month>/<slug:slug>/', views.article_detail),
 ]
 ```
-```
 Here are some example requests, a request to:
-/articles/2005/03/  -  would match path pattern #3 and call the function views.month_archive(request, year=2005, month=3)
-/articles/2003/  -  would match path pattern #1 in the list, not the second, because the patterns are tested in order,
-                    and the first one is the first test to pass. Feel free to exploit the ordering to insert special cases
-                    like this. Django would call the function views.special_case_2003(request)
-/articles/2003  -  would not match any of these patterns, because each pattern requires that the URL end with a slash
-/articles/2003/03/building-a-django-site/  -  would match the final pattern and Django would call the function
-                                         views.article_detail(request, year=2003, month=3, slug="building-a-django-site").
-```
+- /articles/2005/03/
+    - would match path pattern #3 and call the function views.month_archive(request, year=2005, month=3)
+- /articles/2003/
+    - would match path pattern #1 in the list, not the second, because the patterns are tested in order, and the first one is the first test to pass. Feel free to exploit the ordering to insert special cases like this. Django would call the function views.special_case_2003(request)
+- /articles/2003
+    - would not match any of these patterns, because each pattern requires that the URL end with a slash
+- /articles/2003/03/building-a-django-site/
+    - would match the final pattern and Django would call the function views.article_detail(request, year=2003, month=3, slug="building-a-django-site").
+
 
 To capture a value from the URL, use angle brackets. Captured values can optionally include a converter type. For example, use <int:name> to capture an integer parameter. If a converter isn’t included, any string, excluding a / character, is matched.
 
