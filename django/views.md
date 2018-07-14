@@ -47,11 +47,14 @@ A request to:
     Calls the function: views.article_detail(request, year=2003, month=3, slug="building-a-django-site")
 ```
 
+<br>
 
-
+#### Path converters
 To capture a value from the URL, use angle brackets. Captured values can optionally include a converter type. For example, use \<int:name\> to capture an integer parameter. If a converter isn’t included, any string, excluding a / character, is matched.
 
 There’s no need to add a leading slash, because every URL has that. For example, it’s articles, not /articles.
+
+
 
 <br>
 
