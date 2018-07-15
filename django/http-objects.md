@@ -13,8 +13,7 @@ Django uses request and response objects to pass state through the system.
 $ django-admin startproject mysite
 ```
 
-#### Request and response objects
-Requests and responses go through middleware. Think of middleware as your house window, where requests go out and responses come in, both of them going through the window.
+Requests and responses go through middleware. Think of middleware as your house window, user's where requests come in and responses go out, both of them going through the window.
 ```python
 def home_view(request):
     return HttpResponse('Hello world')
