@@ -6,7 +6,7 @@ Django uses request and response objects to pass state through the system.
 #### Their life cycle:
 1. User requests a URL
 2. Django creates a HttpRequest object that contains metadata about their request
-3. It is routed by Django to find the appropriate view, then and passes the HttpRequest as the first arguement to the view function
+3. It is routed by Django which searches for the appropriate view, and once the correct view is found Django passes the HttpRequest as the first arguement to the view function
 4. The view will return a HttpResponse object (all views must return one)
 
 <br>
