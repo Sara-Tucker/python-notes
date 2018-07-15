@@ -22,8 +22,8 @@ Imagine we are working with a system that is keeping track of meals and their co
 To create resources in a REST environment, we most commonly use the HTTP POST method. POST creates a new resource of the specified resource type.
 
 For example, let’s imagine that we are adding a new food item to the stored list of dishes for this restaurant, and the dish objects are stored in a dishes resource. If we wanted to create the new item, we would use a POST request:
+Request:
 ```python
-# Request:
 POST http://www.myrestaurant.com/dishes/
 
 
@@ -36,9 +36,8 @@ POST http://www.myrestaurant.com/dishes/
 }
 ```
 This creates a new item with a name value of “Avocado Toast” and a price value of 8. Upon successful creation, the server should return a header with a link to the newly-created resource, along with a HTTP response code of 201 (CREATED).
-
+Response:
 ```python
-# Response:
 Status Code - 201 (CREATED)
 
 
@@ -53,24 +52,21 @@ Status Code - 201 (CREATED)
 ```
 From this response, we see that the dish with name “Avocado Toast” and price 8 has been successfully created and added to the dishes resource.
 
+<br>
 
-
-
-
-Read
-
-To read resources in a REST environment, we use the GET method. Reading a resource should never change any information - it should only retrieve it. If you call GET on the same information 10 times in a row, you should get the same response on the first call that you get on the last call.
-
-GET can be used to read an entire list of items:
+#### Read
+To read resources in a REST environment, we use the GET method. GET can be used to read an entire list of items.
 
 Request:
-
+```python
 GET http://www.myrestaurant.com/dishes/
+```
+#Response:
+```py
+Status Code - 200 (OK)
 
-Response: Status Code - 200 (OK)
 
-Body -
-
+# Body
 {
   "dishes": [
     {
@@ -85,57 +81,64 @@ Body -
     },
     ...
     {
-      "id": 1223,
-      "name": “Avocado Toast”,
-      "price": 8
-    },
-    {
       "id": 1224,
       "name": “Muesli and Yogurt”,
       "price": 5
     }
   ]
 }
-
+```
 GET requests can also be used to read a specific item, when its id is specified in the request:
-
 Request:
-
+```python
 GET http://www.myrestaurant.com/dishes/1223
+```
+Response:
+```python
+Status Code - 200 (OK)
 
-Response: Status Code - 200 (OK) Body -
 
+# Body
 {
   "id": 1223,
   "name": “Avocado Toast”,
   "price": 8
 }
-
+```
 After this request, no information has been changed in the database. The item with id 1223 has been retrieved from the dishes resource, and not modified. When there are no errors, GET will return the HTML or JSON of the desired resource, along with a 200 (OK) response code. If there is an error, it most often will return a 404 (NOT FOUND) response code.
-Update
 
+<br>
+
+#### Update
 PUT is the HTTP method used for the CRUD operation, Update.
 
 For example, if the price of Avocado Toast has gone up, we should go into the database and update that information. We can do this with a PUT request.
 
 Request:
-
+```python
 PUT http://www.myrestaurant.com/dishes/1223
 
-Body -
 
+#Body
 {
   "dish": {
     "name": “Avocado Toast”,
     "price": 10
   }
 }
-
+```
 This request should change the item with id 1223 to have the attributes supplied in the request body. This dish with id 1223 should now still have the name “Avocado Toast”, but the price value should now be 10, whereas before it was 8.
 
-Response: Status Code - 200 (OK) Body - not necessary
+Response:
+```python
+Status Code - 200 (OK)
 
+# Body - not necessary
+```
 The response includes a Status Code of 200 (OK) to signify that the operation was successful, but it need not return a response body.
+
+<br>
+
 Delete
 
 The CRUD operation Delete corresponds to the HTTP method DELETE. It is used to remove a resource from the system.
@@ -153,6 +156,10 @@ Response: Status Code - 204 (NO CONTENT) Body - None
 Calling GET on the dishes resource after this DELETE call would return the original list of dishes with the {"id": 1223, "name": “Avocado Toast”, "price": 10} entry removed. All other dish objects in the dishes resource should remain unchanged. If we tried to call a GET on the item with id 1223, which we just deleted, we would receive a 404 (NOT FOUND) response code and the state of the system should remain unchanged.
 
 Calling DELETE on a resource that does not exist should not change the state of the system. The call should return a 404 response code (NOT FOUND) and do nothing.
+
+
+
+
 
 #### Create a Django project (environment):
 ```
