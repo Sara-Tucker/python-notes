@@ -58,6 +58,15 @@ To treat the response as a file attachment, use the content_type argument and se
 response = HttpResponse(my_data, content_type='application/vnd.ms-excel')
 response['Content-Disposition'] = 'attachment; filename="foo.xls"'
 ```
+<br>
+
+#### Child classes
+#### HttpResponseRedirect
+```python
+def redirect_somewhere(request):
+    return HttpResponseRedirect('/some/path') #any website
+```
+
 
 <br>
 <br>
