@@ -139,19 +139,24 @@ The response includes a Status Code of 200 (OK) to signify that the operation wa
 
 <br>
 
-Delete
-
+#### Delete
 The CRUD operation Delete corresponds to the HTTP method DELETE. It is used to remove a resource from the system.
 
 Let’s say that the world avocado shortage has reached a critical point, and we can no longer afford to serve this modern delicacy at all. We should go into the database and delete the item that corresponds to “Avocado Toast”, which we know has an id of 1223.
 
 Request:
-
+```python
 DELETE http://www.myrestaurant.com/dishes/1223
+```
 
 Such a call, if successful, returns a response code of 204 (NO CONTENT), with no response body. The dishes resource should no longer contain the dish object with id 1223.
 
-Response: Status Code - 204 (NO CONTENT) Body - None
+Response:
+```python
+Status Code - 204 (NO CONTENT)
+
+Body - None
+```
 
 Calling GET on the dishes resource after this DELETE call would return the original list of dishes with the {"id": 1223, "name": “Avocado Toast”, "price": 10} entry removed. All other dish objects in the dishes resource should remain unchanged. If we tried to call a GET on the item with id 1223, which we just deleted, we would receive a 404 (NOT FOUND) response code and the state of the system should remain unchanged.
 
