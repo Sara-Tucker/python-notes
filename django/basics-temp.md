@@ -1,5 +1,159 @@
 # Django
 
+#### CRUD - Create, Read, Update, Delete
+CRUD are the four functions that models should always have. 
+
+- Create — take all the fields for a database item and create a new item
+- Read — display a database item and all the items
+- Update — change existing database items
+- Delete — supply one or more fields of the database item to be able to search it, and delete the item
+
+<br>
+
+#### CRUD and REST
+In a REST environment, CRUD often corresponds to the HTTP methods POST, GET, PUT, and DELETE. These are the fundamental elements of a persistent storage system.
+
+Throughout the rest of the article, we will recommend standards and response codes that are typically followed by developers when creating RESTful applications.
+
+Imagine we are working with a system that is keeping track of meals and their corresponding prices for a restaurant. Let’s look at how we would implement CRUD operations.
+
+
+#### Create
+To create resources in a REST environment, we most commonly use the HTTP POST method. POST creates a new resource of the specified resource type.
+
+For example, let’s imagine that we are adding a new food item to the stored list of dishes for this restaurant, and the dish objects are stored in a dishes resource. If we wanted to create the new item, we would use a POST request:
+```python
+# Request:
+POST http://www.myrestaurant.com/dishes/
+
+
+# Body
+{
+  "dish": {
+    "name": “Avocado Toast”,
+    "price": 8
+  }
+}
+```
+This creates a new item with a name value of “Avocado Toast” and a price value of 8. Upon successful creation, the server should return a header with a link to the newly-created resource, along with a HTTP response code of 201 (CREATED).
+
+```python
+# Response:
+Status Code - 201 (CREATED)
+
+
+# Body
+{
+  "dish": {
+    "id": 1223,
+    "name": “Avocado Toast”,
+    "price": 8
+  }
+}
+```
+From this response, we see that the dish with name “Avocado Toast” and price 8 has been successfully created and added to the dishes resource.
+
+
+
+
+
+Read
+
+To read resources in a REST environment, we use the GET method. Reading a resource should never change any information - it should only retrieve it. If you call GET on the same information 10 times in a row, you should get the same response on the first call that you get on the last call.
+
+GET can be used to read an entire list of items:
+
+Request:
+
+GET http://www.myrestaurant.com/dishes/
+
+Response: Status Code - 200 (OK)
+
+Body -
+
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": “Spring Rolls”,
+      "price": 6
+    },
+    {
+      "id": 2,
+      "name": “Mozzarella Sticks”,
+      "price": 7
+    },
+    ...
+    {
+      "id": 1223,
+      "name": “Avocado Toast”,
+      "price": 8
+    },
+    {
+      "id": 1224,
+      "name": “Muesli and Yogurt”,
+      "price": 5
+    }
+  ]
+}
+
+GET requests can also be used to read a specific item, when its id is specified in the request:
+
+Request:
+
+GET http://www.myrestaurant.com/dishes/1223
+
+Response: Status Code - 200 (OK) Body -
+
+{
+  "id": 1223,
+  "name": “Avocado Toast”,
+  "price": 8
+}
+
+After this request, no information has been changed in the database. The item with id 1223 has been retrieved from the dishes resource, and not modified. When there are no errors, GET will return the HTML or JSON of the desired resource, along with a 200 (OK) response code. If there is an error, it most often will return a 404 (NOT FOUND) response code.
+Update
+
+PUT is the HTTP method used for the CRUD operation, Update.
+
+For example, if the price of Avocado Toast has gone up, we should go into the database and update that information. We can do this with a PUT request.
+
+Request:
+
+PUT http://www.myrestaurant.com/dishes/1223
+
+Body -
+
+{
+  "dish": {
+    "name": “Avocado Toast”,
+    "price": 10
+  }
+}
+
+This request should change the item with id 1223 to have the attributes supplied in the request body. This dish with id 1223 should now still have the name “Avocado Toast”, but the price value should now be 10, whereas before it was 8.
+
+Response: Status Code - 200 (OK) Body - not necessary
+
+The response includes a Status Code of 200 (OK) to signify that the operation was successful, but it need not return a response body.
+Delete
+
+The CRUD operation Delete corresponds to the HTTP method DELETE. It is used to remove a resource from the system.
+
+Let’s say that the world avocado shortage has reached a critical point, and we can no longer afford to serve this modern delicacy at all. We should go into the database and delete the item that corresponds to “Avocado Toast”, which we know has an id of 1223.
+
+Request:
+
+DELETE http://www.myrestaurant.com/dishes/1223
+
+Such a call, if successful, returns a response code of 204 (NO CONTENT), with no response body. The dishes resource should no longer contain the dish object with id 1223.
+
+Response: Status Code - 204 (NO CONTENT) Body - None
+
+Calling GET on the dishes resource after this DELETE call would return the original list of dishes with the {"id": 1223, "name": “Avocado Toast”, "price": 10} entry removed. All other dish objects in the dishes resource should remain unchanged. If we tried to call a GET on the item with id 1223, which we just deleted, we would receive a 404 (NOT FOUND) response code and the state of the system should remain unchanged.
+
+Calling DELETE on a resource that does not exist should not change the state of the system. The call should return a 404 response code (NOT FOUND) and do nothing.
+
 #### Create a Django project (environment):
 ```
 $ django-admin startproject mysite
