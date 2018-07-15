@@ -26,3 +26,34 @@ def home_view(request):
     
     return response
 ```
+## HttpRequest
+### Fields (attributes)
+#### HttpRequest.path
+- A string representing the full path to the requested page, not including the scheme or domain.
+- Example: "/music/bands/the_beatles/"
+
+#### HttpRequest.COOKIES
+- A dictionary containing all cookies. Keys and values are strings.
+    
+#### HttpRequest.META
+- A dictionary containing all available HTTP headers. Available headers depend on the client and server.
+
+<br>
+
+### Fields (attributes) set by middleware
+#### HttpRequest.session
+- From the SessionMiddleware: A readable and writable, dictionary-like object that represents the current session.
+
+#### HttpRequest.site
+- From the CurrentSiteMiddleware: An instance of Site or RequestSite as returned by get_current_site() representing the current site.
+
+#### HttpRequest.user
+- From the AuthenticationMiddleware: An instance of AUTH_USER_MODEL representing the currently logged-in user. If the user isn’t currently logged in, user will be set to an instance of AnonymousUser. You can tell them apart with is_authenticated, like so:
+```python
+    if request.user.is_authenticated:
+        # Do something for logged-in users.
+    else:
+        # Do something for anonymous users.
+```
+
+<br>
