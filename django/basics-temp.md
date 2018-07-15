@@ -52,29 +52,6 @@ appname/
 
 <br>
 
-#### Create a view:
-```python
-# open appname/views.py
-from django.http import HttpResponse
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the appname index.")
-```
-
-<br>
-
-#### /urls.py
-URLs map a url to a view.
-```
-urlpatterns = [
-    path('route/', view, optionalname),
-    
-    path('admin/', admin.site.urls),
-]
-```
-
-<br>
-
 #### manage.py migrate:
 The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables.
 ```
@@ -110,6 +87,9 @@ https://docs.python.org/3/tutorial/modules.html
 <br>
 <br>
 <br>
+
+---
+
 <br>
 <br>
 
