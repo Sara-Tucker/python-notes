@@ -39,12 +39,11 @@ Unlike HttpRequest objects which are created automatically by Django, HttpRespon
 #### Passing strings
 ```python
 from django.http import HttpResponse
-response = HttpResponse("Here's the text of the Web page.")
 response = HttpResponse("Text only, please.", content_type="text/plain")
 
 # If you want to add content incrementally, you can use response as a file-like object:
 response = HttpResponse()
-response.write("<p>Here's the text of the Web page.</p>")
+response.write("<p>Here's some text for the Web page.</p>")
 response.write("<p>Here's another paragraph.</p>")
 ```
 
