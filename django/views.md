@@ -6,6 +6,8 @@ Django uses views to encapsulate the logic responsible for processing a user’s
 #### URLconfs / URL dispatcher
 To design URLs for an app, you use a Python module called URLconf (URL configuration).
 
+To design URLs for an app, you use a Python module for URL configuration. It is called a URLconf module and named ```urls.py```.
+
 #### How Django processes a request
 When a user requests a page from your site, this is the algorithm the system follows to determine which Python code to execute:
 - Django determines the URLconf module to use.
