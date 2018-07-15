@@ -3,33 +3,28 @@ To design URLs for an app, you use a Python module called URLconf (URL configura
 
 To design URLs for an app, you use a Python module for URL configuration. It is called a URLconf module and named ```urls.py```.
 
+<br>
+
 ### How Django processes a request
 #### Request
 1. A user requests a URL
 2. Django creates a HttpRequest object that contains metadata about their request
 
-#### Routing / finding the suitable view / URL stuff
+#### URL routing / finding the suitable view
 1. Django loads the Urlconf module set in ROOT_URLCONF in settings.py
     - However, if the incoming HttpRequest object has a urlconf attribute (set by middleware) that module is used instead
-2. Django loads the "urlpatterns" Python list of django.urls.path() and/or django.urls.re_path() instances
-3. 
+2. Django loads the "urlpatterns" list of django.urls.path() and/or django.urls.re_path() instances
+3. Django iterates over each URL pattern, in order, and stops at the first one that matches the requested URL
+    - If no URL pattern matches, or if an exception is raised during any point in this process, Django invokes an appropriate error-handling view
 
-- Django runs through each URL pattern, in order, and stops at the first one that matches the requested URL.
-- Once one of the URL patterns matches, Django imports and calls the given view, which is just a function (or a class-based view). The view gets passed the following arguments:
-    - An instance of HttpRequest
-    - If the matched URL pattern returned no named groups, then the matches from the regular expression are provided as positional arguments.
-    - The keyword arguments are made up of any named parts matched by the path expression, overridden by any arguments specified in the optional kwargs argument to django.urls.path() or django.urls.re_path().
-- If no URL pattern matches, or if an exception is raised during any point in this process, Django invokes an appropriate error-handling view.
+#### The view
+1. Once a URL pattern matches the requested URL, Django imports and calls the given view function which gets passed the following arguments:
+    - the HttpRequest always as the first argument
+    - .....If the matched URL pattern returned no named groups, then the matches from the regular expression are provided as positional arguments
+    - .....The keyword arguments are made up of any named parts matched by the path expression, overridden by any arguments specified in the optional kwargs argument to django.urls.path() or django.urls.re_path()
+2. The view returns a HttpResponse object
 
-
-
-
-3. It is routed by Django which searches for the appropriate view, and once the correct view is found Django passes the HttpRequest as the first arguement to the view function
-4. The view will return a HttpResponse object (all views must return one)
-
-
-    
-
+<br>
 <br>
 
 Here’s a sample URLconf module and its urlpatterns list:
