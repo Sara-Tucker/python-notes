@@ -1,8 +1,3 @@
-The view layer:  
-Django uses views to encapsulate the logic responsible for processing a user’s request and for returning the response. The view layer is made up of different parts.
-
-<br>
-
 #### URLconfs / URL dispatcher
 To design URLs for an app, you use a Python module called URLconf (URL configuration).
 
@@ -65,6 +60,8 @@ There’s no need to add a leading slash, because every URL has that. For exampl
 
 # Views
 A view function is a function that is passed a Web request and returns a Web response. This response can be the HTML contents of a Web page, a 404 error, an XML document, an image, or anything really. The view itself contains whatever arbitrary logic is necessary to return that response. The convention is to put views in a views.py file.
+
+Views encapsulate the logic responsible for processing a user’s request and return the response.
 
 <br>
 
