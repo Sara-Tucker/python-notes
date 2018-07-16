@@ -1,17 +1,25 @@
 # Django
 
 #### CRUD - Create, Read, Update, Delete
-CRUD are the four functions that models should always have. 
+CRUD are the four functions that models should always have.  
+are the four basic functions of a database.
 
 - Create — take all the fields for a database item and create a new item
 - Read — display a database item and all the items
 - Update — change existing database items
 - Delete — supply one or more fields of the database item to be able to search it, and delete the item
 
+Operation |	SQL	| RESTful WS (HTTP)
+--- | --- | ---
+Create | INSERT | POST
+Read (Retrieve) |	SELECT | GET
+Update (Modify) |	UPDATE | PUT
+Delete | DELETE | DELETE
+
 <br>
 
 #### CRUD and REST
-In a REST environment, CRUD often corresponds to the HTTP methods POST, GET, PUT, and DELETE. These are the fundamental elements of a persistent storage system.
+In a REST environment, CRUD often corresponds to the HTTP methods POST, GET, PUT, and DELETE. These are the fundamental elements of a persistent storage system (database).
 
 Throughout the rest of the article, we will recommend standards and response codes that are typically followed by developers when creating RESTful applications.
 
