@@ -1,5 +1,10 @@
 **[Basics (temp)](https://github.com/SethTucker/python-notes/blob/master/django/basics-temp.md)**  
 
+<br>
+
+## The model layer
+Models structure and manipulate the data of your Web application.
+
 **[Models](https://github.com/SethTucker/python-notes/blob/master/django/models.md)**  
 
 <br>
