@@ -5,12 +5,14 @@ Models structure and manipulate the data of your Web application.
 
 Models are essentially your database layout, with additional metadata.  
 
-Best definition - models are database table templates
+models are database table templates
+
+best - Models are database tables
 
 <br>
 
 - Each model is a class that inherits from the django.db.models.Model class
-- Each DatabaseField of the model represents a database column.
+- Each DatabaseField of the model represents a database column
 
 #### Creating models:
 ```python
@@ -20,7 +22,7 @@ class Person(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
 ```
-first_name and last_name are DatabaseFields of the model. Each DatabaseField maps to a database column.
+first_name and last_name are DatabaseFields of the model. Each DatabaseField maps to a database table column.
 
 The above Person model would create a database table like this:
 ```python
@@ -35,19 +37,18 @@ CREATE TABLE myapp_person (
 <br>
 
 #### Activate a model:
-Once you have defined your models, you need to tell Django you’re going to use those models. Do this by editing your settings file and changing the INSTALLED_APPS setting to add the name of the module that contains your models.py.
+Once you have defined your models, you need to tell Django you’re going to use those models. Do this by editing your settings file and changing the INSTALLED_APPS list in settings.py to add the name of the module that contains your models.py.
 
-For example, if the models for your application live in the module myapp.models (the package structure that is created for an application by the manage.py startapp script), INSTALLED_APPS should read, in part:
+For example, if the models for your application live in the module myapp.models, INSTALLED_APPS should have:
 ```python
 INSTALLED_APPS = [
     'myapp',
 ]
 ```
 Description #2:  
-To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS setting. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add the dotted path to the INSTALLED_APPS setting. It’ll look like this:
+To include the app in our project, we need to add a reference to its configuration class in the INSTALLED_APPS list in settings.py. The PollsConfig class is in the polls/apps.py file, so its dotted path is 'polls.apps.PollsConfig'. Edit the mysite/settings.py file and add the dotted path to the INSTALLED_APPS setting. It’ll look like this:
 ```python
 # in mysite/settings.py file
-
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
 ]
@@ -57,10 +58,10 @@ When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optio
 <br>
 <br>
 
-#### DatabaseFields:
-The most important part of a model – and the only required part of a model – is the list of DatabaseFields it defines. DatabaseFields are specified by attributes(fields) that are classes.
+### DatabaseFields:
+The most important part of a model – and the only required part of a model – are the DatabaseFields it defines. DatabaseFields are specified by attributes(fields) that are classes.
 
-DatabaseFields are an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represents a database table column. Django uses DatabaseFields to create the database table to map Python types to the database.
+DatabaseFields are an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represent a database table column. Django uses DatabaseFields to create the database table to map Python types to the database.
 
 In models, a DatabaseField is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 ```python
@@ -82,14 +83,14 @@ class Choice(models.Model):
 <br>
 
 DatabaseField class types:  
-Each attribute(field) in your model should be an instance of the appropriate DatabaseField class. Django uses the various DatabaseField classes to determine:
+Each attribute(field) in your model should be an instance of an appropriate DatabaseField class. Django uses the various DatabaseField classes to determine:
 - The column type, which tells the database what kind of data to store (e.g. INTEGER, VARCHAR, TEXT)
 - The default HTML widget to use when rendering a form field (e.g. ```<input type="text">, <select>```)
 - The minimal validation requirements, used in Django’s admin and in automatically-generated forms
 
 <br>
 
-### DatabaseField arguments:
+#### DatabaseField arguments:
 Each DatabaseField takes a set of DatabaseField-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR DatabaseField used to store the data.
 
 There’s also a set of common optional arguments available to all DatabaseField types. Here’s the most often-used ones:
