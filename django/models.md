@@ -1,15 +1,16 @@
-The model layer:  
-Django provides an abstraction layer (the “models”) for structuring and manipulating the data of your Web application. The model layer is made up of different parts.
-
 # Models
-A model is the single and definitive source of information about your data. It contains the fields and behaviors of the data you’re storing. Generally each model maps to a single database table.  
+A model is the single and definitive source of information about your data. It contains the fields and behaviors of the data you’re storing. Generally each model maps to a single database table.
+
+Models structure and manipulate the data of your Web application.
+
 Models are essentially your database layout, with additional metadata.  
+
 Best definition - models are database table templates
 
 <br>
 
 - Each model is a class that inherits from the django.db.models.Model class
-- Each DatabaseField of the model represents a DatabaseField
+- Each DatabaseField of the model represents a database column.
 
 #### Creating models:
 ```python
