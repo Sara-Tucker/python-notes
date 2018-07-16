@@ -55,3 +55,15 @@ def detail(request, poll_id):
     return render(request, 'polls/detail.html', {'poll': p})
 ```
 
+<br>
+
+#### CRUD List View / Query Sets
+```python
+#views.py
+
+from .models import MyModel
+
+def my_model_list_view(request):
+    qs = MyModel.objects.all()
+    return render(????????????????????????)
+```
