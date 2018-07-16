@@ -20,6 +20,18 @@ Delete | DELETE | DELETE
 
 <br>
 
+#### User interface
+CRUD is also relevant at the user interface level of most applications. As a bare minimum, the software must allow the user to:
+```
+Create or add new entries
+Read, retrieve, search, or view existing entries
+Update or edit existing entries
+Delete/deactivate/remove existing entries
+```
+Without at least these four operations, the software cannot be considered complete. Because these operations are so fundamental, they are often documented and described under one comprehensive heading, such as "content management".
+
+<br>
+
 #### CRUD and REST
 In a REST environment, CRUD often corresponds to the HTTP methods POST, GET, PUT, and DELETE. These are the fundamental elements of a persistent storage system (database).
 
