@@ -9,6 +9,8 @@ are the four basic functions of a database.
 - Update — change existing database items
 - Delete — supply one or more fields of the database item to be able to search it, and delete the item
 
+<br>
+
 Operation |	SQL	| RESTful WS (HTTP)
 --- | --- | ---
 Create | INSERT | POST
@@ -25,11 +27,11 @@ Throughout the rest of the article, we will recommend standards and response cod
 
 Imagine we are working with a system that is keeping track of meals and their corresponding prices for a restaurant. Let’s look at how we would implement CRUD operations.
 
-
 #### Create
 To create resources in a REST environment, we most commonly use the HTTP POST method. POST creates a new resource of the specified resource type.
 
 For example, let’s imagine that we are adding a new food item to the stored list of dishes for this restaurant, and the dish objects are stored in a dishes resource. If we wanted to create the new item, we would use a POST request:
+
 Request:
 ```python
 POST http://www.myrestaurant.com/dishes/
@@ -44,6 +46,7 @@ POST http://www.myrestaurant.com/dishes/
 }
 ```
 This creates a new item with a name value of “Avocado Toast” and a price value of 8. Upon successful creation, the server should return a header with a link to the newly-created resource, along with a HTTP response code of 201 (CREATED).
+
 Response:
 ```python
 Status Code - 201 (CREATED)
@@ -69,7 +72,8 @@ Request:
 ```python
 GET http://www.myrestaurant.com/dishes/
 ```
-#Response:
+
+Response:
 ```py
 Status Code - 200 (OK)
 
@@ -96,11 +100,14 @@ Status Code - 200 (OK)
   ]
 }
 ```
+
 GET requests can also be used to read a specific item, when its id is specified in the request:
+
 Request:
 ```python
 GET http://www.myrestaurant.com/dishes/1223
 ```
+
 Response:
 ```python
 Status Code - 200 (OK)
