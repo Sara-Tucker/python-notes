@@ -61,15 +61,15 @@ When you add new apps to INSTALLED_APPS, be sure to run manage.py migrate, optio
 ### DatabaseFields:
 The most important part of a model – and the only required part of a model – are the DatabaseFields it defines. DatabaseFields are specified by attributes(fields) that are classes.
 
-DatabaseFields are an abstract class (classes and class members that are incomplete and must be implemented in a derived class) that represent a database table column. Django uses DatabaseFields to create the database table to map Python types to the database.
+DatabaseFields are instantiated as an abstract class (classes and class members that are incomplete and must be implemented in a derived class), and represent a database table column. Django uses DatabaseFields to create the database table to map Python types to the database.
 
-In models, a DatabaseField is instantiated as a class and represents a particular table column. It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
+It has attributes(fields) such as null and unique, and methods that Django uses to map the attribute(field) value to database-specific values.
 ```python
 class Question(models.Model):
     #dbfield_inst = models.---Field()
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
-    # a human readable can be given as an optional first position argument
+    # a human readable name can be given as an optional first position argument
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
@@ -186,5 +186,3 @@ class Fruit(models.Model):
 - If True, this DatabaseField must be unique throughout the table.
 
 
-
-An iterable (e.g., a list or tuple) (collection)
