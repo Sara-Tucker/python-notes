@@ -3,11 +3,13 @@ A model is the single and definitive source of information about your data. It c
 
 Models structure and manipulate the data of your Web application.
 
-Models are essentially your database layout, with additional metadata.  
+Models are essentially your database layout, with additional metadata.
 
-models are database table templates
+Models store your application’s data.
 
-best - Models are database tables
+Models are database table templates
+
+Models are database tables
 
 <br>
 
