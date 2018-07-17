@@ -5,6 +5,10 @@ __ - private
 __var__ - special methods from Python
 
 The first argument of every class method is always a reference to the current instance of the class. By convention, this argument is called self.
+
+
+
+An iterable (e.g., a list or tuple) (collection)
 ```
 
 **Methods:**  
