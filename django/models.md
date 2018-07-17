@@ -94,6 +94,9 @@ Each attribute(field) in your model should be an instance of an appropriate Data
 Each DatabaseField takes a set of DatabaseField-specific arguments. For example, CharField (and its subclasses) require a max_length argument which specifies the size of the VARCHAR DatabaseField used to store the data.
 
 There’s also a set of common optional arguments available to all DatabaseField types. Here’s the most often-used ones:
+#### verbose_name
+- Every DatabaseField can take a more descriptive name of the DatabaseField as an optional first positional argument
+
 #### null
 - If True, Django will store empty values as NULL in the database. Default is False.
     
