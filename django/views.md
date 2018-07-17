@@ -3,6 +3,8 @@ A view function is a function that is passed a Web request and returns a Web res
 
 Views encapsulate the logic responsible for processing a user’s request and return the response.
 
+A view is a function responsible for rendering a page.
+
 <br>
 
 #### A View:
