@@ -92,9 +92,7 @@ def my_view(request):
 <br>
 
 ### django.shortcuts
-#### render()
-render(request, template_name, context=None, content_type=None, status=None, using=None)
-
+#### render(request, template_name, context=None, content_type=None, status=None, using=None)
 Combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
 
 Required arguments:
@@ -119,9 +117,7 @@ def my_view(request):
 
 <br>
 
-#### redirect()
-redirect(to, permanent=False, \*args, \*\*kwargs)
-
+#### redirect(to, permanent=False, \*args, \*\*kwargs)
 Returns an HttpResponseRedirect to the appropriate URL for the arguments passed. The arguments could be:
 - A model: the model’s get_absolute_url() function will be called.
 - A view name, possibly with arguments: reverse() will be used to reverse-resolve the name.
@@ -156,3 +152,8 @@ def my_view(request):
     # or
     return redirect('https://example.com/')
 ```
+
+<br>
+
+[get_object_or_404()](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-object-or-404)  
+[get_list_or_404()](https://docs.djangoproject.com/en/2.0/topics/http/shortcuts/#get-list-or-404)
