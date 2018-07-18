@@ -27,6 +27,18 @@ To design URLs for an app, you use a Python module for URL configuration. It is 
 <br>
 <br>
 
+#### /urls.py
+urlpatterns map a url to a view.
+```
+urlpatterns = [
+    path('mysite/', view, optionalname),
+    
+    path('admin/', admin.site.urls),
+]
+```
+
+<br>
+
 Here’s a sample URLconf module and its urlpatterns list:
 ```python
 from django.urls import path
@@ -65,12 +77,74 @@ To capture a value from the URL, use angle brackets. Captured values can optiona
 
 There’s no need to add a leading slash, because every URL has that. For example, it’s articles, not /articles.
 
-#### /urls.py
-URLs map a url to a view.
-```
+<br>
+
+#### What the URLconf searches against
+The URLconf searches for the requested URL, as a normal Python string. It doesn't include GET or POST parameters, or the domain name. The URLconf doesn’t look at the request method. In other words, all request methods – POST, GET, HEAD, etc. – will be routed to the same function for the same URL.
+
+For example for a request to:
+- https://www.example.com/myapp/, the URLconf will look for myapp/
+- https://www.example.com/myapp/?page=3, the URLconf will look for myapp/
+
+<br>
+
+#### Using "include"
+At any point, your urlpatterns can “include” other URLconf modules. This essentially “roots” a set of URLs below other ones.
+
+For example, here’s an excerpt of the URLconf for the Django website itself. It includes a number of other URLconfs:
+```python
+from django.urls import include, path
+
 urlpatterns = [
-    path('route/', view, optionalname),
-    
-    path('admin/', admin.site.urls),
+    path('community/', include('aggregator.urls')),
+    path('contact/', include('contact.urls')),
 ]
 ```
+Whenever Django encounters include(), it chops off whatever part of the URL matched up to that point and sends the remaining string to the included URLconf for further processing.
+
+Another possibility is to include additional URL patterns by using a list of path() instances. For example, consider this URLconf:
+```python
+from django.urls import include, path
+
+from apps.main import views as main_views
+from credit import views as credit_views
+
+urlpatterns = [
+    path('', main_views.homepage),
+    path('help/', include('apps.help.urls')),
+    path('credit/', include(extra_patterns)),
+]
+
+extra_patterns = [
+    path('reports/', credit_views.report),
+    path('reports/<int:id>/', credit_views.report),
+    path('charge/', credit_views.charge),
+]
+```
+This can be used to remove redundancy from URLconfs where a single pattern prefix is used repeatedly. For example, consider this URLconf:
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('<page_slug>-<page_id>/history/', views.history),
+    path('<page_slug>-<page_id>/edit/', views.edit),
+    path('<page_slug>-<page_id>/discuss/', views.discuss),
+    path('<page_slug>-<page_id>/permissions/', views.permissions),
+]
+```
+We can improve this by stating the common path prefix only once and grouping the suffixes that differ:
+```python
+from django.urls import include, path
+from . import views
+
+urlpatterns = [
+    path('<page_slug>-<page_id>/', include([
+        path('history/', views.history),
+        path('edit/', views.edit),
+        path('discuss/', views.discuss),
+        path('permissions/', views.permissions),
+    ])),
+]
+```
+
