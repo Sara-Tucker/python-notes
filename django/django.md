@@ -14,6 +14,6 @@ Views encapsulate the logic responsible for processing a user’s request and re
 
 **[Http request and response objects](https://github.com/SethTucker/python-notes/blob/master/django/http-objects.md)**
 
-**[URLconfs](https://github.com/SethTucker/python-notes/blob/master/django/idk.md)**
+**[URLconfs](https://github.com/SethTucker/python-notes/blob/master/django/urlconfs.md)**
 
 **[Views](https://github.com/SethTucker/python-notes/blob/master/django/views.md)**
