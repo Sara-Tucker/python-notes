@@ -72,14 +72,14 @@ A request to:
 
 <br>
 
-#### Path converters
+### Path converters
 To capture a value from the URL, use angle brackets. Captured values can optionally include a converter type. For example, use \<int:name\> to capture an integer parameter. If a converter isn’t included, any string, excluding a / character, is matched.
 
 There’s no need to add a leading slash, because every URL has that. For example, it’s articles, not /articles.
 
 <br>
 
-#### What the URLconf searches against
+### What the URLconf searches against
 The URLconf searches for the requested URL, as a normal Python string. It doesn't include GET or POST parameters, or the domain name. The URLconf doesn’t look at the request method. In other words, all request methods – POST, GET, HEAD, etc. – will be routed to the same function for the same URL.
 
 For example for a request to:
@@ -88,7 +88,7 @@ For example for a request to:
 
 <br>
 
-#### Using "include"
+### Using "include"
 At any point, your urlpatterns can “include” other URLconf modules. This essentially “roots” a set of URLs below other ones.
 
 For example, here’s an excerpt of the URLconf for the Django website itself. It includes a number of other URLconfs:
@@ -123,7 +123,7 @@ extra_patterns = [
 ```
 This can be used to remove redundancy from URLconfs where a single pattern prefix is used repeatedly. For example, consider this URLconf:
 ```python
-from django.urls import path
+from django.urls import include, path
 from . import views
 
 urlpatterns = [
@@ -132,11 +132,8 @@ urlpatterns = [
     path('<page_slug>-<page_id>/discuss/', views.discuss),
     path('<page_slug>-<page_id>/permissions/', views.permissions),
 ]
-```
-We can improve this by stating the common path prefix only once and grouping the suffixes that differ:
-```python
-from django.urls import include, path
-from . import views
+
+#We can improve this by stating the common path prefix only once and grouping the suffixes that differ
 
 urlpatterns = [
     path('<page_slug>-<page_id>/', include([
