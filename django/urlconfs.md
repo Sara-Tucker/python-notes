@@ -162,7 +162,7 @@ urlpatterns = [
 In this example, for a request to /blog/2005/, Django will call views.year_archive(request, year=2005, foo='bar'). This technique is used in the syndication framework to pass metadata and options to views.
 
 Similarly, you can pass extra options to include() and each line in the included URLconf will be passed the extra options.
-```
+```python
 # main.py
 from django.urls import include, path
 
