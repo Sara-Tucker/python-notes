@@ -59,7 +59,7 @@ def detail(request, poll_id):
 
 <br>
 
-#### CRUD List View / Query Sets
+#### CRUD List view / Query sets
 ```python
 #views.py
 
@@ -68,4 +68,22 @@ from .models import MyModel
 def my_model_list_view(request):
     qs = MyModel.objects.all()
     return render(????????????????????????)
+```
+
+<br>
+
+#### View decorators
+The decorators in django.views.decorators.http can be used to restrict access to views based on the request method. These decorators will return a django.http.HttpResponseNotAllowed if the conditions are not met.
+
+- require_GET()
+- require_POST()
+- require_http_methods(request_method_list)
+    - Decorator to require that a view only accepts specified request methods.
+```
+from django.views.decorators.http import require_http_methods
+
+@require_http_methods(["GET", "POST"])
+def my_view(request):
+    # I can assume now that only GET or POST requests make it this far
+    #code
 ```
