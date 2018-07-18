@@ -145,3 +145,39 @@ urlpatterns = [
 ]
 ```
 
+<br>
+
+### Passing extra options to view functions
+URLconfs have a hook that lets you pass extra arguments to your view functions, as a Python dictionary. The path() function can take an optional third argument which should be a dictionary of extra keyword arguments to pass to the view function.
+
+For example:
+```python
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('blog/<int:year>/', views.year_archive, {'foo': 'bar'}),
+]
+```
+In this example, for a request to /blog/2005/, Django will call views.year_archive(request, year=2005, foo='bar'). This technique is used in the syndication framework to pass metadata and options to views.
+
+Similarly, you can pass extra options to include() and each line in the included URLconf will be passed the extra options.
+```
+# main.py
+from django.urls import include, path
+
+urlpatterns = [
+    path('blog/', include('inner'), {'blog_id': 3}),
+]
+
+
+# inner.py
+from django.urls import path
+from mysite import views
+
+urlpatterns = [
+    path('archive/', views.archive),
+    path('about/', views.about),
+]
+```
+Note that extra options will always be passed to every line in the included URLconf, regardless of whether the line’s view actually accepts those options as valid. For this reason, this technique is only useful if you’re certain that every view in the included URLconf accepts the extra options you’re passing.
