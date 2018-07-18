@@ -79,11 +79,80 @@ The decorators in django.views.decorators.http can be used to restrict access to
 - require_POST()
 - require_http_methods(request_method_list)
     - Decorator to require that a view only accepts specified request methods.
-```
+```python
 from django.views.decorators.http import require_http_methods
 
 @require_http_methods(["GET", "POST"])
 def my_view(request):
     # I can assume now that only GET or POST requests make it this far
     #code
+```
+
+<br>
+<br>
+
+### django.shortcuts
+#### render()
+render(request, template_name, context=None, content_type=None, status=None, using=None)
+
+Combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
+
+Required arguments:
+- request - The request object used to generate this response.
+- template_name - The full name of a template to use or sequence of template names. If a sequence is given, the first template that exists will be used.
+
+Optional arguments:
+- context - A dictionary of values to add to the template context. By default, this is an empty dictionary. If a value in the dictionary is callable, the view will call it just before rendering the template.
+- content_type - The MIME type to use for the resulting document.
+- status - The status code for the response. Defaults to 200.
+- using - The NAME of a template engine to use for loading the template.
+
+The following example renders the template myapp/index.html with the MIME type application/xhtml+xml:
+```python
+from django.shortcuts import render
+
+def my_view(request):
+    # View code here...
+    return render(request, 'myapp/index.html', {'foo': 'bar'},
+    content_type='application/xhtml+xml')
+```
+
+<br>
+
+#### redirect()
+redirect(to, permanent=False, \*args, \*\*kwargs)
+
+Returns an HttpResponseRedirect to the appropriate URL for the arguments passed. The arguments could be:
+- A model: the model’s get_absolute_url() function will be called.
+- A view name, possibly with arguments: reverse() will be used to reverse-resolve the name.
+- An absolute or relative URL, which will be used as-is for the redirect location.
+
+By default, redirect() returns a temporary redirect; pass permanent=True to issue a permanent redirect.
+
+You can use the redirect() function in a number of ways:
+
+By passing some object; that object’s get_absolute_url() method will be called to figure out the redirect URL:
+```python
+from django.shortcuts import redirect
+
+def my_view(request):
+    # ...
+    object = MyModel.objects.get(...)
+    return redirect(object)
+```
+
+By passing the name of a view and optionally some positional or keyword arguments; the URL will be reverse resolved using the reverse() method:
+```python
+def my_view(request):
+    # ...
+    return redirect('some-view-name', foo='bar')
+```
+
+By passing a hardcoded URL to redirect to:
+```python
+def my_view(request):
+    # ...
+    return redirect('/some/url/')
+    # or
+    return redirect('https://example.com/')
 ```
