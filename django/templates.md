@@ -9,6 +9,10 @@ A template is rendered with a context. Rendering replaces variables with their v
 
 The syntax of the Django template language involves three constructs: variables, tags, and filters.
 
+A template is simply a text file. It can generate any text-based format (HTML, XML, CSV, etc.).
+
+A template contains variables, which get replaced with values when the template is evaluated, and tags, which control the logic of the template.
+
 <br>
 
 #### Configuration:
