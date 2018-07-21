@@ -245,25 +245,29 @@ appname/
 
 <br>
 
-#### manage.py migrate:
-The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables.
+#### manage.py createsuperuser:
 ```
-$ manage.py migrate
+$ manage.py createsuperuser
 ```
 
 <br>
 
-
 #### manage.py makemigrations:
 After making a change to a model you need to run this.
 
-The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables.
-
 By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
 
-Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk. You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py. Don’t worry, you’re not expected to read them every time Django makes one, but they’re designed to be human-editable in case you want to manually tweak how Django changes things.
+Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk. You can read the migration for your new model if you like; it’s the file polls/migrations/0001_initial.py.
 ```
 $ manage.py makemigrations
+```
+
+<br>
+
+#### manage.py migrate:
+The migrate command looks at the INSTALLED_APPS setting and creates any necessary database tables.
+```
+$ manage.py migrate
 ```
 
 <br>
