@@ -224,3 +224,8 @@ class MyModel(models.Model):
     date_created = models.DateField(auto_now_add=True)
     date_updated = models.DateField(auto_now=True, default=timezone.now)
 ```
+
+<br>
+
+### Query set
+A list of instances of a model.
