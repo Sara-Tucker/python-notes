@@ -218,6 +218,7 @@ class MyModel(models.Model):
 ### Automatic date created/updated timestamps for Model objects
 ```python
 from django.db import models
+from django.utils import timezone
 
 class MyModel(models.Model):
     # ...
