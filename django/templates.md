@@ -70,10 +70,8 @@ Some tags require beginning and ending tags:
 ```
 {% if user.is_authenticated %}Hello, {{ user.username }}.{% endif %}
 ```
-```
-https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ref-templates-builtins-tags
+https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ref-templates-builtins-tags  
 https://docs.djangoproject.com/en/2.0/howto/custom-template-tags/#howto-writing-custom-template-tags
-```
 
 <br>
 
@@ -84,7 +82,7 @@ They look like this:
 ```
 {{ django|title }}
 ```
-With a context of {'django': 'the web framework for perfectionists with deadlines'}, this template renders to:
+With a context of {'django':'the web framework for perfectionists with deadlines'}, this filter titles the string and the template renders to:
 ```
 The Web Framework For Perfectionists With Deadlines
 ```
@@ -92,7 +90,6 @@ Some filters take an argument:
 ```
 {{ my_date|date:"Y-m-d" }}
 ```
-```
-https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ref-templates-builtins-filters
+https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#ref-templates-builtins-filters  
 https://docs.djangoproject.com/en/2.0/howto/custom-template-tags/#howto-writing-custom-template-filters
-```
+
