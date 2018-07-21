@@ -77,6 +77,40 @@ To capture a value from the URL, use angle brackets. Captured values can optiona
 
 There’s no need to add a leading slash, because every URL has that. For example, it’s articles, not /articles.
 
+Example:
+```python
+# polls/views.py
+
+def detail(request, question_id):
+    return HttpResponse("You're looking at question %s." % question_id)
+
+def results(request, question_id):
+    response = "You're looking at the results of question %s."
+    return HttpResponse(response % question_id)
+
+def vote(request, question_id):
+    return HttpResponse("You're voting on question %s." % question_id)
+```
+
+Wire these new views into the polls.urls module by adding the following path() calls:
+```python
+# polls/urls.py
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    # ex: /polls/
+    path('', views.index, name='index'),
+    # ex: /polls/5/
+    path('<int:question_id>/', views.detail, name='detail'),
+    # ex: /polls/5/results/
+    path('<int:question_id>/results/', views.results, name='results'),
+    # ex: /polls/5/vote/
+    path('<int:question_id>/vote/', views.vote, name='vote'),
+]
+```
+
 <br>
 
 ### What the URLconf searches against
@@ -147,6 +181,9 @@ urlpatterns = [
     ])),
 ]
 ```
+
+Another example:  
+When somebody requests a page from your website – say, “/polls/34/”, Django will load the mysite.urls Python module because it’s pointed to by the ROOT_URLCONF setting. It finds the variable named urlpatterns and traverses the patterns in order. After finding the match at 'polls/', it strips off the matching text ("polls/") and sends the remaining text – "34/" – to the ‘polls.urls’ URLconf for further processing. There it matches '<int:question_id>/', resulting in a call to the view.
 
 <br>
 
