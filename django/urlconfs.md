@@ -135,9 +135,9 @@ urlpatterns = [
     path('<page_slug>-<page_id>/discuss/', views.discuss),
     path('<page_slug>-<page_id>/permissions/', views.permissions),
 ]
-
-#We can improve this by stating the common path prefix only once and grouping the suffixes that differ
-
+```
+We can improve this by stating the common path prefix only once and grouping the suffixes that differ:
+```python
 urlpatterns = [
     path('<page_slug>-<page_id>/', include([
         path('history/', views.history),
