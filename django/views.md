@@ -3,6 +3,8 @@ A view function is a function that is passed a Web request and returns a Web res
 
 Views encapsulate the logic responsible for processing a user’s request and return the response.
 
+In Django, web pages and other content are delivered by views. Each view is represented by a simple Python function (or method, in the case of class-based views). Django will choose a view by examining the part of the requested URL after the domain name.
+
 A view is a function responsible for rendering a page.
 
 <br>
