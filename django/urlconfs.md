@@ -83,8 +83,11 @@ There’s no need to add a leading slash, because every URL has that. For exampl
 The URLconf searches for the requested URL, as a normal Python string. It doesn't include GET or POST parameters, or the domain name. The URLconf doesn’t look at the request method. In other words, all request methods – POST, GET, HEAD, etc. – will be routed to the same function for the same URL.
 
 For example for a request to:
-- https://www.example.com/myapp/, the URLconf will look for myapp/
-- https://www.example.com/myapp/?page=3, the URLconf will look for myapp/
+```
+https://www.example.com/myapp/ - the URLconf will look for myapp/
+
+https://www.example.com/myapp/?page=3 - the URLconf will look for myapp/
+```
 
 <br>
 
