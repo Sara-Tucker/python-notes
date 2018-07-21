@@ -212,3 +212,15 @@ class MyModel(models.Model):
     def __str__(self):
         return self.? #title, date, etc
 ```
+
+<br>
+
+### Automatic date created/updated timestamps for Model objects
+```python
+from django.db import models
+
+class MyModel(models.Model):
+    # ...
+    date_created = models.DateField(auto_now_add=True)
+    date_updated = models.DateField(auto_now=True, default=timezone.now)
+```
