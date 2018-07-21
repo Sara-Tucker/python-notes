@@ -171,6 +171,14 @@ class Student(models.Model):
 - Extra “help” text to be displayed with the form widget. It’s useful for documentation even if your DatabaseField isn’t used on a form.
 
 #### primary_key
+Every model by default has this added to keep track of objects in the database table.
+```python
+from django.db import models
+
+class MyModel(models.Model):
+    id = models.AutoField(primary_key=True)
+```
+
 - If True, this field is the primary key for the model.
 - If you don’t specify primary_key=True for any fields in your model, Django will automatically add an IntegerField to hold the primary key, so you don’t need to set primary_key=True on any of your fields unless you want to override the default primary-key behavior. For more, see Automatic primary key fields.
 - The primary key field is read-only. If you change the value of the primary key on an existing object and then save it, a new object will be created alongside the old one. For example:
@@ -190,4 +198,6 @@ class Fruit(models.Model):
 #### unique
 - If True, this DatabaseField must be unique throughout the table.
 
+<br>
 
+### new
