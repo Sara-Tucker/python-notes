@@ -98,6 +98,7 @@ Each DatabaseField takes a set of DatabaseField-specific arguments. For example,
 There’s also a set of common optional arguments available to all DatabaseField types. Here’s the most often-used ones:
 #### verbose_name
 - Every DatabaseField can take a more descriptive name of the DatabaseField as an optional first positional argument
+- When working with database objects in the Django admin, this name will be shown as the field name instead
 
 #### null
 - If True, Django will store empty values as NULL in the database. Default is False.
