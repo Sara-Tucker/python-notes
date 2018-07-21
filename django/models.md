@@ -201,4 +201,14 @@ class Fruit(models.Model):
 
 <br>
 
-### new
+### Display database objects cleaner in Django admin
+Instead of showing as My Model object 1, 2, etc, you can change the name of the objects to something else, like if you have a title DatabaseField or date DatabaseField that are better names for the objects.
+```python
+from django.db import models
+
+class MyModel(models.Model):
+    # ...
+    
+    def __str__(self):
+        return self.? #title, date, etc
+```
