@@ -76,15 +76,21 @@ KR202-239
 KR202-242
 ```
 
+<br>
+
 Get revenue of all 'AY' class SKUs:
 ```
 'AY': 'revenue': 53724966
 ```
 
+<br>
+
 Average monthly order qty of all SKUs:
 ```
 1601.44
 ```
+
+<br>
 
 SKUs with largest safety stock:
 ```
