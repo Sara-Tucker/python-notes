@@ -48,6 +48,7 @@ Revenue: $123,190
 <br>
 
 ```
+(this compared with the other 39 skus in the dataset):
 Revenue Rank: 19/40  
 Excess Rank: 6/40  
 Shortage Rank: 15/40  
