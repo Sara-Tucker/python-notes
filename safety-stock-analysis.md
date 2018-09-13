@@ -28,9 +28,9 @@ Demand Variability: 0.314
 Qty on Hand: 1003  
 Calculated Safety Stock: 1165
 
-Reorder Level:  
+Reorder Level: think these 2 got messed up
 Reorder Qty: 
-formula = Lead_time\*Demand+Service_level\*Std_Dev\*sqrt(Lead_time) - think this got messed up
+formula = Lead_time*Demand+Service_level*Std_Dev*sqrt(Lead_time)
 
 Economic Order Qty: 44  
 Economic Order Variable Cost: $15,708
