@@ -86,5 +86,11 @@ Average monthly order qty of all SKUs:
 1601.44
 ```
 
-<br>
-
+SKUs with largest safety stock:
+```
+#1 KR202-241 - Safety stock: 2719
+#2 KR202-231 - Safety stock: 2484
+#3 KR202-233 - Safety stock: 2472
+#4 KR202-227 - Safety stock: 2277
+#5 KR202-225 - Safety stock: 2261
+```
