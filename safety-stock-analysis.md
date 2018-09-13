@@ -78,8 +78,11 @@ KR202-242
 
 Get revenue of all 'AY' class SKUs:
 ```
-[{'AY': {'revenue': 5372496600.0}}]
+'AY': 'revenue': 53724966
 ```
+
+Average monthly order qty of all SKUs:
+```1601.44```
 
 <br>
 
