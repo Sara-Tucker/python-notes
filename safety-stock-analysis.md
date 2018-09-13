@@ -132,3 +132,11 @@ SKUs with largest safety stock:
 9    5.646221e+05  10  2622.509091
 10   5.393369e+04  11  2847.000000
 ```
+
+<br>
+<br>
+<br>
+
+## Creating Supply Chain Simulation
+https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html  
+https://dc.etsu.edu/cgi/viewcontent.cgi?article=4651&context=etd
