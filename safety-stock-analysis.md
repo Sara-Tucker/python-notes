@@ -65,7 +65,7 @@ Unit Cost Rank: 21/40
 <br>
 <br>
 
-## More features
+## Easy Analysis Features
 Get list of all 'AY' class SKUs:
 ```
 KR202-229
