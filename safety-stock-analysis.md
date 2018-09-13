@@ -82,7 +82,9 @@ Get revenue of all 'AY' class SKUs:
 ```
 
 Average monthly order qty of all SKUs:
-```1601.44```
+```
+1601.44
+```
 
 <br>
 
