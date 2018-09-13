@@ -28,9 +28,9 @@ Demand Variability: 0.314
 Qty on Hand: 1003
 Calculated Safety Stock: 1165
 
-Reorder Level: 4069?
-RL = Lead_time*Demand+Service_level*sigma*sqrt(Lead_time)
-Reorder Qty: 13?
+Reorder Level: 
+RL = Lead_time*Demand+Service_level*Std_Dev*sqrt(Lead_time) why?
+Reorder Qty: 
 
 
 'revenue': '123190000', 'economic_order_quantity': '44', 'economic_order_variable_cost': '15708.41', 'ABC_XYZ_Classification': 'BY', 'excess_stock': '0', 'shortages': '5979','total_orders': '24638'
