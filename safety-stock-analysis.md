@@ -61,3 +61,25 @@ Shortage Rank: 15/40
 Safety Stock Rank: 29/40  
 Unit Cost Rank: 21/40
 ```
+
+<br>
+<br>
+
+## More features
+Get list of all 'AY' class SKUs:
+```
+KR202-229
+KR202-232
+KR202-234
+KR202-235
+KR202-239
+KR202-242
+```
+
+Get revenue of all 'AY' class SKUs:
+```
+[{'AY': {'revenue': 5372496600.0}}]
+```
+
+<br>
+
