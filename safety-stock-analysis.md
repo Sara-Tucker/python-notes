@@ -132,6 +132,7 @@ SKUs with largest safety stock:
 9    5.646221e+05  10  2622.509091
 10   5.393369e+04  11  2847.000000
 ```
+https://supplychainpy.readthedocs.io/en/latest/_images/image3.png
 
 <br>
 <br>
