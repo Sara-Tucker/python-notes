@@ -18,6 +18,7 @@ Blue | 2665 | 1841 | 1231 | 2598 | 1988 | 1988 | 1001 | 2 | 5000 | 1003 | 10
 <br>
 
 ## Example Analysis
+```
 SKU: KR202-209
 
 Average Qty Ordered: 2053  
@@ -41,9 +42,11 @@ Shortage units: 5979
 
 Total Qty Ordered: 24,638  
 Revenue: $123,190,000
+```
 
 <br>
 
+```
 Revenue Rank: 19/40  
 Excess Rank: 6/40  
 Shortage Rank: 15/40  
@@ -54,3 +57,4 @@ Min Ordered Month: 731
 Max Ordered Month: 2927  
 Inventory Turns: 24  
 Inventory Traffic Light: Green (inventory to cover demand for next 7 days and up to safety stock)
+```
