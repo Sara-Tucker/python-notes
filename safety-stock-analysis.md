@@ -138,5 +138,5 @@ SKUs with largest safety stock:
 <br>
 
 ## Creating Supply Chain Simulation
-https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html  
 https://dc.etsu.edu/cgi/viewcontent.cgi?article=4651&context=etd
+https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html  
