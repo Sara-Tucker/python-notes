@@ -35,13 +35,13 @@ Reorder Qty:
 Economic Order Qty: 44  
 Economic Order Variable Cost: $15,708
 
-ABC XYZ Classification: BY
+ABC XYZ Classification: BY (Medium consumption value. Predictably variable demand. Less reliable forecasts.)
 
 Excess stock: 0  
 Shortage units: 5979
 
 Total Qty Ordered: 24,638  
-Revenue: $123,190,000
+Revenue: $123,190
 ```
 
 <br>
