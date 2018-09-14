@@ -153,4 +153,4 @@ https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html
 
 #### Links:
 https://supplychainpy.readthedocs.io/en/latest/index.html  
-Example: https://www.udemy.com/safety-stock-inventory-control/
+[Example](https://www.udemy.com/safety-stock-inventory-control/)
