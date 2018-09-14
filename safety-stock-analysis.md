@@ -79,7 +79,7 @@ KR202-242
 
 Get revenue of all 'CZ' class SKUs:
 ```
-'CZ': 'revenue': 53724966
+Total CZ Revenue: $5,724,966
 ```
 
 <br>
