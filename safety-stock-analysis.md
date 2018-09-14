@@ -52,9 +52,8 @@ Inventory Traffic Light: Green (inventory to cover demand for next 7 days and up
 
 <br>
 
-```
 Comparing with the other SKUs in the dataset:
-
+```
 Revenue Rank: 19/40  
 Excess Rank: 6/40  
 Shortage Rank: 15/40  
@@ -78,9 +77,9 @@ KR202-242
 
 <br>
 
-Get revenue of all 'AY' class SKUs:
+Get revenue of all 'CZ' class SKUs:
 ```
-'AY': 'revenue': 53724966
+'CZ': 'revenue': 53724966
 ```
 
 <br>
@@ -142,3 +141,11 @@ SKUs with largest safety stock:
 ## Creating Supply Chain Simulation
 https://dc.etsu.edu/cgi/viewcontent.cgi?article=4651&context=etd  
 https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html
+
+<br>
+<br>
+<br>
+
+#### Links:
+https://supplychainpy.readthedocs.io/en/latest/index.html  
+
