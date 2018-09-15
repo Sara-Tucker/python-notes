@@ -141,8 +141,7 @@ SKUs with largest safety stock:
 ## Creating Supply Chain Simulation
 https://dc.etsu.edu/cgi/viewcontent.cgi?article=4651&context=etd  
 https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html  
-[Part 1](https://www.youtube.com/watch?v=7LuN_6m7h2o)  
-[Part 2](https://www.youtube.com/watch?v=Kmu9DNQamLw)  
+[YT Part 1](https://www.youtube.com/watch?v=7LuN_6m7h2o) [Part 2](https://www.youtube.com/watch?v=Kmu9DNQamLw)  
 [Part 1](https://codereview.stackexchange.com/questions/27874/inventory-simulation-using-pandas-dataframe)  
 [Part 2](https://github.com/Jdash99/sinvi)  
 [Part 3](https://translate.google.com/translate?sl=auto&tl=en&js=y&prev=_t&hl=en&ie=UTF-8&u=https%3A%2F%2Fsinvi.readthedocs.io%2Fen%2Flatest%2Fintroduccion.html&edit-text=)  
