@@ -14,6 +14,7 @@ reorder_quantity
 rank of units ordered
 list of orders
 lead time
+service level - 99.6
 ```
 
 <br>
