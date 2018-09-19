@@ -4,19 +4,25 @@
 
 export to csv
 ```
-sku
-standard_deviation - daily and monthly
-demand_variability - std_dev/mean
-mean - daily + monthly
-ABC_XYZ_Classification - https://github.com/KevinFasusi/supplychainpy/blob/5bffccf9383045eace82ee1d21ca49e1ecdd7d22/supplychainpy/inventory/abc_xyz.py#L154
-reorder_level
-reorder_quantity
-rank of units ordered
-list of orders
-lead time
-service level - 99.6
+Inventory class
+    list of Skus
+    overview stuff, like top 10, rank of units ordered
+    
+Sku class
+    Name
+    ABC_XYZ_Classification - https://github.com/KevinFasusi/supplychainpy/blob/5bffccf9383045eace82ee1d21ca49e1ecdd7d22/supplychainpy/inventory/abc_xyz.py#L154
+    demand_variability - std_dev/mean
+    Insights - insights from pics
+    Mean - daily + monthly
+    list Orders
+    const Service level - 99.6
+    standard_deviation - daily and monthly
+    const Z-Score - 99.6
 
-insights from pics
+    Optional:
+    lead time
+    reorder_level
+    reorder_quantity
 ```
 
 <br>
