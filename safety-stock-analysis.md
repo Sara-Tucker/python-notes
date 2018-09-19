@@ -8,7 +8,7 @@ sku
 standard_deviation - daily and monthly
 demand_variability - std_dev/mean
 mean - daily + monthly
-ABC_XYZ_Classification
+ABC_XYZ_Classification - https://github.com/KevinFasusi/supplychainpy/blob/5bffccf9383045eace82ee1d21ca49e1ecdd7d22/supplychainpy/inventory/abc_xyz.py#L154
 reorder_level
 reorder_quantity
 rank of units ordered
