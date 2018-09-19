@@ -2,6 +2,22 @@
 
 <br>
 
+export to csv
+```
+sku
+standard_deviation - daily and monthly
+demand_variability - std_dev/mean
+mean - daily + monthly
+ABC_XYZ_Classification
+reorder_level
+reorder_quantity
+rank of units ordered
+list of orders
+lead time
+```
+
+<br>
+
 ### Dataset format:
 - SKU = color
 - Month = qty ordered
