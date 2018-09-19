@@ -24,6 +24,13 @@ Sku class
     reorder_level
     reorder_quantity
 ```
+```
+1) W0
+2) MDMK
+3) idk
+
+Enter a #: 
+```
 
 <br>
 
