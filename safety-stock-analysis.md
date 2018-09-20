@@ -11,7 +11,7 @@ Inventory class
 Sku class
     Name
     ABC_XYZ_Classification - https://github.com/KevinFasusi/supplychainpy/blob/5bffccf9383045eace82ee1d21ca49e1ecdd7d22/supplychainpy/inventory/abc_xyz.py#L154
-    demand_variability - std_dev/mean
+    Coefficient of variation (demand_variability) - std_dev/mean - https://blog.arkieva.com/do-you-use-coefficient-of-variation-to-determine-forecastability/
     Insights - insights from pics
     Mean - daily + monthly
     list Orders
