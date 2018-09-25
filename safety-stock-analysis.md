@@ -185,3 +185,11 @@ https://supplychainpy.readthedocs.io/en/latest/monte_carlo_simulation.html
 #### Links:
 https://supplychainpy.readthedocs.io/en/latest/index.html  
 [Example](https://www.udemy.com/safety-stock-inventory-control/)
+
+https://link.springer.com/content/pdf/10.1007%2F978-0-387-74157-4_39.pdf
+
+http://web.mit.edu/2.810/www/files/readings/King_SafetyStock.pdf
+
+https://msdn.microsoft.com/en-us/magazine/mt683796.aspx
+
+https://www.cgma.org/resources/tools/cost-transformation-model/abc-xyz-inventory-management.html
